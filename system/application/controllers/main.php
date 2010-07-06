@@ -14,7 +14,6 @@ class Main extends Controller {
 			'<link rel="stylesheet" href="'.base_url().'css/nivo-slider.css" type="text/css" media="screen" />';
 		$this->load->view('includes/template', $data);
 	}
-	
 }
 
 ?>
