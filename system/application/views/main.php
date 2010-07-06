@@ -1,6 +1,6 @@
 <div id="foto-slider">
 	<img src="<?php echo base_url();?>img/fotos/1.jpg" alt="" title="Cluster FING" />
-	<img src="<?php echo base_url();?>img/fotos/2.jpg" alt="" title="Cluster FING" />
+	<img src="<?php echo base_url();?>img/fotos/2.jpg" alt="" title="Cluster FING" style="display:none;" />
 </div>
 <div id="two-columns">
 	<div id="left-column">
@@ -9,8 +9,16 @@
 		      <div class="slide">
 		        <h3></h3>
 		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=load_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4&st=1278434046" /></p>
+              </div>
+			  <div class="slide">
+		        <h3></h3>
+		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/pie.php?title=Cluster%20Load%20Percentages&size=250x150&50-75=1,ffde5e&25-50=2,caff98&0-25=13,e2ecff&down=3,515151" /></p>
 		      </div>
-		    </div>
+			  <div class="slide">
+		        <h3></h3>
+		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/pie.php?title=Cluster%20queue%20usage&size=250x150&free=100,ac5e44" /></p>
+		      </div>
+            </div>
 	    </div>
 		<div class="module">
 			<div class="module-title">Noticias</div>

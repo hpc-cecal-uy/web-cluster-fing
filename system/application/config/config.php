@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://localhost/web-cluster-fing/";
+$config['base_url']	= "/web-cluster-fing/";
 
 /*
 |--------------------------------------------------------------------------
