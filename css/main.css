@@ -15,21 +15,19 @@
 #left-column {
 	float: left;
 	width: 425px;
-	margin-left:15px;
-	margin-right:10px;
 	overflow: hide;
 }
 
 #right-column {
 	float: left;
 	width: 425px;
-	margin-left:10px;
-	margin-right:15px;
 	overflow: hide;
 }
 
 .module {
 	width: 425px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
@@ -51,4 +49,50 @@
 .module-body {
 	padding-top: 0.5em;
 	padding-bottom: 0.5em;
+}
+
+/** 
+ * Slideshow style rules.
+ */
+#slideshow {
+	float: left;
+	margin:0 auto;
+	width:450px;
+	height:263px;
+	position:relative;
+	/*background:transparent url(../img/bg_slideshow.jpg) no-repeat 0 0;*/
+}
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:390px;
+  height:263px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+}
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:540px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+  height:263px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:29px;
+  height:263px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:0;
+  left:0;
+  background:transparent url(../img/control_left_2.jpg) no-repeat 0 0;
+}
+#rightControl {
+  top:0;
+  right:0;
+  background:transparent url(../img/control_right_2.jpg) no-repeat 0 0;
 }
