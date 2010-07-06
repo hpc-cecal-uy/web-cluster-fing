@@ -4,4 +4,51 @@
 	border-style: solid;
 	border-width: 3px;
 	border-color: black;
+	margin-bottom: 1em;
+}
+
+#two-columns {
+	float: left;
+	width: 900px;
+}
+
+#left-column {
+	float: left;
+	width: 425px;
+	margin-left:15px;
+	margin-right:10px;
+	overflow: hide;
+}
+
+#right-column {
+	float: left;
+	width: 425px;
+	margin-left:10px;
+	margin-right:15px;
+	overflow: hide;
+}
+
+.module {
+	width: 425px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.module-title {
+	/*font-weight: bold;*/
+	font-size: 1.6em;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCCCCC;
+}
+
+.module-title:before {
+	content: '';
+	font-size: 0.6em;
+	/*font-style: italic;*/
+}
+
+.module-body {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 }

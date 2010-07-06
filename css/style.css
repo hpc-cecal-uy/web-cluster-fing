@@ -64,6 +64,8 @@ body {
 	
 	/*background-image:url(../img/header-background.png);
 	background-repeat:repeat-x;*/
+	
+	float: left;
 }
 
 #page-footer-body {
@@ -71,4 +73,5 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	font-size: 0.8em;
 }
