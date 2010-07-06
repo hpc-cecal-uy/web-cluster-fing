@@ -26,6 +26,10 @@ body {
 	
 	background-image:url(../img/header-background.png);
 	background-repeat:repeat-x;
+	
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: black;
 }
 
 #page-header-body {
