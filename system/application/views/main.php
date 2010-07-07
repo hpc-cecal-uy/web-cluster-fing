@@ -47,42 +47,42 @@
 		</div>
 	</div>
 	<div id="right-column">
-		<div class="module">
+		<div class="module" style="background:url(img/1278458880_kdmconfig.png) no-repeat right 25px;">
 			<div class="module-title">Nuevos usuarios</div>
 			<div class="module-body">
-				<p><a href="#">C&oacute;mo conectarse</a></p>
-				<p><a href="#">C&oacute;mo ejecutar un trabajo</a></p>
-				<p><a href="#">Preguntas frecuentes</a></p>
-				<p><a href="#">Generador de scripts</a></p>
+				<a href="#" class="menu-option">C&oacute;mo conectarse</a>
+				<a href="#" class="menu-option">C&oacute;mo ejecutar un trabajo</a>
+				<a href="#" class="menu-option">Preguntas frecuentes</a>
+				<a href="#" class="menu-option">Generador de scripts</a>
 			</div>
 		</div>
-		<div class="module">
+		<div class="module" style="background:url(img/1278458679_kcmpartitions.png) no-repeat right 25px;">
 			<div class="module-title">Reportes</div>
 			<div class="module-body">
-				<p><a href="#">Estad&iacute;sticas de uso mensual</a></p>
-				<p><a href="#">Estad&iacute;sticas de tiempo real</a></p>
-				<p><a href="#">Uso de CPU</a></p>
-				<p><a href="#">Uso de espacio de almacenamiento</a></p>
+				<a href="#" class="menu-option">Estad&iacute;sticas de uso mensual</a>
+				<a href="#" class="menu-option">Estad&iacute;sticas de tiempo real</a>
+				<a href="#" class="menu-option">Uso de CPU</a>
+				<a href="#" class="menu-option">Uso de espacio de almacenamiento</a>
 			</div>
 		</div>
-		<div class="module">
+		<div class="module" style="background:url(img/1278458589_mycomputer.png) no-repeat right 25px;">
 			<div class="module-title">Enseñanza</div>
 			<div class="module-body">
-				<p><a href="#">Charla 1 (cluster)</a></p>
-				<p><a href="#">Charla 2 (memoria compartida)</a></p>
-				<p><a href="#">Charla 3 (memoria distribuida)</a></p>
-				<p><a href="#">Nivelaci&oacute;n 1 (Unix-Linux)</a></p>
-				<p><a href="#">Nivelaci&oacute;n 2 (Unix-Linux)</a></p>
-				<p><a href="#">FORTRAN</a></p>
-				<p><a href="#">Nivelaci&oacute;n 3 (Unix-Linux)</a></p>
+				<a href="#" class="menu-option">Charla 1 (cluster)</a>
+				<a href="#" class="menu-option">Charla 2 (memoria compartida)</a>
+				<a href="#" class="menu-option">Charla 3 (memoria distribuida)</a>
+				<a href="#" class="menu-option">Nivelaci&oacute;n 1 (Unix-Linux)</a>
+				<a href="#" class="menu-option">Nivelaci&oacute;n 2 (Unix-Linux)</a>
+				<a href="#" class="menu-option">FORTRAN</a>
+				<a href="#" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
 			</div>
 		</div>
-		<div class="module">
+		<div class="module" style="background:url(img/1278458764_folder_green.png) no-repeat right 25px;">
 			<div class="module-title">Documentos</div>
 			<div class="module-body">
-				<p><a href="#">Descripci&oacute;n t&eacute;cnica</a></p>
-				<p><a href="#">Pol&iacute;ticas de uso</a></p>
-				<p><a href="#">Reglamento de uso</a></p>
+				<a href="#" class="menu-option">Descripci&oacute;n t&eacute;cnica</a>
+				<a href="#" class="menu-option">Pol&iacute;ticas de uso</a>
+				<a href="#" class="menu-option">Reglamento de uso</a>
 			</div>
 		</div>
 	</div>
