@@ -4,45 +4,43 @@
 </div>
 <div id="two-columns">
 	<div id="left-column">
-		<div id="slideshow">
-		    <div id="slidesContainer">
-		      <div class="slide">
-		        <h3></h3>
-		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=load_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4&st=1278434046" /></p>
-              </div>
-			  <div class="slide">
-		        <h3></h3>
-		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/pie.php?title=Cluster%20Load%20Percentages&size=250x150&50-75=1,ffde5e&25-50=2,caff98&0-25=13,e2ecff&down=3,515151" /></p>
-		      </div>
-			  <div class="slide">
-		        <h3></h3>
-		        <p><img src="http://www.fing.edu.uy/cluster/ganglia/pie.php?title=Cluster%20queue%20usage&size=250x150&free=100,ac5e44" /></p>
-		      </div>
-            </div>
+		<div class="module">
+			<div class="module-title">Estd&iacute;sticas de tiempo real</div>
+			<div class="module-body">
+				<div id="slideshow">
+				    <div id="slidesContainer">
+				      <div class="slide">
+				        <h3></h3>
+				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=load_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+		              </div>
+					  <div class="slide">
+				        <h3></h3>
+				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=cpu_report&z=medium&c=FING Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				      </div>
+					  <div class="slide">
+				        <h3></h3>
+				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=mem_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				      </div>
+		      		  <div class="slide">
+				        <h3></h3>
+				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=network_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				      </div>	      
+		            </div>
+			    </div>
+			</div>
 	    </div>
 		<div class="module">
 			<div class="module-title">Noticias</div>
 			<div class="module-body">
-				<p>01/Marzo/2009</p>
-				<p>El cluster está operativo.</p>
-				<br/>
-				<p>23/Marzo/2009</p>
-				<p>Se esta formando una comision ad-hoc para definir las politicas de uso del cluster.</p>
-				<br/>
-				<p>30/Marzo/2009</p>
-				<p>Se publican las primeras estadísticas mensuales de uso.</p>
-				<br/>
-				<p>19/Junio/2009</p>
-				<p>Se han publicado estadisticas revisadas para Marzo, Abril y Mayo.</p>
-				<br/>
-				<p>06/Marzo/2010</p>
-				<p>Se han completado las estadisticas de 2009 y el primer bimestre de 2010.</p>
-				<br/>
-				<p>06/Marzo/2010</p>
-				<p>El cluster crece!. las proximas semanas se instalran 4 nuevos servidores adquiridos a fin de 2009, llevando el total de nucleos de calculo de 72 a 104</p>
-				<br/>
-				<p>08/Marzo/2010</p>
-				<p>Se ha incorporado a la web el reportGanglia grafico del estado del cluster en tiempo real</p>
+				<ul class="noticias">
+					<?php foreach($noticias as $noticia):?>
+						<li class="noticia">
+							<span class="noticia_titulo"><?php echo $noticia['titulo'];?></span>
+							<span class="noticia_fecha"><?php echo $noticia['fecha'];?></span>					
+							<p class="noticia_contenido"><?php echo $noticia['contenido'];?></p>
+						</li>
+					<?php endforeach;?>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -60,7 +58,7 @@
 			<div class="module-title">Reportes</div>
 			<div class="module-body">
 				<a href="#" class="menu-option">Estad&iacute;sticas de uso mensual</a>
-				<a href="#" class="menu-option">Estad&iacute;sticas de tiempo real</a>
+				<a href="#" class="menu-option">Estad&iacute;sticas de tiempo real (completas)</a>
 				<a href="#" class="menu-option">Uso de CPU</a>
 				<a href="#" class="menu-option">Uso de espacio de almacenamiento</a>
 			</div>
@@ -86,4 +84,7 @@
 			</div>
 		</div>
 	</div>
+	Logo CeCal
+	Logo Fing
+	Logo CSIC
 </div>
