@@ -47,7 +47,7 @@
 		</div>
 	</div>
 	<div id="right-column">
-		<div class="module" style="background:url(img/1278458880_kdmconfig.png) no-repeat right 25px;">
+		<div class="module" style="background:url(img/1278458880_kdmconfig_64x64.png) no-repeat right 30px;">
 			<div class="module-title">Nuevos usuarios</div>
 			<div class="module-body">
 				<a href="#" class="menu-option">C&oacute;mo conectarse</a>
@@ -56,7 +56,7 @@
 				<a href="#" class="menu-option">Generador de scripts</a>
 			</div>
 		</div>
-		<div class="module" style="background:url(img/1278458679_kcmpartitions.png) no-repeat right 25px;">
+		<div class="module" style="background:url(img/1278458679_kcmpartitions_64x64.png) no-repeat right 30px;">
 			<div class="module-title">Reportes</div>
 			<div class="module-body">
 				<a href="#" class="menu-option">Estad&iacute;sticas de uso mensual</a>
@@ -65,7 +65,7 @@
 				<a href="#" class="menu-option">Uso de espacio de almacenamiento</a>
 			</div>
 		</div>
-		<div class="module" style="background:url(img/1278458589_mycomputer.png) no-repeat right 25px;">
+		<div class="module" style="background:url(img/1278458589_mycomputer_64x64.png) no-repeat right 30px;">
 			<div class="module-title">Enseñanza</div>
 			<div class="module-body">
 				<a href="#" class="menu-option">Charla 1 (cluster)</a>
@@ -77,7 +77,7 @@
 				<a href="#" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
 			</div>
 		</div>
-		<div class="module" style="background:url(img/1278458764_folder_green.png) no-repeat right 25px;">
+		<div class="module" style="background:url(img/1278458764_folder_green_64x64.png) no-repeat right 30px;">
 			<div class="module-title">Documentos</div>
 			<div class="module-body">
 				<a href="#" class="menu-option">Descripci&oacute;n t&eacute;cnica</a>
