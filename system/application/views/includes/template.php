@@ -15,7 +15,7 @@
 			<div id="page-header">
 				<div id="page-header-body">
 					<!-- <h1 class="title">Cluster FING</h1> -->
-					<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>img/cluster_fing.png"></img></a>
+					<a href="<?php echo base_url();?>index.php"><img src="<?php echo base_url();?>img/cluster_fing.png"></img></a>
 					<p>
 						El cluster FING es una infraestructura de c&oacute;mputo de alto desempe&ntilde;o 
 						perteneciente a la Facultad de Ingenier&iacute;a. Su principal objetivo consiste 
