@@ -32,13 +32,14 @@ class Main extends Controller {
 			$archivo_fecha = unix_to_human($archivo_timestamp, TRUE, 'eu');
 			$archivo_contenido = read_file($archivo_path);
 			
-			$cuerpo = strstr($archivo_contenido, "\n");
-			$titulo = strstr($archivo_contenido, "\n", true);
+			$pos = strpos($archivo_contenido, "\n");
 			
-			if (!$titulo && !$cuerpo) {
-				$titulo = $archivo_contenido;
-			} else if (!$titulo && $cuerpo) {
+			if ($pos > 0) {
+				$cuerpo = substr($archivo_contenido, $pos, strlen($archivo_contenido));
+				$titulo = substr($archivo_contenido, 0, $pos);	
+			} else {
 				$titulo = "Noticia";
+				$cuerpo = $archivo_contenido;
 			}
 			
 			$pos = strrpos($archivo_nombre, ".");
