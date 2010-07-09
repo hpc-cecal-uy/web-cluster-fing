@@ -26,8 +26,6 @@ class Main extends Controller {
 		$archivos = get_dir_file_info($path_noticias);
 		
 		foreach ($archivos as $archivo) {	
-			//var_dump($archivo);
-			
 			$archivo_nombre = $archivo['name'];
 			$archivo_path = $archivo['server_path'];
 			$archivo_timestamp = filemtime($archivo_path);
@@ -35,7 +33,7 @@ class Main extends Controller {
 			$archivo_contenido = read_file($archivo_path);
 			
 			$pos = strrpos($archivo_nombre, ".");
-			if ($pos >= 0) {
+			if ($pos > 0) {
 			    $archivo_nombre = substr($archivo_nombre, 0 , $pos);
 			}
 			
@@ -47,6 +45,7 @@ class Main extends Controller {
 		}
 		
 		usort($noticias, 'sort_cmp');
+		$noticias = array_slice($noticias, 0, 10);
 		
 		return $noticias;
 	}

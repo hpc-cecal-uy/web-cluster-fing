@@ -1,8 +1,14 @@
 @CHARSET "UTF-8";
 
 * {
+	/*
 	margin:0;
 	padding:0;
+	*/
+}
+
+img {
+	border-style: none;
 }
 
 body {
@@ -12,6 +18,9 @@ body {
 	text-align: center;
 	
 	background-color:#fff;
+	
+	margin:0;
+	padding:0;
 }
 
 #page {
@@ -75,4 +84,37 @@ body {
 	margin-right: auto;
 	text-align: center;
 	font-size: 0.8em;
+}
+
+#volver {
+	float:right;
+	padding-left: 24px;
+	background-image: url(../img/back.png);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	line-height: 24px;
+	font-size: 1.2em;
+}
+
+#volver a {
+	text-decoration: none;
+}
+
+pre.escaped {
+	display:block;
+	
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	
+	background-color: #F9F9F9;
+	font-family: Sans-serif;
+	font-size: 12px;
+	padding: 12px 10px;
 }
