@@ -32,16 +32,25 @@ class Main extends Controller {
 			$archivo_fecha = unix_to_human($archivo_timestamp, TRUE, 'eu');
 			$archivo_contenido = read_file($archivo_path);
 			
+			$cuerpo = strstr($archivo_contenido, "\n");
+			$titulo = strstr($archivo_contenido, "\n", true);
+			
+			if (!$titulo && !$cuerpo) {
+				$titulo = $archivo_contenido;
+			} else if (!$titulo && $cuerpo) {
+				$titulo = "Noticia";
+			}
+			
 			$pos = strrpos($archivo_nombre, ".");
 			if ($pos > 0) {
 			    $archivo_nombre = substr($archivo_nombre, 0 , $pos);
 			}
 			
 			array_push($noticias, array(
-				'titulo'=>$archivo_nombre,
+				'titulo'=>$titulo,
 				'timestamp'=>$archivo_timestamp,
 				'fecha'=>$archivo_fecha,
-				'contenido'=>$archivo_contenido));			
+				'contenido'=>$cuerpo));			
 		}
 		
 		usort($noticias, 'sort_cmp');
