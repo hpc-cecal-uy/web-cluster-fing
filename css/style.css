@@ -102,6 +102,9 @@ body {
 
 pre.escaped {
 	display:block;
+	overflow: scroll;
+	overflow-y: auto;
+	overflow-x: auto;
 	
 	-moz-border-radius-topleft: 10px;
 	-moz-border-radius-topright: 10px;
