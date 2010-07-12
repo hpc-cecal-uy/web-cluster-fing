@@ -9,7 +9,7 @@
 <div id="two-columns">
 	<div id="left-column">
 		<div class="module">
-			<div class="module-title">Estd&iacute;sticas de tiempo real</div>
+			<div class="module-title">Estad&iacute;sticas de tiempo real</div>
 			<div class="module-body">
 				<div id="slideshow">
 				    <div id="slidesContainer">
@@ -97,9 +97,10 @@
 	<div class="contacto">
 		<table border="0" style="margin:auto">
 			<tr>
-				<td valign="top">e-mail de contacto:</td>
-				<td valign="bottom"><img src="<?php echo base_url();?>img/email.png"/></td>
+				<td valign="top" style="text-align: right;">e-mail de contacto:</td>
+				<td valign="bottom" style="text-align: left;"><img src="<?php echo base_url();?>img/email.png"/></td>
 			</tr>
+			<tr><td style="text-align: right;">grupo de noticias:</td><td style="text-align: left;">fing.cluster.general</td></tr>
 		</table>
 	</div>
 </div>
