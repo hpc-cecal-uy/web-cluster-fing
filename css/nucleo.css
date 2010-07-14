@@ -1,0 +1,106 @@
+h3 {
+	margin: 0;
+	padding: 7px 0 0 0;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+div#feature_list {
+	width: 750px;
+	height: 680px;
+	overflow: hidden;
+	position: relative;
+}
+
+div#feature_list ul {
+	position: absolute;
+	top: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul#tabs {
+	left: 0;
+	z-index: 2;
+	width: 320px;
+}
+
+ul#tabs li {
+	font-size: 12px;
+	font-family: Arial;
+}
+
+ul#tabs li img {
+	padding: 5px;
+	border: none;
+	float: left;
+	margin: 10px 10px 0 0;
+}
+
+ul#tabs li a {
+	color: #222;
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+	height: 60px;
+	outline: none;
+}
+
+ul#tabs li a:hover {
+	text-decoration: underline;
+}
+
+ul#tabs li a.current {
+	background: url('../img/feature-tab-current.png');
+	color: #FFF;
+}
+
+ul#tabs li a.current:hover {
+	text-decoration: none;
+	cursor: default;
+}
+
+ul#output {
+	right: 0;
+	width: 425px;
+	/*height: 750px;*/
+	position: relative;
+}
+
+ul#output li {
+	position: absolute;
+	width: 425px;
+	/*height: 750px;*/
+}
+
+ul#output li a {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	padding: 8px 12px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #FFF;
+	background: #000;
+	-moz-border-radius: 5px;
+}
+
+ul#output li a:hover {
+	background: #222222;
+}
+
+.logos {
+	width: 100%;
+	text-align: center;
+	padding-top: 4em;
+}
+
+.logos a {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.logos img {
+	border-style: none;
+}
