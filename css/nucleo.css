@@ -89,7 +89,10 @@ ul#output li a {
 	
 	color: #FFF;
 	background: #000;
-
+	background-image: url('../img/ver_mas.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+	
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	text-align: justify;
@@ -97,9 +100,6 @@ ul#output li a {
 
 ul#output li a:hover {
 	background-color: #222222;
-	background-image: url('../img/ver_mas.png');
-	background-repeat: no-repeat;
-	background-position: top right;
 }
 
 .logos {
