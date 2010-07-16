@@ -6,8 +6,8 @@ h3 {
 }
 
 div#feature_list {
-	width: 750px;
-	height: 750px;
+	width: 890px;
+	height: 670px;
 	overflow: hidden;
 	position: relative;
 }
@@ -42,8 +42,11 @@ ul#tabs li a {
 	color: #222;
 	text-decoration: none;
 	display: block;
-	padding: 10px;
-	height: 60px;
+	padding-right: 15px;
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	height: 50px;
 	outline: none;
 }
 
@@ -52,7 +55,7 @@ ul#tabs li a:hover {
 }
 
 ul#tabs li a.current {
-	background: url('../img/feature-tab-current.png');
+	background: url('../img/feature-tab-current_320x60.png');
 	color: #FFF;
 }
 
@@ -63,14 +66,14 @@ ul#tabs li a.current:hover {
 
 ul#output {
 	right: 0;
-	width: 425px;
+	width: 560px;
 	/*height: 750px;*/
 	position: relative;
 }
 
 ul#output li {
 	position: absolute;
-	width: 425px;
+	width: 560px;
 	/*height: 750px;*/
 }
 
@@ -78,19 +81,25 @@ ul#output li a {
 	position: absolute;
 	top: 0px;
 	left: 10px;
-	width: 390px;
-	height: 730px;
+	width: 525px;
+	height: 650px;
 	padding: 8px 12px;
 	text-decoration: none;
-	font-size: 12px;
+	font-size: 13px;
+	
 	color: #FFF;
 	background: #000;
+
 	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
 	text-align: justify;
 }
 
 ul#output li a:hover {
-	background: #222222;
+	background-color: #222222;
+	background-image: url('../img/ver_mas.png');
+	background-repeat: no-repeat;
+	background-position: top right;
 }
 
 .logos {
