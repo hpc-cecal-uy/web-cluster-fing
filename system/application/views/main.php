@@ -80,6 +80,13 @@
 				<a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_3.pdf" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
 			</div>
 		</div>
+		<div class="module" style="background-image:url(img/1280327953_edu_science_64x64.png);">
+			<div class="module-title">Investigación</div>
+			<div class="module-body">
+				<a href="http://www.fing.edu.uy/cluster/index.php/nucleo" class="menu-option">N&uacute;cleo Interdisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o (NICCAD)</a>
+				<a href="http://www.fing.edu.uy/cluster/seminario/" class="menu-option">Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
+			</div>
+		</div>
 		<div class="module" style="background-image:url(img/1278458764_folder_green_64x64.png);">
 			<div class="module-title">Documentos</div>
 			<div class="module-body">
