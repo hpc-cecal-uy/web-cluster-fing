@@ -7,6 +7,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="744.09448819"
@@ -24,6 +25,20 @@
        inkscape:vp_z="744.09448 : 526.18109 : 1"
        inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
        id="perspective10" />
+    <inkscape:perspective
+       id="perspective3655"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3729"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -33,16 +48,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="6.1095684"
-     inkscape:cx="138.36398"
+     inkscape:cx="109.39303"
      inkscape:cy="929.28532"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1038"
-     inkscape:window-height="611"
-     inkscape:window-x="47"
-     inkscape:window-y="41"
-     inkscape:window-maximized="0" />
+     inkscape:window-width="1366"
+     inkscape:window-height="691"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -60,28 +75,48 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#cccccc;fill-opacity:1;stroke:#cccccc;stroke-width:8.63642502;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#cccccc;fill-opacity:1;stroke:#cccccc;stroke-width:9.318;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect2816"
-       width="51.363575"
-       height="11.363575"
-       x="102.68219"
-       y="126.88784"
-       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas.png"
+       width="63.612198"
+       height="10.681662"
+       x="103.02315"
+       y="127.2288"
+       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas_2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <text
        xml:space="preserve"
        style="font-size:18px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="103.49927"
-       y="136.64713"
+       x="104.09927"
+       y="136.94711"
        id="text3590"
-       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas.png"
+       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas_2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3592"
-         x="103.49927"
-         y="136.64713"
+         x="104.09927"
+         y="136.94711"
          style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial">ver más</tspan></text>
+    <image
+       y="96.654999"
+       x="127.79439"
+       id="image3657"
+       height="11.297814"
+       width="7.2058682"
+       xlink:href="file:///home/santiago/eclipse/php-workspace/web-cluster-fing/img/1278435166_gtk-media-play-ltr.png"
+       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas_2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <image
+       y="126.41653"
+       x="156.04546"
+       id="image3731"
+       height="13.136653"
+       width="13.300331"
+       xlink:href="file:///home/santiago/eclipse/php-workspace/web-cluster-fing/img/1278626091_next.png"
+       inkscape:export-filename="/home/santiago/eclipse/php-workspace/web-cluster-fing/img/ver_mas_2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
   </g>
 </svg>
