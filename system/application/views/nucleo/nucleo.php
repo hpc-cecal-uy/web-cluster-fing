@@ -27,6 +27,10 @@
 				<span></span> </a></li>
 				
 				<li><a href="javascript:;">
+				<h3>Laboratorio de Química Teorica y Computacional</h3>
+				<span></span> </a></li>
+				
+				<li><a href="javascript:;">
 				<h3>Mecánica de los Fluidos Computacional</h3>
 				<span></span> </a></li>			
 
@@ -40,10 +44,6 @@
 				
 				<li><a href="javascript:;">
 				<h3>Simulación numérica de convertidores energéticos</h3>
-				<span></span> </a></li>
-				
-				<li><a href="javascript:;">
-				<h3>Laboratorio de Química Teorica y Computacional</h3>
 				<span></span> </a></li>
 			</ul>
 			<ul id="output">
@@ -173,6 +173,36 @@
 					Los objetivos principales del LPE son desarrollar y poner a punto técnicas probabilísticas y estadísticas de análisis de información que colaboren en la solución de los diversos problemas tecnológicos y científicos de interés nacional, y contribuir a formar los recursos humanos capaces de llevar adelante tales tareas en los diversos ámbitos de la actividad nacional.
 					<br/><br/>
 					Si bien hay un énfasis muy importante en la realización de trabajo aplicado, una característica destacable del grupo es la búsqueda de un equilibrio entre las actividades más aplicadas y las de fundamentación básica. Por lo tanto, si bien el LPE apunta preferentemente a la investigación aplicada o de mayor impacto directo sobre aplicaciones, requiere a todos sus integrantes la realización de actividades de formación (y cuando corresponde, de investigación) básica en Probabilidad y Estadística.</a></li>
+								<li>
+					<a href="http://www.fing.edu.uy/inco/grupos/cecal/hpc/">
+						<b>Grupo de investigación:</b><br />
+						Laboratorio de Química Teorica y Computacional<br />
+						<br/>
+						<b>Institución:</b><br />
+						Instituto de Química Biologica, Facultad de Ciencias<br />
+						<br />
+						<b>Responsable:</b><br />
+						Laura Coitiño<br />
+						<br />
+						<b>Representante ante el NICCAD:</b><br />
+						Laura Coitiño<br />
+						<br />
+						<b>Áreas temáticas de investigación:</b><br />
+						a) Modelado QM y QM/MM de sistemas moleculares de interes biomedico y
+						bioquimico (en especial bases moleculares de patologias humanas, por ej.
+						procesos de glicacion de peptidos y proteinas relevantes en Diabetes,
+						Alzheimer y Cancer; alteraciones de ADN vinculado a la generacion de
+						patologias de origen genetico; nitracion de acidos grasos);<br/><br/>
+						b) Screening in silico de potenciales farmacos anticancerigenos de Pt, Pd
+						y Ru con herramientas bioinformaticas de data mining acopladas a metodos
+						QM; mecanismos de transporte biomolecular y mecanismo de accion molecular
+						en el organismo;<br/><br/>
+						c) Optimizacion in silico de sensores para daño de ADN basados en
+						compuestos de Ru que actuan como switches moleculares de luz;<br/><br/>
+						d) Enzimologia computacional (ej.mecanismo de accion de la  Etanolamina
+						amonio lias).
+					</a>
+				</li>
 				<li style="display: none;"><a href="#">
 					<b>Grupo de investigación:</b><br />
 					Mecánica de los Fluidos Computacional<br />
@@ -248,36 +278,6 @@
 					- Aplicación de herramientas teóricas de Termodinámica de Tiempos Finitos para optimizar motores de combustión interna.
 					<br/><br/>
 					- Evaluación y análisis no lineal de un modelo estocástico que reproduce la variabilidad cíclica en motores de encendido por chispa.</a>
-				</li>
-				<li>
-					<a href="http://www.fing.edu.uy/inco/grupos/cecal/hpc/">
-						<b>Grupo de investigación:</b><br />
-						Laboratorio de Química Teorica y Computacional, Instituto de Química Biologica<br />
-						<br/>
-						<b>Institución:</b><br />
-						Facultad de Ciencias<br />
-						<br />
-						<b>Responsable:</b><br />
-						Laura Coitiño<br />
-						<br />
-						<b>Representante ante el NICCAD:</b><br />
-						Laura Coitiño<br />
-						<br />
-						<b>Áreas temáticas de investigación:</b><br />
-						a) Modelado QM y QM/MM de sistemas moleculares de interes biomedico y
-						bioquimico (en especial bases moleculares de patologias humanas, por ej.
-						procesos de glicacion de peptidos y proteinas relevantes en Diabetes,
-						Alzheimer y Cancer; alteraciones de ADN vinculado a la generacion de
-						patologias de origen genetico; nitracion de acidos grasos);<br/><br/>
-						b) Screening in silico de potenciales farmacos anticancerigenos de Pt, Pd
-						y Ru con herramientas bioinformaticas de data mining acopladas a metodos
-						QM; mecanismos de transporte biomolecular y mecanismo de accion molecular
-						en el organismo;<br/><br/>
-						c) Optimizacion in silico de sensores para daño de ADN basados en
-						compuestos de Ru que actuan como switches moleculares de luz;<br/><br/>
-						d) Enzimologia computacional (ej.mecanismo de accion de la  Etanolamina
-						amonio lias).
-					</a>
 				</li>
 			</ul>
 		</div>
