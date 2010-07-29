@@ -38,8 +38,8 @@ class Main extends Controller {
 				$cuerpo = substr($archivo_contenido, $pos, strlen($archivo_contenido));
 				$titulo = substr($archivo_contenido, 0, $pos);	
 			} else {
-				$titulo = "Noticia";
-				$cuerpo = $archivo_contenido;
+				$titulo = $archivo_contenido;
+				$cuerpo = "";
 			}
 			
 			$pos = strrpos($archivo_nombre, ".");
