@@ -29,7 +29,7 @@ class Main extends Controller {
 			$archivo_nombre = $archivo['name'];
 			$archivo_path = $archivo['server_path'];
 			$archivo_timestamp = filemtime($archivo_path);
-			$archivo_fecha = unix_to_human($archivo_timestamp, TRUE, 'eu');
+			$archivo_fecha = unix_to_human($archivo_timestamp, FALSE, 'eu');
 			$archivo_contenido = read_file($archivo_path);
 			
 			$pos = strpos($archivo_contenido, "\n");
