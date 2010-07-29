@@ -39,8 +39,7 @@
 				<ul class="noticias">
 					<?php foreach($noticias as $noticia):?>
 						<li class="noticia">
-							<span class="noticia_titulo"><?php echo $noticia['titulo'];?></span>
-							<span class="noticia_fecha"><?php echo $noticia['fecha'];?></span>					
+							<span class="noticia_fecha"><?php echo $noticia['fecha'];?></span><span class="noticia_titulo"><?php echo $noticia['titulo'];?></span>
 							<p class="noticia_contenido"><?php echo $noticia['contenido'];?></p>
 						</li>
 					<?php endforeach;?>

@@ -98,7 +98,7 @@ a.menu-option:hover {
 
 .noticias .noticia_fecha {
 	font-size: 0.8em;
-	float: right;
+	/*float: right;*/
 }
 
 .noticias .noticia_contenido {
