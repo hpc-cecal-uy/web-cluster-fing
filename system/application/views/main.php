@@ -68,7 +68,7 @@
 				<a href="http://www.fing.edu.uy/cluster/uso.disco.home.cluster.txt" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
 			</div>
 		</div>
-		<div class="module" style="background-image:url(img/1278458740_file-manager_64x64.png);">
+		<div class="module" style="background-image:url(img/1280934526_package_edutainment_64x64.png);">
 			<div class="module-title">Enseñanza</div>
 			<div class="module-body">
 				<a href="http://www.fing.edu.uy/cluster/grupo/cluster_arquitectura_y_aplicaciones.pdf" class="menu-option">Charla 1 (cluster)</a>
