@@ -56,7 +56,7 @@
 				<a href="index.php/como_ejecutar_trabajo" class="menu-option">C&oacute;mo ejecutar un trabajo</a>
 				<a href="index.php/comandos_uso_cotidiano" class="menu-option">Comandos de uso cotidiano</a>
 				<a href="index.php/preguntas_frecuentes" class="menu-option">Preguntas frecuentes</a>
-				<a href="http://www.fing.edu.uy/inco/grupos/cecal/hpc/php-qsub" class="menu-option" target="_new">Generador de scripts</a>
+				<a href="index.php/qsubscript" class="menu-option" target="_new">Generador de scripts</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1278458679_kcmpartitions_64x64.png);">

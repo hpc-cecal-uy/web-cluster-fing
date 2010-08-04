@@ -15,6 +15,7 @@ class Main extends Controller {
 			'<script src="'.base_url().'js/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>';
 		$data['css_include'] = '<link rel="stylesheet" href="'.base_url().'css/main.css" type="text/css" media="screen" />'.
 			'<link rel="stylesheet" href="'.base_url().'css/nivo-slider.css" type="text/css" media="screen" />';
+		
 		$data['noticias'] = $this->obtenerNoticias();
 		$this->load->view('includes/template', $data);
 	}
