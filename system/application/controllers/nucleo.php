@@ -8,6 +8,7 @@ class Nucleo extends Controller {
 	
 	function index() {
 		$data['body'] = 'nucleo/nucleo';
+		$data['volver_style'] = '';
 		$data['js_include'] = 
 			'<script src="'.base_url().'js/nucleo.js" type="text/javascript" charset="utf-8"></script>'.
 			'<script src="'.base_url().'js/jquery.featureList-1.0.0.js" type="text/javascript" charset="utf-8"></script>';

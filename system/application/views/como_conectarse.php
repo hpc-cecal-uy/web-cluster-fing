@@ -1,4 +1,3 @@
-<div id="volver"><a href="<?php echo base_url();?>index.php">volver</a></div>
 <div id="content-wrapper">
 	<div id="content-container">
 		<div id="content">

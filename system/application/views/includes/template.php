@@ -15,7 +15,6 @@
 		<div id="page">
 			<div id="page-header">
 				<div id="page-header-body">
-					<!-- <h1 class="title">Cluster FING</h1> -->
 					<a href="<?php echo base_url();?>index.php"><img src="<?php echo base_url();?>img/cluster_fing.png"></img></a>
 					<p>
 						El cluster FING es una infraestructura de c&oacute;mputo de alto desempe&ntilde;o 
@@ -25,6 +24,9 @@
 						llamado de Fortalecimiento de Equipamientos para la Investigaci&oacute;n de la 
 						Comisi&oacute;n Sectorial de Investigaci&oacute;n Cient&iacute;fica (2008). 
 					</p>
+					<div class="volver_header" style="<?php echo $volver_style; ?>">
+						<a href="<?php echo base_url();?>index.php">volver a la página principal</a>
+					</div>
 				</div>
 			</div>
 			

@@ -1,4 +1,3 @@
-<div id="volver"><a href="<?php echo base_url();?>index.php">volver</a></div>
 <h2>Generador de scripts qsub para el cluster FING</h2>
 <div id="contenidoInterno">
 	<div <?php if (strlen($error) == 0) echo 'style="display:none;"'; ?>>

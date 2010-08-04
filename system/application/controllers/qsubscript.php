@@ -33,6 +33,7 @@ class QSubScript extends Controller {
 		$data['body'] = 'qsubscript';
 		$data['js_include'] = '<script src="'.base_url().'js/qsubscript.js" type="text/javascript" charset="utf-8"></script>';
 		$data['css_include'] = '<link rel="stylesheet" href="'.base_url().'css/qsubscript.css" type="text/css" media="screen" />';
+		$data['volver_style'] = '';
 		
 		$data['implementacion_mpi_trabajo_options'] = $implementacion_mpi_trabajo_options;
 		$data['cola_trabajo_options'] = $cola_trabajo_options;

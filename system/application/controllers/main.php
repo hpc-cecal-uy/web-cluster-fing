@@ -10,6 +10,7 @@ class Main extends Controller {
 		$this->load->helper('file');
 		$this->load->helper('date');
 		
+		$data['volver_style'] = 'display:none';
 		$data['body'] = 'main';
 		$data['js_include'] = '<script src="'.base_url().'js/main.js" type="text/javascript" charset="utf-8"></script>'.
 			'<script src="'.base_url().'js/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>';
