@@ -90,7 +90,7 @@
 		<div class="module" style="background-image:url(img/1278458764_folder_green_64x64.png);">
 			<div class="module-title">Documentos</div>
 			<div class="module-body">
-				<a href="http://www.fing.edu.uy/cluster/pdfs/componentes.pdf" class="menu-option">Descripci&oacute;n t&eacute;cnica</a>
+				<a href="<?php echo base_url();?>files/clusterFING_estructura.pdf" class="menu-option">Descripci&oacute;n t&eacute;cnica</a>
 				<a href="http://www.fing.edu.uy/cluster/pdfs/politicas.pdf" class="menu-option">Pol&iacute;ticas de uso</a>
 				<a href="http://www.fing.edu.uy/cluster/pdfs/Reglamento.pdf" class="menu-option">Reglamento de uso</a>
 			</div>
