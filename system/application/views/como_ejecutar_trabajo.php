@@ -1,8 +1,6 @@
-<div id="content-wrapper">
-<div id="content-container">
 <div id="content">
 <h1>Cómo ejecutar un trabajo</h1>
-<div>
+<div id="content-body">
 <h2>Índice</h2>
 <ul>
 	<li><a href='#Recursos'>Solicitud de recursos</a></li>
@@ -41,14 +39,12 @@ uno.<br />
 Solicita 2 nodos con el atributo "server" y 14 nodos de cualquier tipo,
 todos con una unidad de procesamiento. En total solicita 16 nodos.<br />
 <br />
-<pre class='escaped'>qsub -l
-nodes=server:hippi+10:noserver+3:bigmem:hippi</pre><br />
+<pre class='escaped'>qsub -l nodes=server:hippi+10:noserver+3:bigmem:hippi</pre><br />
 Solicita un nodo que tenga los atributos "server" y "hippi", 10 nodos
 con el atributo "notserver" y 3 nodos con los atributos "bigmem" y
 "hippi".<br />
 <br />
-<pre class='escaped'>qsub -l
-nodes=node02.cluster.fing+node03.cluster.fing+node09.cluster.fing</pre><br />
+<pre class='escaped'>qsub -l nodes=node02.cluster.fing+node03.cluster.fing+node09.cluster.fing</pre><br />
 Solicita 3 nodos por nombre con una unidad de procesamiento por nodo.<br />
 <br />
 <pre class='escaped'>qsub -l nodes=4:ppn=2</pre><br />
@@ -58,8 +54,7 @@ En total solicita 8 unidades de procesamiento.<br />
 <pre class='escaped'>qsub -l nodes=1:ppn=4</pre><br />
 Solicita 1 nodo con 4 unidades de procesamiento.<br />
 <br />
-<pre class='escaped'>qsub -l
-nodes=2:blue:ppn=2+red:ppn=3+node12.cluster.fing</pre><br />
+<pre class='escaped'>qsub -l nodes=2:blue:ppn=2+red:ppn=3+node12.cluster.fing</pre><br />
 Solicita 2 nodos con el atributo "blue" con 2 unidades de procesamiento
 disponibles cada uno, 2 nodos con el atributo "red" con 3 unidades de
 procesamiento disponibles en cada uno y un nodo por nombre con una
@@ -220,18 +215,18 @@ disponibles en el cluster se debe ejecutar:</p>
 mpich-ch_p4-gcc-1.2.7
 openmpi-1.2.5
 lam-7.1.4</pre>
-<p>Para configurar el uso de la implementación MPICH se
-debe ejecutar: <pre class='escaped'>[siturria@cluster ~]$ switcher mpi = mpich-ch_p4-gcc-1.2.7</pre></p>
-<p>Finalmente podemos verificar que la configuración sea
-la correcta ejecutando el siguiente comando: <pre class='escaped'>[siturria@cluster
+<p>Para configurar el uso de la implementación MPICH se debe ejecutar: <pre
+	class='escaped'>[siturria@cluster ~]$ switcher mpi = mpich-ch_p4-gcc-1.2.7</pre></p>
+<p>Finalmente podemos verificar que la configuración sea la correcta
+ejecutando el siguiente comando: <pre class='escaped'>[siturria@cluster
 mom_logs]$ switcher mpi --user</pre></p>
-<p>Una vez definida una implementación de MPI para
-nuestro usuario los comandos MPI (p.ej.: mpicc, mpiCC, mpirun, etc.)
-quedaran definidos de forma global en el cluster y podrémos ejecutarlos
-sin inconvenientes desde cualquier nodo.</p>
-<p>Es necesario cerrar la conexión de la sesión actual e
-iniciar una nueva conexión con el cluster para que la nueva
-configuración tenga efecto.</p>
+<p>Una vez definida una implementación de MPI para nuestro usuario los
+comandos MPI (p.ej.: mpicc, mpiCC, mpirun, etc.) quedaran definidos de
+forma global en el cluster y podrémos ejecutarlos sin inconvenientes
+desde cualquier nodo.</p>
+<p>Es necesario cerrar la conexión de la sesión actual e iniciar una
+nueva conexión con el cluster para que la nueva configuración tenga
+efecto.</p>
 <div></div>
 <h3>MPICH<a name='DistribuidoMPICH' id='DistribuidoMPICH'></a></h3>
 
@@ -421,7 +416,5 @@ NPROCS=$(wc -l &lt; $PBS_NODEFILE)
 echo $NPROCS
 echo
 time mpiexec -np $NPROCS -machinefile $PBS_NODEFILE ./&lt;Ejecutable de nuestro trabajo&gt;</pre>
-</div>
-</div>
 </div>
 </div>

@@ -1,9 +1,6 @@
-<div id="content-wrapper">
-<div id="content-container">
-<div id="content"><!--PageTitleFmt-->
+<div id="content">
 <h1>Comandos de uso cotidiano</h1>
-<!--/PageTitleFmt--> <!--PageText-->
-<div>
+<div id="content-body">
 <ul>
 	<li><a href='#IniciarTrabajo'>Iniciar un trabajo en el cluster</a></li>
 	<li><a href='#ListarTrabajos'>Listar trabajos en el cluster</a></li>
@@ -66,7 +63,6 @@ Total Jobs: 3   Active Jobs: 3   Idle Jobs: 0   Blocked Jobs: 0
 <p>Si se desea obtener solamente los trabajos del usuario siturria se
 puede utilizar el argumento <em>-u</em>:</p>
 <pre class='escaped'>
-
 [siturria@cluster ~]$ showq -u siturria
 </pre>
 <p>Si se desea obtener un listado con los totales de trabajos por cada
@@ -86,8 +82,8 @@ especial           --      --       --      --    0   0 --   E R
 </pre>
 <h2>Eliminar un trabajo del cluster<a name='EliminarTrabajo'
 	id='EliminarTrabajo'></a></h2>
-<p><code class='escaped'>[siturria@cluster ~]$ qdel 285.cluster</code><br />
-</p>
+<pre class='escaped'>
+[siturria@cluster ~]$ qdel 285.cluster</pre>
 <h2>Detalle de un trabajo<a name='DetalleTrabajo' id='DetalleTrabajo'></a></h2>
 <p>Para obtener información de un trabajo que aún se encuentra en el
 sistema pueden utilizarse los comandos <em>checkjob</em> o <em>qstat -f</em>.
@@ -246,9 +242,7 @@ available backfill window.
 <pre class='escaped'>
 [siturria@cluster primeNumber]$ diagnose -j
 [siturria@cluster primeNumber]$ diagnose -q 
-</pre></div>
-
-</div>
+</pre>
 </div>
 </div>
 

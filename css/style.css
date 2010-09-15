@@ -1,10 +1,10 @@
 @CHARSET "UTF-8";
 
-* {
-	/*
+* { /*
 	margin:0;
 	padding:0;
 	*/
+	
 }
 
 img {
@@ -14,28 +14,24 @@ img {
 body {
 	font-family: Helvetica, Verdana, Lucida Grande, Sans-serif;
 	font-size: 12px;
-	color:navy;
+	color: navy;
 	text-align: center;
-	
-	background-color:#fff;
-	
-	margin:0;
-	padding:0;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
 }
 
 #page {
+	
 }
 
 #page-header {
 	padding-top: 1em;
 	padding-bottom: 0px;
-	
 	width: 100%;
 	text-align: center;
-	
-	background-image:url(../img/header-background.png);
-	background-repeat:repeat-x;
-	
+	background-image: url(../img/header-background.png);
+	background-repeat: repeat-x;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: black;
@@ -45,7 +41,7 @@ body {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: left;	
+	text-align: left;
 }
 
 #page-header .title {
@@ -63,18 +59,15 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: left;
-	
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
 #page-footer {
 	width: 100%;
-
 	padding-top: 1.5em;
 	padding-bottom: 1em;
 	text-align: center;
-	
 	float: left;
 }
 
@@ -104,13 +97,10 @@ body {
 	padding-left: 15px;
 	right: 0px;
 	text-decoration: none;
-	
 	background-color: #5EA3CE;
 	color: white;
-	
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
-	
 	-webkit-border-top-left-radius: 5px;
 	-webkit-border-top-right-radius: 5px;
 }
@@ -120,7 +110,7 @@ body {
 }
 
 #volver {
-	float:right;
+	float: right;
 	padding-left: 24px;
 	background-image: url(../img/back.png);
 	background-repeat: no-repeat;
@@ -134,23 +124,40 @@ body {
 }
 
 pre.escaped {
-	display:block;
+	display: block;
 	overflow: scroll;
 	overflow-y: auto;
 	overflow-x: auto;
-	
 	-moz-border-radius-topleft: 10px;
 	-moz-border-radius-topright: 10px;
 	-moz-border-radius-bottomleft: 10px;
 	-moz-border-radius-bottomright: 10px;
-	
 	-webkit-border-top-left-radius: 10px;
 	-webkit-border-top-right-radius: 10px;
 	-webkit-border-bottom-left-radius: 10px;
 	-webkit-border-bottom-right-radius: 10px;
-	
-	background-color: #F9F9F9;
+	background-color: #E8E8E8;
 	font-family: Sans-serif;
 	font-size: 12px;
 	padding: 12px 10px;
+}
+
+#content {
+	font-size: 14px;
+}
+
+#content h1 {
+	font-size: 22px;
+}
+
+#content h2 {
+	font-size: 18px;
+}
+
+#content h3 {
+	font-size: 16px;
+}
+
+#content-body {
+
 }
