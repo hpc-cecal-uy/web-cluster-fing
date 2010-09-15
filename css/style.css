@@ -80,29 +80,36 @@ body {
 }
 
 .volver_header {
-	margin: 2px;
+	margin: auto;
 	padding: 0px;
-	width: 100%;
-	text-align: right;
+	width: 900px;
+	text-align: center;
 }
 
 .volver_header a {
+	float: right;
+	
 	margin-left: auto;
 	margin-right: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	padding-top: 5px;
-	padding-bottom: 2px;
+	
+	padding-top: 3px;
+	padding-bottom: 3px;
 	padding-right: 15px;
 	padding-left: 15px;
+	
+	font-size: 13px;
+	font-weight: bold;
 	right: 0px;
 	text-decoration: none;
 	background-color: #5EA3CE;
 	color: white;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-topright: 5px;
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
+	
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
 }
 
 .volver_header a:hover {

@@ -24,10 +24,10 @@
 						llamado de Fortalecimiento de Equipamientos para la Investigaci&oacute;n de la 
 						Comisi&oacute;n Sectorial de Investigaci&oacute;n Cient&iacute;fica (2008). 
 					</p>
-					<div class="volver_header" style="<?php echo $volver_style; ?>">
-						<a href="<?php echo base_url();?>index.php">volver a la página principal</a>
-					</div>
 				</div>
+			</div>
+			<div class="volver_header" style="<?php echo $volver_style; ?>">
+				<a href="<?php echo base_url();?>index.php">volver a la página principal</a>
 			</div>
 			
 			<div id="page-body">
