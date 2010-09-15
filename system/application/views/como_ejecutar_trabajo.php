@@ -17,48 +17,88 @@
 <h2>Solicitud de recursos<a name='Recursos' id='Recursos'></a></h2>
 <p>Antes de iniciar un trabajo en el cluster es necesario solicitar los
 recursos de cómputo que el trabajo requerirá para su ejecución. Existen
-3 tipos de recursos que deben solicitarse:</p>
+dos tipos de recursos que deben solicitarse:</p>
 <ul>
-	<li>Cantidad de nodos utilizados (nodes)</li>
+	<li>Nodos utilizados</li>
 	<li>Tiempo total de ejecución del trabajo (walltime)</li>
 </ul>
-<h3>Cantidad de nodos utilizados (nodes)</h3>
-<p>A menos que se especifique lo contrario se asume que cada nodo
-solicitado por un trabajo requiere una sola unidad de cómputo, es decir,
-un solo CPU. Una máquina del cluster que cuenta con 8 CPU (p.ej.: dos
-procesadores con cuatro núcleos cada uno) es equivalente a 8 nodos de un
-solo CPU, esto quiere decir que una máquina de este tipo puede ejecutar
-simultáneamente 8 trabajos que requieran un nodo cada uno.<br />
+<h3>Nodos utilizados</h3>
+<p>Debe especificarse la cantidad de nodos que requiere un trabajo para
+su ejecución. A menos que se especifique lo contrario cada nodo
+solicitado por un trabajo equivale a un CPU del cluster, i.e., una
+máquina del cluster que cuenta con 8 CPU es equivalente a 8 nodos. Una
+máquina con 8 CPU puede ejecutar simultáneamente 8 trabajos que
+requieran un nodo cada uno.<br />
+<br />
+Además de las cantidad de nodos requeridos, pueden solicitarse nodos
+según sus características o por su nombre. Actualmente el cluster se
+encuentra compuesto por los siguientes nodos.
+<table cellpadding="5px" cellspacing="5px">
+	<tr style="font-weight:bold;">
+		<td>Nombre</td>
+		<td>#</td>
+		<td>Atributos</td>
+		<td>Características de cada máquina</td>
+	</tr>
+	<tr>
+		<td>node02 al node09</td>
+		<td>8</td>
+		<td>cpu,cpu8,ram8</td>
+		<td>8 núcleos y 8 GB de RAM</td>
+	</tr>
+	<tr>
+		<td>node11 al node16</td>
+		<td>6</td>
+		<td>cpu,cpu2,ram2</td>
+		<td>2 núcleos y 2 GB de RAM</td>
+	</tr>
+	<tr>
+		<td>node20 al node23</td>
+		<td>4</td>
+		<td>cpu,cpu16,ram24</td>
+		<td>8 núcleos (16 con hyper-threading) y 24 GB de RAM</td>
+	</tr>
+	<tr>
+		<td>tesla</td>
+		<td>1</td>
+		<td>gpu,gpu4,ram48</td>
+		<td>8 núcleos (16 con hyper-threading), 48 GB de RAM, 4 tarjetas
+		nVidia C1060</td>
+	</tr>
+</table>
+<br />
 <br />
 Ejemplos de solicitud de nodos:<br />
 <pre class='escaped'>qsub -l nodes=12</pre><br />
 Solicita 12 nodos de cualquier tipo con una unidad de cómputo (CPU) cada
-uno.<br />
+uno. En total se solicitan 12 CPU que pueden estar distribuidos entre cualquier 
+máquina del cluster.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=2:server+14</pre><br />
-Solicita 2 nodos con el atributo "server" y 14 nodos de cualquier tipo,
-todos con una unidad de procesamiento. En total solicita 16 nodos.<br />
+<pre class='escaped'>qsub -l nodes=2:cpu8+14</pre><br />
+Solicita 2 nodos con el atributo "cpu8" y 14 nodos de cualquier tipo,
+todos con una unidad de procesamiento. En total solicita 16 CPU.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=server:hippi+10:noserver+3:bigmem:hippi</pre><br />
-Solicita un nodo que tenga los atributos "server" y "hippi", 10 nodos
-con el atributo "notserver" y 3 nodos con los atributos "bigmem" y
-"hippi".<br />
+<pre class='escaped'>qsub -l nodes=cpu16:ram24+10:cpu8+3:cpu2:ram2</pre><br />
+Solicita un nodo que tenga los atributos "cpu" y "ram24", 10 nodos
+con el atributo "cpu8" y 3 nodos con los atributos "cpu2" y "ram2". En total
+se solicitan 14 CPU.<br />
 <br />
 <pre class='escaped'>qsub -l nodes=node02.cluster.fing+node03.cluster.fing+node09.cluster.fing</pre><br />
-Solicita 3 nodos por nombre con una unidad de procesamiento por nodo.<br />
-<br />
-<pre class='escaped'>qsub -l nodes=4:ppn=2</pre><br />
-Solicita 4 nodos con 2 unidades de procesamiento disponibles cada uno.
-En total solicita 8 unidades de procesamiento.<br />
+Solicita 3 nodos por nombre con una unidad de procesamiento por nodo.
+En total se solicitan 3 CPU.<br />
 <br />
 <pre class='escaped'>qsub -l nodes=1:ppn=4</pre><br />
-Solicita 1 nodo con 4 unidades de procesamiento.<br />
+Solicita 1 nodo con 4 unidades de procesamiento. Es decir que al trabajo se le asignarán
+4 CPU pero estos deben estar en la misma máquina.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=2:blue:ppn=2+red:ppn=3+node12.cluster.fing</pre><br />
-Solicita 2 nodos con el atributo "blue" con 2 unidades de procesamiento
-disponibles cada uno, 2 nodos con el atributo "red" con 3 unidades de
+<pre class='escaped'>qsub -l nodes=4:ppn=2</pre><br />
+Solicita 4 nodos con 2 unidades de procesamiento disponibles cada uno. En total solicitan 8 CPU.<br />
+<br />
+<pre class='escaped'>qsub -l nodes=2:ram8:ppn=2+ram24:ppn=3+node12.cluster.fing</pre><br />
+Solicita 2 nodos con el atributo "ram8" con 2 unidades de procesamiento
+disponibles cada uno, 2 nodos con el atributo "ram24" con 3 unidades de
 procesamiento disponibles en cada uno y un nodo por nombre con una
-unidad de procesamiento disponible.<br />
+unidad de procesamiento disponible. En total se solicitan 8 CPU.<br />
 </p>
 <h3>Tiempo total de ejecución del trabajo (walltime)</h3>
 <p>Este recruso mide el tiempo total de ejecución de un trabajo, desde
