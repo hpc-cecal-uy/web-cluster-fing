@@ -10,7 +10,6 @@
 	<ul>
 		<li><a href='#DistribuidoMPICH'>MPICH</a></li>
 		<li><a href='#DistribuidoLAM'>LAM/MPI</a></li>
-		<li><a href='#DistribuidoOpenMPI'>OpenMPI</a></li>
 	</ul>
 	</li>
 </ul>
@@ -251,15 +250,14 @@ implementación de MPI es necesario configurar el entorno de nuestro
 usuario del cluster y especificar qué implementación de MPI se desea
 utilizar. Para obtener una lista de las implementaciónes de MPI
 disponibles en el cluster se debe ejecutar:</p>
-<pre class='escaped'>[siturria@cluster ~]$ switcher mpi --list
+<pre class='escaped'>[siturria@cluster ~]$ switcher mpi --list 
 mpich-ch_p4-gcc-1.2.7
 openmpi-1.2.5
 lam-7.1.4</pre>
 <p>Para configurar el uso de la implementación MPICH se debe ejecutar: <pre
 	class='escaped'>[siturria@cluster ~]$ switcher mpi = mpich-ch_p4-gcc-1.2.7</pre></p>
 <p>Finalmente podemos verificar que la configuración sea la correcta
-ejecutando el siguiente comando: <pre class='escaped'>[siturria@cluster
-mom_logs]$ switcher mpi --user</pre></p>
+ejecutando el siguiente comando: <pre class='escaped'>[siturria@cluster mom_logs]$ switcher mpi --user</pre></p>
 <p>Una vez definida una implementación de MPI para nuestro usuario los
 comandos MPI (p.ej.: mpicc, mpiCC, mpirun, etc.) quedaran definidos de
 forma global en el cluster y podrémos ejecutarlos sin inconvenientes
@@ -329,7 +327,7 @@ echo Cantidad de nodos:
 NPROCS=$(wc -l &lt; $PBS_NODEFILE)
 echo $NPROCS
 echo
-time mpirun -np $NPROCS -machinefile $PBS_NODEFILE ./&lt;Ejecutable de nuestro trabajo&gt; </pre>
+time mpiexec -mpich-p4-no-shmem ./&lt;Ejecutable de nuestro trabajo&gt; </pre>
 
 <h3>LAM/MPI<a name='DistribuidoLAM' id='DistribuidoLAM'></a></h3>
 <pre class='escaped'>#!/bin/bash
@@ -391,70 +389,13 @@ echo Cantidad de nodos:
 NPROCS=$(wc -l &lt; $PBS_NODEFILE)
 echo $NPROCS
 echo
-lamboot
-time mpiexec ./&lt;Ejecutable de nuestro trabajo&gt;
 
-lamhalt</pre>
-<h3>OpenMPI<a name='DistribuidoOpenMPI' id='DistribuidoOpenMPI'></a></h3>
-<pre class='escaped'>#!/bin/bash
+export LD_LIBRARY_PATH=/opt/lam-7.1.4/lib
+export PATH=/opt/lam-7.1.4/bin:$PATH
 
-# Nombre del trabajo
-#PBS -N &lt;Nombre del trabajo&gt;
+/opt/lam-7.1.4/bin/lamboot
+/opt/lam-7.1.4/bin/mpiexec ./&lt;Ejecutable de nuestro trabajo&gt;
+/opt/lam-7.1.4/bin/lamhalt</pre>
 
-# Requerimientos
-# En este caso nuestro trabajo requiere: 16 procesadores, 1 hora de ejecución.
-#PBS -l nodes=16,walltime=01:00:00
-
-# Cola de ejecución
-#PBS -q publica
-
-# Directorio de trabajo
-#PBS -d /home/siturria/&lt;directorio_trabajo&gt;
-
-# Correo electronico
-#PBS -M &lt;mi_email&gt;@fing.edu.uy
-
-# Email
-#PBS -m abe
-# n: no mail will be sent.
-# a: mail is sent when the job is aborted by the batch system.
-# b: mail is sent when the job begins execution.
-# e: mail is sent when the job terminates.
-
-# Directorio donde se guardará la salida estándar y de error de nuestro trabajo
-#PBS -e /home/siturria/&lt;directorio_trabajo&gt;/
-#PBS -o /home/siturria/&lt;directorio_trabajo&gt;/
-
-# Will make  all variables defined in the environment from which the job is submitted available to the job.
-#PBS -V
-
-echo Job Name: $PBS_JOBNAME
-echo Working directory: $PBS_O_WORKDIR
-echo Queue: $PBS_QUEUE
-echo Cantidad de tasks: $PBS_TASKNUM
-echo Home: $PBS_O_HOME
-echo Puerto del MOM: $PBS_MOMPORT
-echo Nombre del usuario: $PBS_O_LOGNAME
-echo Idioma: $PBS_O_LANG
-echo Cookie: $PBS_JOBCOOKIE
-echo Offset de numero de nodos: $PBS_NODENUM
-echo Shell: $PBS_O_SHELL
-echo Host: $PBS_O_HOST
-echo Cola de ejecucion: $PBS_QUEUE
-echo Archivo de nodos: $PBS_NODEFILE
-echo Path: $PBS_O_PATH
-echo
-cd $PBS_O_WORKDIR
-echo Current path:
-pwd
-echo
-echo Nodos:
-cat $PBS_NODEFILE
-echo
-echo Cantidad de nodos:
-NPROCS=$(wc -l &lt; $PBS_NODEFILE)
-echo $NPROCS
-echo
-time mpiexec -np $NPROCS -machinefile $PBS_NODEFILE ./&lt;Ejecutable de nuestro trabajo&gt;</pre>
 </div>
 </div>
