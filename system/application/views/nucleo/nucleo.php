@@ -1,3 +1,0 @@
-<div>
-	Redireccionando...
-</div>
