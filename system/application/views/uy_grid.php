@@ -94,7 +94,7 @@ corrientes del Río de la Plata, entre otros).</p>
 	<tr valign="top">
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/Tournier.pdf'><img
+			href='<?php echo base_url();?>cartas.2010/TOURNIER.pdf'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">Tournier Animation</div>
@@ -124,7 +124,7 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/DINASA.jpg'><img
+			href='<?php echo base_url();?>cartas.2010/DINASA.TIF'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">Dirección Nacional de Aguas y
@@ -162,7 +162,7 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/AcruxSoft.docx'><img
+			href='<?php echo base_url();?>cartas.2010/AcruxSoft.Borrador.docx'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">AcruxSoft</div>
@@ -186,7 +186,7 @@ corrientes del Río de la Plata, entre otros).</p>
 	<tr valign="top">
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/MIEM.DNE.doc'><img
+			href='<?php echo base_url();?>cartas.2010/MIEM.DNE.Borrador.doc'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">Dirección Nacional de Energía y
@@ -202,7 +202,7 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/PEDECIBA.Geociencias.Borrador.odt'><img
+			href='<?php echo base_url();?>cartas.2010/PEDECIBA.Geociencias.jpg'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">PEDECIBA Geociencias</div>
@@ -216,7 +216,7 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/Kalya.pdf'><img
+			href='<?php echo base_url();?>cartas.2010/KALYA.pdf'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">KALYA Soluciones Informáticas</div>
