@@ -169,14 +169,14 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/ANTEL.docx'><img
+			href='<?php echo base_url();?>cartas.2010/ANTEL.jpg'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">ANTEL</div>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/DNM.doc'><img
+			href='<?php echo base_url();?>cartas.2010/DNM.jpg'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">Dirección Nacional de Meteorología
@@ -227,8 +227,12 @@ corrientes del Río de la Plata, entre otros).</p>
 			border="0"></a></div>
 		<div style="text-align: center;">Instituto Pasteur</div></td>
 	</tr>
-	<tr>
-		<td></td>
+	<tr valign="top">
+		<td><div style="text-align: center;"><a
+			href='<?php echo base_url();?>cartas.2010/SECIU.jpg'><img
+			src="<?php echo base_url();?>img/1292330620_references.png"
+			border="0"></a></div>
+		<div style="text-align: center;">SeCIU</div></td>
 		<td></td>
 		<td></td>
 		<td></td>
