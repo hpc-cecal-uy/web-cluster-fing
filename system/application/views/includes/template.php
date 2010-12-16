@@ -36,7 +36,10 @@
 			
 			<div id="page-footer">
 				<div id="page-footer-body">
-					<p>Esta p&aacute;gina fue generada en {elapsed_time} segundos.</p>
+					<!-- <p>Esta p&aacute;gina fue generada en {elapsed_time} segundos.</p> -->
+					<a target="_new" href='http://www.fing.edu.uy/inco/grupos/cecal/'>CeCal</a> | <a 
+						target="_new" href='http://www.fing.edu.uy/inco/cursos/hpc/'>HPC</a> | <a 
+						target="_new" href='http://www.fing.edu.uy/grupos/niccad/'>NICCAD</a>
 				</div>
 			</div>
 		</div>
