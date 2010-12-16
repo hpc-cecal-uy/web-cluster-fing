@@ -109,7 +109,7 @@ corrientes del Río de la Plata, entre otros).</p>
 		</td>
 		<td>
 		<div style="text-align: center;"><a
-			href='<?php echo base_url();?>cartas.2010/MIEM.DNI.jpg'><img
+			href='<?php echo base_url();?>cartas.2010.2/MIEM.DNI.jpg'><img
 			src="<?php echo base_url();?>img/1292330620_references.png"
 			border="0"></a></div>
 		<div style="text-align: center;">Dirección Nacional de Industrias
