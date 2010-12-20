@@ -3,6 +3,12 @@
 <h3 style="font-size: 1.4em">Servicio nacional de cómputo de alto
 desempeño en plataforma Grid</h3>
 <div id="content-body" style="text-align: justify;">
+<p><b><u>Documentos</u></b></p>
+<p>Propuesta del proyecto presentada a la ANII <a href='http://www.fing.edu.uy/cluster/FOR.INS_.562_POSTULACION_SCT_X_2010_1.uyGrid.pdf'>descargar</a> (PDF, 1.6 Mb)</p>
+<p>Documentación completa <a href='http://www.fing.edu.uy/cluster/uy-Grid.rar'>descargar</a> (RAR, 50 Mb)</p>
+</div>
+<div id="content-body" style="text-align: justify;">
+<p><b><u>Resumen del proyecto</u></b></p>
 <p>El proyecto uy-Grid propone implementar un servicio de cómputo
 científico de gran escala, basado en una infraestructura distribuida
 (grid), instrumentando una plataforma de e-Ciencia que permita
