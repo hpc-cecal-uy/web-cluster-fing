@@ -4,14 +4,18 @@
 <h2>Índice</h2>
 <ul>
 	<li><a href='#Recursos'>Solicitud de recursos</a></li>
-	<li><a href='#Serial'>Trabajo serial</a></li>
-	<li><a href='#Paralelo'>Trabajo paralelo</a></li>
-	<li><a href='#Distribuido'>Trabajo distribuido</a>
+	<li><a href='#Script'>Describir un trabajo</a>
 	<ul>
-		<li><a href='#DistribuidoMPICH'>MPICH</a></li>
-		<li><a href='#DistribuidoLAM'>LAM/MPI</a></li>
+		<li><a href='#Serial'>Trabajo serial</a></li>
+		<li><a href='#Paralelo'>Trabajo paralelo</a></li>
+		<li><a href='#Distribuido'>Trabajo paralelo/distribuido</a>
+		<ul>
+			<li><a href='#DistribuidoMPICH'>MPICH</a></li>
+			<li><a href='#DistribuidoLAM'>LAM/MPI</a></li>
+		</ul>
 	</ul>
 	</li>
+	<li><a href='#Iniciar'>Iniciar un trabajo</a></li>
 </ul>
 <h2>Solicitud de recursos<a name='Recursos' id='Recursos'></a></h2>
 <p>Antes de iniciar un trabajo en el cluster es necesario solicitar los
@@ -38,31 +42,36 @@ encuentra compuesto por los siguientes nodos.
 		<td>#</td>
 		<td>Atributos</td>
 		<td>Características de cada máquina</td>
+		<td nowrap="nowrap"></td>
 	</tr>
 	<tr>
 		<td>node02 al node09</td>
 		<td>8</td>
 		<td>cpu,cpu8,ram8</td>
 		<td>8 núcleos y 8 GB de RAM</td>
+		<td></td>
 	</tr>
-	<tr>
+	<tr style="color: red;">
 		<td>node11 al node16</td>
 		<td>6</td>
 		<td>cpu,cpu2,ram2</td>
 		<td>2 núcleos y 2 GB de RAM</td>
+		<td nowrap="nowrap">* fuera de servicio</td>
 	</tr>
 	<tr>
 		<td>node20 al node23</td>
 		<td>4</td>
 		<td>cpu,cpu16,ram24</td>
 		<td>8 núcleos (16 con hyper-threading) y 24 GB de RAM</td>
+		<td></td>
 	</tr>
-	<tr>
+	<tr style="color: red;">
 		<td>tesla</td>
 		<td>1</td>
 		<td>gpu,gpu4,ram48</td>
 		<td>8 núcleos (16 con hyper-threading), 48 GB de RAM, 4 tarjetas
 		nVidia C1060</td>
+		<td nowrap="nowrap">* no accesible</td>
 	</tr>
 </table>
 <br />
@@ -100,10 +109,9 @@ procesamiento disponibles en cada uno y un nodo por nombre con una
 unidad de procesamiento disponible. En total se solicitan 8 CPU.<br />
 </p>
 <h3>Tiempo total de ejecución del trabajo (walltime)</h3>
-<p>Este recruso mide el tiempo total de ejecución de un trabajo, desde
-que es iniciado hasta que finaliza. Los trabajos que sobrepasen su
-tiempo walltime serán detenidos y el usuario perderá la ejecución del
-trabajo. Es conveniente realizar una estimación holgada del tiempo
+<p>Este recurso mide el tiempo total de ejecución de un trabajo, desde
+que es iniciado hasta que finaliza. <u><b>Un trabajo será detenido si su tiempo de ejecución
+sobrepasa el tiempo de walltime solicitado</b></u>. Es conveniente realizar una estimación holgada del tiempo
 walltime de un trabajo, se recomienda sobreestimar la duración del
 trabajo en un 20%. No se debe abusar en la estimación del tiempo
 walltime, trabajos que requieran demasiado tiempo de ejecución serán más
@@ -111,9 +119,14 @@ dificiles de ajustar a la planificación en el cluster por lo que pueden
 ver demorado su inicio hasta que se encuentre un "hueco" lo
 suficientemente grande en la planificación.<br />
 Para especificar una hora de recurso walltime: <pre class='escaped'>walltime=01:00:00</pre><br />
-<strong>Si un trabajo no especifica un tiempo walltime su valor por
-defecto será de 12 horas.</strong><br />
+Si un trabajo no especifica un tiempo walltime, su valor por
+defecto será de <b><u>12 horas</u></b>.
 </p>
+<h2>Describir un trabajo<a name='Script' id='Script'></a></h2>
+Para ejecutar un trabajo en el cluster es necesario proporcionarle al gestor una descripción del trabajo en cuestión.
+Esta descripción se realiza en forma de un script, a continuación veremos algunos ejemplos de este script para diferentes tipos
+de trabajos.
+
 <h2>Trabajo serial<a name='Serial' id='Serial'></a></h2>
 <p>Esqueleto de un script de ejecución de un trabajo serial:</p>
 <pre class='escaped'>#!/bin/bash
@@ -243,7 +256,7 @@ export OMP_SCHEDULE="DYNAMIC,1"
 export OMP_NUM_THREADS=$NPROCS
 time ./&lt;Ejecutable de nuestro trabajo&gt;</pre>
 
-<h2>Trabajo distribuido<a name='Distribuido' id='Distribuido'></a></h2>
+<h2>Trabajo paralelo/distribuido<a name='Distribuido' id='Distribuido'></a></h2>
 
 <p>Antes de compilar y ejecutar un programa que utilice una
 implementación de MPI es necesario configurar el entorno de nuestro
@@ -399,3 +412,13 @@ export PATH=/opt/lam-7.1.4/bin:$PATH
 
 </div>
 </div>
+<h2>Iniciar un trabajo<a name='Iniciar' id='Iniciar'></a></h2>
+Una vez finalizado el script que describe a nuestro trabajo debemos indicarle al gestor que deseamos iniciar el trabajo en el cluster.
+Para solicitar la ejecución de un trabajo en el cluster debemos invocar el comando <i>qsub</i> utilizando como argumento el script que acabamos 
+de crear y que describe nuestro trabajo:
+<pre class='escaped'>
+[siturria@cluster ~]$ qsub script_gestor.sh
+</pre>
+Es probable que un trabajo no inicie inmediatamente su ejecución en el cluster. El gestor debe buscar los recursos necesarios para iniciar la ejecución
+del nuevo trabajo y es probable que estos recursos actualmente esten siendo utilizados por otro trabajo. Para obtener más información sobre el estado 
+de un trabajo en el cluster ver <a href="<?php echo base_url();?>index.php/comandos_uso_cotidiano">comandos de uso cotidiano</a>.  
