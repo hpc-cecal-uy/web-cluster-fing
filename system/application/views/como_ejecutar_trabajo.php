@@ -47,30 +47,22 @@ encuentra compuesto por los siguientes nodos.
 	<tr>
 		<td>node02 al node09</td>
 		<td>8</td>
-		<td>cpu,cpu8,ram8</td>
+		<td>class0,cpu,cpu2,cpu8,ram8</td>
 		<td>8 núcleos y 8 GB de RAM</td>
 		<td></td>
-	</tr>
-	<tr style="color: red;">
-		<td>node11 al node16</td>
-		<td>6</td>
-		<td>cpu,cpu2,ram2</td>
-		<td>2 núcleos y 2 GB de RAM</td>
-		<td nowrap="nowrap">* fuera de servicio</td>
 	</tr>
 	<tr>
 		<td>node20 al node23</td>
 		<td>4</td>
-		<td>cpu,cpu16,ram24</td>
+		<td>class1,cpu,cpu2,cpu8,cpu16,ram24</td>
 		<td>8 núcleos (16 con hyper-threading) y 24 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr style="color: red;">
 		<td>tesla</td>
 		<td>1</td>
-		<td>gpu,gpu4,ram48</td>
-		<td>8 núcleos (16 con hyper-threading), 48 GB de RAM, 4 tarjetas
-		nVidia C1060</td>
+		<td>gpu</td>
+		<td>8 núcleos (16 con hyper-threading), 48 GB de RAM, 4 tarjetas nVidia C1060</td>
 		<td nowrap="nowrap">* no accesible</td>
 	</tr>
 </table>
