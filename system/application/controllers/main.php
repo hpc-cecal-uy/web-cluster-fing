@@ -13,15 +13,26 @@ class Main extends Controller {
 		$data['volver_style'] = 'display:none';
 		$data['body'] = 'main';
 		$data['js_include'] = '<script src="'.base_url().'js/main.js" type="text/javascript" charset="utf-8"></script>'.
-			'<script src="'.base_url().'js/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>';
+			'<script src="'.base_url().'js/jquery.nivo.slider.js" type="text/javascript" charset="utf-8"></script>'.
+			'<script src="'.base_url().'js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>'.
+			'<script src="'.base_url().'js/jquery.flipCounter.1.1.pack.js" type="text/javascript" charset="utf-8"></script>';
 		$data['css_include'] = '<link rel="stylesheet" href="'.base_url().'css/main.css" type="text/css" media="screen" />'.
 			'<link rel="stylesheet" href="'.base_url().'css/nivo-slider.css" type="text/css" media="screen" />';
 		
 		$data['noticias'] = $this->obtenerNoticias();
+		
+		// Horas de cómputo ------------------
+		$file = "/home/santiago/eclipse/php-workspace/web-cluster-fing/Cluster.All.Hours.txt";
+		$f = fopen($file, "r");
+		if ($line = fgets($f, 1000) ) {
+			print $data['horas'] = $line;
+		}
+		// Horas de cómputo ------------------
+		
 		$this->load->view('includes/template', $data);
 	}
 	
-	function obtenerNoticias() {
+	function obtenerNoticias() {		
 		$noticias = array();
 		
 		$path_noticias = APPPATH.'views/includes/noticias';
