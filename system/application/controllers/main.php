@@ -22,10 +22,11 @@ class Main extends Controller {
 		$data['noticias'] = $this->obtenerNoticias();
 		
 		// Horas de cómputo ------------------
-		$file = "/home/santiago/eclipse/php-workspace/web-cluster-fing/Cluster.All.Hours.txt";
+		//$file = "/home/santiago/eclipse/php-workspace/web-cluster-fing/Cluster.All.Hours.txt";
+		$file = "/fing/web/cluster/Cluster.All.Hours.txt";
 		$f = fopen($file, "r");
 		if ($line = fgets($f, 1000) ) {
-			print $data['horas'] = $line;
+			$data['horas'] = $line;
 		}
 		// Horas de cómputo ------------------
 		
