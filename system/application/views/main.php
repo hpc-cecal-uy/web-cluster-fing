@@ -10,16 +10,20 @@
 <div id="two-columns">
 	<div id="left-column">
 		<div class="module">
-			<!-- <div class="module-title">¡Cumplimos 1.000.000 de horas de cómputo!</div> -->
-			<div class="module-title">¡Falta poco para cumplir el 1.000.000 de horas!</div>
+			<div class="module-title">¡Cumplimos 1.000.000 de horas de cómputo!</div>
+			<!-- <div class="module-title">¡Falta poco para cumplir el 1.000.000 de horas!</div>-->
 			<div class="module-body">
-				<div style="font-size:14px;">Las horas computadas hasta el momento son...</div>
-				<br />
-				<div style="text-align:center;">
-					<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
+				<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>
+				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
+					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de agosto del 2011 a las 20:46!<br/><br/>
+					Nuestros agradecimientos a todos los que colaboraron para que este hito pudiera ser alcanzado.<br/>
+					<br/><br/>
+					<div style="text-align:center;">
+						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
+					</div>
+					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
 				<script type="text/javascript">
-				/* <![CDATA[ */
 				        jQuery(document).ready(function($) {
 				                //$("#counter").flipCounter({imagePath:"http://localhost/web-cluster-fing/img/flipCounter-medium.png"});
 				                $("#counter").flipCounter({imagePath:"http://www.fing.edu.uy/cluster/img/flipCounter-medium.png",number:0});
@@ -27,20 +31,14 @@
 				                $("#counter").flipCounter(
 				                        "startAnimation", // scroll counter from the current number to the specified number
 				                        {
-				                                number: <?php echo $horas; ?>, // the number we want the counter to scroll to
+				                                number: <?php echo $horas;?>, // the number we want the counter to scroll to
 				                                easing: jQuery.easing.easeOutCubic, // this easing function to apply to the scroll.
 				                                duration: 3000 // number of ms animation should take to complete
 				                        }
 				                );    
 				        });
-				/* ]]> */
 				</script>
 				<br />
-				<!-- <div style="float:right; width:200px; padding-right:15px;font-size:14px;text-align:justify;">
-					¡Albricias, el proyecto cluster FING cumplió 1.000.000 horas de cómputo!<br/><br/>
-					Queremos agradecer a todos los que colaboraron para que este hito se pudiera ser alcanzado blah blah blah.<br/>
-					<br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> 
-				</div> -->
 				<!-- <img src="../img/large.jpg" width="200px"></img><br/><br/><br/><br/> -->
 				<!-- <img src="../img/awesome.png" width="200px"></img> -->
 				<!-- <img src="../img/computer-woo-hoo.png" width="200px"></img> -->
