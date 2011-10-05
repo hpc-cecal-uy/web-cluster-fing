@@ -15,7 +15,7 @@
 			<div class="module-body">
 				<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
-					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de agosto del 2011 a las 20:46!<br/><br/>
+					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de setiembre del 2011 a las 20:46!<br/><br/>
 					Nuestros agradecimientos a todos los que colaboraron para que este hito pudiera ser alcanzado.<br/>
 					<br/><br/>
 					<div style="text-align:center;">
