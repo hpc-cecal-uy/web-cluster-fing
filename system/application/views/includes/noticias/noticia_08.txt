@@ -1,0 +1,6 @@
+Nuevos nodos en producción.
+Estan instaladas y en producción las nuevas máquinas HP : node30 y node31, con 24 nucleos y 24 GB c/u.<br/>
+<br/>
+Los nuevos nodos tienen los siguientes adjetivos para el gestor: cpu24, ram24, class2. Los atributos cpu24 y class2 son exclusivos de estos nodos, mientras que ram24 lo comparten con las otras HP.<br/>
+<br/>
+Con esto los nucleos de procesamiento habilitados desde el gestor llegan a 144. Esta planificado que en un par de meses lleguen a 192.

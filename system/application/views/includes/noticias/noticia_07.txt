@@ -1,0 +1,2 @@
+Estado del cluster en tiempo real.
+Se ha incorporado a la web reporte gráfico del estado del cluster en tiempo real.

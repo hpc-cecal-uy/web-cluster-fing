@@ -1,0 +1,3 @@
+El cluster crece!
+Las próximas semanas se instalarán 4 nuevos servidores adquiridos a fin de 2009, llevando el total de nucleos de calculo de 72 a 104.
+
