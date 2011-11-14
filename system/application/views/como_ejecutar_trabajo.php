@@ -59,7 +59,7 @@ encuentra compuesto por los siguientes nodos.
 		<td></td>
 	</tr>
 	<tr>
-		<td>node30 al node31</td>
+		<td>node30 al node32</td>
 		<td>2</td>
 		<td>class2,cpu,cpu24,ram24</td>
 		<td>24 núcleos y 24 GB de RAM</td>

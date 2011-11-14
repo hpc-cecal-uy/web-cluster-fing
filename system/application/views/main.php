@@ -122,6 +122,7 @@
 			<div class="module-body">
 				<a href="http://www.fing.edu.uy/grupos/niccad/index.php" class="menu-option">N&uacute;cleo Interdisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o (NICCAD)</a>
 				<a href="http://www.fing.edu.uy/cluster/seminario/" class="menu-option">Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
+				<a href="http://www.fing.edu.uy/cluster/seminario/2011/" class="menu-option">2do. Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1278458764_folder_green_64x64.png);">
