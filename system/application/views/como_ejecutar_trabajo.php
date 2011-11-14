@@ -16,6 +16,7 @@
 	</ul>
 	</li>
 	<li><a href='#Iniciar'>Iniciar un trabajo</a></li>
+	<li><a href='#IniciarConDependencia'>Iniciar un trabajo que depende de otro trabajo</a></li>
 </ul>
 <h2>Solicitud de recursos<a name='Recursos' id='Recursos'></a></h2>
 <p>Antes de iniciar un trabajo en el cluster es necesario solicitar los
@@ -420,4 +421,15 @@ de crear y que describe nuestro trabajo:
 </pre>
 Es probable que un trabajo no inicie inmediatamente su ejecución en el cluster. El gestor debe buscar los recursos necesarios para iniciar la ejecución
 del nuevo trabajo y es probable que estos recursos actualmente esten siendo utilizados por otro trabajo. Para obtener más información sobre el estado 
-de un trabajo en el cluster ver <a href="<?php echo base_url();?>index.php/comandos_uso_cotidiano">comandos de uso cotidiano</a>.  
+de un trabajo en el cluster ver <a href="<?php echo base_url();?>index.php/comandos_uso_cotidiano">comandos de uso cotidiano</a>.
+<h2>Iniciar un trabajo que depende de otro trabajo<a name='IniciarConDependencia' id='IniciarConDependencia'></a></h2>
+Para iniciar un trabajo que depende de otro trabajo debemos utilizar la opción "qsub -W depend=" seguido por el tipo de dependencia. Por ejemplo, supongamos que el trabajo <b><i>paso_1.sh</i></b> esta siendo ejecutado en el cluster con tiene ID <b><i>3251714.cluster</i></b>, y queremos que el trabajo <b><i>paso_2.sh</i></b> sea ejecutado una vez que finaliza el trabajo <b><i>paso_1.sh</i></b>. Entonces debemos iniciar el trabajo <b><i>paso_2.sh</i></b> de la siguiente manera:  
+<pre class='escaped'>
+[siturria@cluster ~]$ qsub -W depend=after:3251714.cluster paso_2.qsub
+</pre>
+Si ademas queremos que se ejecute <b>solamente</b> si el trabajo finaliza correctamente, debemos ejecutar:
+<pre class='escaped'>
+[siturria@cluster ~]$ qsub -W depend=afterok:3251714.cluster paso_2.qsub
+</pre> 
+Aqui se puede consultar una lista de todos las posibles dependencias con las que puede iniciarse un trabajo <a href="http://cf.ccmr.cornell.edu/cgi-bin/w3mman2html.cgi?qsub%281B%29">enlace</a>.
+  
