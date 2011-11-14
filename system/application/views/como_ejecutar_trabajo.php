@@ -423,11 +423,11 @@ Es probable que un trabajo no inicie inmediatamente su ejecución en el cluster.
 del nuevo trabajo y es probable que estos recursos actualmente esten siendo utilizados por otro trabajo. Para obtener más información sobre el estado 
 de un trabajo en el cluster ver <a href="<?php echo base_url();?>index.php/comandos_uso_cotidiano">comandos de uso cotidiano</a>.
 <h2>Iniciar un trabajo que depende de otro trabajo<a name='IniciarConDependencia' id='IniciarConDependencia'></a></h2>
-Para iniciar un trabajo que depende de otro trabajo debemos utilizar la opción "qsub -W depend=" seguido por el tipo de dependencia. Por ejemplo, supongamos que el trabajo <b><i>paso_1.sh</i></b> esta siendo ejecutado en el cluster con tiene ID <b><i>3251714.cluster</i></b>, y queremos que el trabajo <b><i>paso_2.sh</i></b> sea ejecutado una vez que finaliza el trabajo <b><i>paso_1.sh</i></b>. Entonces debemos iniciar el trabajo <b><i>paso_2.sh</i></b> de la siguiente manera:  
+Para iniciar un trabajo que depende de otro trabajo debemos utilizar la opción <b><i>qsub -W depend</i></b> seguido por el tipo de dependencia.<br/>Por ejemplo, supongamos que el trabajo <b><i>paso_1.sh</i></b> esta siendo ejecutado en el cluster con tiene ID <b><i>3251714.cluster</i></b>, y queremos que el trabajo <b><i>paso_2.sh</i></b> sea ejecutado una vez que finaliza el trabajo <b><i>paso_1.sh</i></b>. Entonces debemos iniciar el trabajo <b><i>paso_2.sh</i></b> de la siguiente manera:  
 <pre class='escaped'>
 [siturria@cluster ~]$ qsub -W depend=after:3251714.cluster paso_2.qsub
 </pre>
-Si ademas queremos que se ejecute <b>solamente</b> si el trabajo finaliza correctamente, debemos ejecutar:
+En este caso el trabajo <b><i>paso_2.sh</i></b> se ejecutará después del trabajo <b><i>paso_1.sh</i></b> sin importar si este finaliza correctamente o erroneamente. Si queremos que se ejecute <b>solamente</b> si el trabajo finaliza correctamente, debemos ejecutar:
 <pre class='escaped'>
 [siturria@cluster ~]$ qsub -W depend=afterok:3251714.cluster paso_2.qsub
 </pre> 
