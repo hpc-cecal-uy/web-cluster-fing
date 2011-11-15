@@ -17,8 +17,8 @@
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
 					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de setiembre del 2011 a las 20:46!<br/><br/>
 					Nuestros agradecimientos a todos los que colaboraron para que este hito pudiera ser alcanzado.<br/>
-					<br/>Total de horas de cómputo hasta el momento:<br/><br/>
-					<div style="text-align:center;">
+					<br/>Total de horas de cómputo hasta el momento:<br/>
+					<div style="text-align:center;margin-top:5px;">
 						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
