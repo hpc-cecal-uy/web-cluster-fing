@@ -89,11 +89,11 @@
 				<img src="<?php echo base_url();?>img/logo-niccad.png" width="180px" style="margin-bottom: 10px;"></img>
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
 					El próximo jueves 24 de noviembre de 2011 se llevará a cabo el II Seminario Multidisciplinario de 
-					Computación Científica de Alto Desempeño.<br/>El mismo se desarrollará en el Salón B11 del Polifuncional 
+					Computación Científica de Alto Desempeño.<br/><br/>El mismo se desarrollará en el Salón B11 del Polifuncional 
 					José Luis Massera de la Facultad de Ingeniería, de 10 a 17 horas.<br/>
 					<a href="http://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
 				</div>
-				<br/><br/><br/>
+				<br/><br/><br/><br/>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
