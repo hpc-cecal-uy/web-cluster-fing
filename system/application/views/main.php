@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div class="module">
-			<div class="module-title">Estad&iacute;sticas de tiempo real</div>
+			<div class="module-title">Estad&iacute;sticas en tiempo real</div>
 			<div class="module-body">
 				<div id="slideshow">
 				    <div id="slidesContainer">
