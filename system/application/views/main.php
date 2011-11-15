@@ -17,12 +17,14 @@
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
 					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de setiembre del 2011 a las 20:46!<br/><br/>
 					Nuestros agradecimientos a todos los que colaboraron para que este hito pudiera ser alcanzado.<br/>
-					<br/><br/>
+					<br/><!-- <br/> -->
+					Total de horas de cómputo hasta el momento:
 					<div style="text-align:center;">
 						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
+				<br/><br/>
 				<script type="text/javascript">
 				        jQuery(document).ready(function($) {
 				                //$("#counter").flipCounter({imagePath:"http://localhost/web-cluster-fing/img/flipCounter-medium.png"});
@@ -39,10 +41,6 @@
 				        });
 				</script>
 				<br />
-				<!-- <img src="../img/large.jpg" width="200px"></img><br/><br/><br/><br/> -->
-				<!-- <img src="../img/awesome.png" width="200px"></img> -->
-				<!-- <img src="../img/computer-woo-hoo.png" width="200px"></img> -->
-				<!-- <img src="../img/party_helium_balloons_clip_art_25507.jpg" width="200px"></img> -->
 			</div>
 		</div>
 		<div class="module">
@@ -86,6 +84,19 @@
 		</div>
 	</div>
 	<div id="right-column">
+		<div class="module">
+			<div class="module-title">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</div>
+			<div class="module-body">
+				<img src="<?php echo base_url();?>img/logo-niccad.png" width="180px" style="margin-bottom: 10px;"></img>
+				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
+					El próximo jueves 24 de noviembre de 2011 se llevará a cabo el II Seminario Multidisciplinario de 
+					Computación Científica de Alto Desempeño.<br/>El mismo se desarrollará en el Salón B11 del Polifuncional 
+					José Luis Massera de la Facultad de Ingeniería, de 10 a 17 horas.<br/>
+					<a href="http://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
+				</div>
+				<br/><br/><br/>
+			</div>
+		</div>
 		<div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
 			<div class="module-title">Nuevos usuarios</div>
 			<div class="module-body">
@@ -122,7 +133,7 @@
 			<div class="module-body">
 				<a href="http://www.fing.edu.uy/grupos/niccad/index.php" class="menu-option">N&uacute;cleo Interdisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o (NICCAD)</a>
 				<a href="http://www.fing.edu.uy/cluster/seminario/" class="menu-option">Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
-				<a href="http://www.fing.edu.uy/cluster/seminario/2011/" class="menu-option">2do. Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
+				<a href="http://www.fing.edu.uy/cluster/seminario/2011/" class="menu-option">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1278458764_folder_green_64x64.png);">
