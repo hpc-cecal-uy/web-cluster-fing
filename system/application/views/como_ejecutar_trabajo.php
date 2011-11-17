@@ -48,21 +48,21 @@ encuentra compuesto por los siguientes nodos.
 	<tr>
 		<td>node02 al node09</td>
 		<td>8</td>
-		<td>class0,cpu,cpu8,ram8</td>
+		<td>class0</td>
 		<td>8 núcleos y 8 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>node20 al node23</td>
 		<td>4</td>
-		<td>class1,cpu,cpu8,ram24</td>
+		<td>class1</td>
 		<td>8 núcleos y 24 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr>
 		<td>node30 al node32</td>
-		<td>2</td>
-		<td>class2,cpu,cpu24,ram24</td>
+		<td>3</td>
+		<td>class2</td>
 		<td>24 núcleos y 24 GB de RAM</td>
 		<td></td>
 	</tr>
@@ -121,6 +121,32 @@ suficientemente grande en la planificación.<br />
 Para especificar una hora de recurso walltime: <pre class='escaped'>walltime=01:00:00</pre><br />
 Si un trabajo no especifica un tiempo walltime, su valor por
 defecto será de <b><u>12 horas</u></b>.
+</p>
+<h3>Colas de ejecución</h3>
+<p>El cluster agrupa los trabajos en colas de ejecución. Todo trabajo debe ingresar a una de las 
+colas de ejecución, pero cada cola de ejecución establece ciertas restricciones. Las colas de ejecución disponibles son:
+<table cellpadding="5px" cellspacing="5px">
+	<tr style="font-weight:bold;">
+		<td>Nombre</td>
+		<td>Cant. máx. de procesadores</td>
+		<td>Cant. máx. de walltime</td>
+	</tr>
+	<tr>
+		<td>publica (o small_jobs)</td>
+		<td>hasta 16 proc.</td>
+		<td>hasta 168 horas (7 días)</td>
+	</tr>
+	<tr>
+		<td>medium_jobs</td>
+		<td>hasta 32 proc.</td>
+		<td>hasta 96 horas (4 días)</td>
+	</tr>
+	<tr>
+		<td>big_jobs</td>
+		<td>sin limite</td>
+		<td>hasta 48 horas (2 días)</td>
+	</tr>
+</table>
 </p>
 <h2>Describir un trabajo<a name='Script' id='Script'></a></h2>
 Para ejecutar un trabajo en el cluster es necesario proporcionarle al gestor una descripción del trabajo en cuestión.
