@@ -82,13 +82,13 @@ Solicita 12 nodos de cualquier tipo con una unidad de cómputo (CPU) cada
 uno. En total se solicitan 12 CPU que pueden estar distribuidos entre cualquier 
 máquina del cluster.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=2:cpu8+14</pre><br />
-Solicita 2 nodos con el atributo "cpu8" y 14 nodos de cualquier tipo,
+<pre class='escaped'>qsub -l nodes=2:class0+14</pre><br />
+Solicita 2 nodos con el atributo "class0" y 14 nodos de cualquier tipo,
 todos con una unidad de procesamiento. En total solicita 16 CPU.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=1:cpu16:ram24+10:cpu8+3:cpu2:ram2</pre><br />
-Solicita un nodo que tenga los atributos "cpu" y "ram24", 10 nodos
-con el atributo "cpu8" y 3 nodos con los atributos "cpu2" y "ram2". En total
+<pre class='escaped'>qsub -l nodes=1:class0+10:class1+3:class2</pre><br />
+Solicita un nodo que tenga el atributo "class0", 10 nodos
+con el atributo "class1" y 3 nodos con el atributo "class2". En total
 se solicitan 14 CPU.<br />
 <br />
 <pre class='escaped'>qsub -l nodes=node02.cluster.fing+node03.cluster.fing+node09.cluster.fing</pre><br />
@@ -102,9 +102,9 @@ Solicita 1 nodo con 4 unidades de procesamiento. Es decir que al trabajo se le a
 <pre class='escaped'>qsub -l nodes=4:ppn=2</pre><br />
 Solicita 4 nodos con 2 unidades de procesamiento disponibles cada uno. En total solicitan 8 CPU.<br />
 <br />
-<pre class='escaped'>qsub -l nodes=2:ram8:ppn=2+1:ram24:ppn=3+node12.cluster.fing</pre><br />
-Solicita 2 nodos con el atributo "ram8" con 2 unidades de procesamiento
-disponibles cada uno, 2 nodos con el atributo "ram24" con 3 unidades de
+<pre class='escaped'>qsub -l nodes=2:class0:ppn=2+1:class1:ppn=3+node12.cluster.fing</pre><br />
+Solicita 2 nodos con el atributo "class0" con 2 unidades de procesamiento
+disponibles cada uno, 2 nodos con el atributo "class1" con 3 unidades de
 procesamiento disponibles en cada uno y un nodo por nombre con una
 unidad de procesamiento disponible. En total se solicitan 8 CPU.<br />
 </p>
