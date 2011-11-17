@@ -25,9 +25,9 @@ class QSubScript extends Controller {
 		);
 
 		$cola_trabajo_options = array(
-		  'publica' => 'P&uacute;blica',
-		  'privada' => 'Privada',
-		  'especial' => 'Especial'
+		  'small_jobs' => 'small_jobs',
+		  'medium_jobs' => 'medium_jobs',
+		  'big_jobs' => 'big_jobs'
 		);
 	
 		$data['body'] = 'qsubscript';
