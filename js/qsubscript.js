@@ -276,8 +276,12 @@ $(document).ready(function(){
 		'</ul>');
 	addHelp('#cola_trabajo',
 		'<b>Cola de ejecuci&oacute;n del trabajo:</b><ul>' +
-			'<li>La cola de ejecuci&oacute;n utilizada por el trabajo determina los privilegios que tendr&aacute; el trabajo en el cluster. La cola de ejecuci&oacute;n <b><i>p&uacute;blica</i></b> se encuentra disponible para todos los usuarios. Las colas de ejecuci&oacute;n <b><i>privada</i></b> y <b><i>especial</i></b> requieren autorizaci&oacute;n especial para ser utilizadas.</li>' +
-			'<li>Si usted no esta seguro de tener autorizaci&oacute;n para utilizar la cola <b><i>privada</i></b> o la <b><i>especial</i></b> seguramente no los tenga y deba utilizar la cola <b><i>p&uacute;blica</i></b>.</li>'+
+			'<li>La cola de ejecuci&oacute;n utilizada por el trabajo determina las características que tendr&aacute; el trabajo en el cluster.</li>' +
+			'<li><table cellspacing="0px" cellpadding="0px"><tr style="font-weight:bold;"><td>Nombre</td><td>Máx. de procs.</td><td>Máx. de walltime</td></tr>' +
+			'<tr><td>small_jobs</td><td>hasta 16</td><td>hasta 168 hs.</td></tr>' +
+			'<tr><td>medium_jobs</td><td>hasta 32</td><td>hasta 96 hs.</td></tr>' +
+			'<tr><td>big_jobs</td><td>sin limite</td><td>hasta 48 hs.</td></tr>' +
+			'</table></li>'+
 		'</ul>');
 	addHelp('#tipo_trabajo',
 		'<b>Tipo de trabajo:</b><ul>' +
