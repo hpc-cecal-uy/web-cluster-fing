@@ -277,7 +277,7 @@ $(document).ready(function(){
 	addHelp('#cola_trabajo',
 		'<b>Cola de ejecuci&oacute;n del trabajo:</b><ul>' +
 			'<li>La cola de ejecuci&oacute;n utilizada por el trabajo determina las caracter&iacute;sticas que tendr&aacute; el trabajo en el cluster.</li>' +
-			'<table cellspacing="2px" cellpadding="0px"><tr style="font-weight:bold;"><td>Nombre</td><td>M&aacute;x. de procs.</td><td>M&aacute;x. de walltime</td></tr>' +
+			'<table cellspacing="3px" cellpadding="0px"><tr style="font-weight:bold;"><td>Nombre</td><td>M&aacute;x. de procs.</td><td>M&aacute;x. de walltime</td></tr>' +
 			'<tr><td>small_jobs</td><td>16</td><td>168 hs.</td></tr>' +
 			'<tr><td>medium_jobs</td><td>32</td><td>96 hs.</td></tr>' +
 			'<tr><td>big_jobs</td><td>--</td><td>48 hs.</td></tr>' +
