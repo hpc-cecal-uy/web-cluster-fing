@@ -23,8 +23,8 @@
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
-				<br/><br/><br/>
-				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué hicimos en nuestro primer millón de horas?</span>
+				<br/><br/><br/><br/>
+				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué hicimos en este primer millón de horas?</span>
 				<center><img src="<?php echo base_url();?>img/indicadores.png"></img></center>
 				<script type="text/javascript">
 				        jQuery(document).ready(function($) {
