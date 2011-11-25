@@ -92,9 +92,32 @@
 					El próximo jueves 24 de noviembre de 2011 se llevará a cabo el II Seminario Multidisciplinario de 
 					Computación Científica de Alto Desempeño.<br/><br/>El mismo se desarrollará en el Salón B11 del Polifuncional 
 					José Luis Massera de la Facultad de Ingeniería, de 10 a 17 horas.<br/>
-					<a href="http://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
 				</div>
-				<br/><br/><br/><br/>
+				<div>
+					<br/><br/><br/>
+					<center>
+						<table>
+							<tr>
+								<td>										
+									<a href="https://picasaweb.google.com/santiago.iturriaga/IISeminarioMultidisciplinarioDeComputacionCientificaDeAltoDesempeno?authuser=0&feat=embedwebsite">											
+										<img src="https://lh4.googleusercontent.com/-gEQwCvnrUxc/Ts6psOVZeDI/AAAAAAAAGwc/8fYiUMJA4vY/s144/IMG20111124_001.jpg" 
+											height="108" width="140" /></a>
+								</td>
+								<td>
+									<a href="https://picasaweb.google.com/santiago.iturriaga/IISeminarioMultidisciplinarioDeComputacionCientificaDeAltoDesempeno?authuser=0&feat=embedwebsite">											
+										<img src="https://lh4.googleusercontent.com/-09IFNToleT8/Ts6pqXOIoqI/AAAAAAAAGww/a2thWv_It5k/s144/IMG20111124_002.jpg" 
+											height="108" width="140" /></a>
+								</td>
+								<td>
+									<a href="https://picasaweb.google.com/santiago.iturriaga/IISeminarioMultidisciplinarioDeComputacionCientificaDeAltoDesempeno?authuser=0&feat=embedwebsite">
+										<img src="https://lh5.googleusercontent.com/-0QK_fxigNgE/Ts6plnU470I/AAAAAAAAGxw/N5_48jDBGTs/s144/IMG20111124_007.jpg" 
+											height="108" width="140" /></a>
+								</td>
+							</tr>
+						</table>
+					</center>
+				</div>
+				<a href="http://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
