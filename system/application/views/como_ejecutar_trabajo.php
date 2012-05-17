@@ -66,6 +66,13 @@ encuentra compuesto por los siguientes nodos.
 		<td>24 núcleos y 24 GB de RAM</td>
 		<td></td>
 	</tr>
+	<tr>
+		<td>node33 al node38</td>
+		<td>6</td>
+		<td>class3</td>
+		<td>24 núcleos y 72 GB de RAM</td>
+		<td></td>
+	</tr>
 	<tr style="color: red;">
 		<td>tesla</td>
 		<td>1</td>
@@ -145,6 +152,11 @@ colas de ejecución, pero cada cola de ejecución establece ciertas restriccione
 		<td>big_jobs</td>
 		<td>sin limite</td>
 		<td>hasta 48 horas (2 días)</td>
+	</tr>
+	<tr>
+		<td>quick_jobs</td>
+		<td>hasta 24 proc.</td>
+		<td>hasta 2 horas</td>
 	</tr>
 </table>
 </p>
@@ -458,4 +470,3 @@ En este caso el trabajo <b><i>paso_2.sh</i></b> se ejecutará después del traba
 [siturria@cluster ~]$ qsub -W depend=afterok:3251714.cluster paso_2.qsub
 </pre> 
 Aqui se puede consultar una lista de todos las posibles dependencias con las que puede iniciarse un trabajo <a href="http://cf.ccmr.cornell.edu/cgi-bin/w3mman2html.cgi?qsub%281B%29">enlace</a>.
-  
