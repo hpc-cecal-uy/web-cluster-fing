@@ -139,7 +139,7 @@ colas de ejecución, pero cada cola de ejecución establece ciertas restriccione
 		<td>Cant. máx. de walltime</td>
 	</tr>
 	<tr>
-		<td>publica (o small_jobs)</td>
+		<td>small_jobs</td>
 		<td>hasta 16 proc.</td>
 		<td>hasta 168 horas (7 días)</td>
 	</tr>
@@ -177,7 +177,7 @@ de trabajos.
 #PBS -l nodes=1,walltime=01:00:00
 
 # Cola de ejecución
-#PBS -q publica
+#PBS -q small_jobs
 
 # Directorio de trabajo
 #PBS -d /home/siturria/&lt;directorio_trabajo&gt;
@@ -241,7 +241,7 @@ paralelizar su ejecución es el que sigue:</p>
 #PBS -l nodes=1:ppn=4,walltime=01:00:00
 
 # Cola de ejecución
-#PBS -q publica
+#PBS -q small_jobs
 
 # Directorio de trabajo
 #PBS -d /home/siturria/&lt;directorio_trabajo&gt;
@@ -329,7 +329,7 @@ efecto.</p>
 #PBS -l nodes=16,walltime=01:00:00
 
 # Cola de ejecución
-#PBS -q publica
+#PBS -q small_jobs
 
 # Directorio de trabajo
 #PBS -d /home/siturria/&lt;directorio_trabajo&gt;
@@ -391,7 +391,7 @@ time mpiexec -mpich-p4-no-shmem ./&lt;Ejecutable de nuestro trabajo&gt; </pre>
 #PBS -l nodes=16,walltime=01:00:00
 
 # Cola de ejecución
-#PBS -q publica
+#PBS -q small_jobs
 
 # Directorio de trabajo
 #PBS -d /home/siturria/&lt;directorio_trabajo&gt;
