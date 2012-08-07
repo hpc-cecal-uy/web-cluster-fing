@@ -7,6 +7,26 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function index() {
+		/*$to = "siturria@fing.edu.uy";
+		$subject = "Hi!";
+		$body = "Hi,\n\nHow are you?";
+		if (mail($to, $subject, $body)) {
+			echo("<p>Message successfully sent!</p>");
+		} else {
+			echo("<p>Message delivery failed...</p>");
+		}*/
+		
+		$error = "";
+		
+		if ($this->input->post('submit') == 'Enviar') {
+			$error = $this->validar_input();
+				
+			if (strlen($error) == 0) {
+				$script = $this->enviar();
+			}
+		}
+		
+		$data['error'] = $error;
 		$data['body'] = 'como_conectarse';
 		$data['volver_style'] = '';
 		$data['js_include'] = '';
@@ -14,6 +34,32 @@ class Como_Conectarse extends Controller {
 		$this->load->view('includes/template', $data);
 	}
 	
+	function validar_input() {
+		if (strlen($this->input->post('nombre')) == 0) {
+			return 'Debe ingresar su nombre completo.';
+		}
+			
+		if (strlen($this->input->post('email')) == 0) {
+			return 'Debe ingresar su correo eletr&oacute;nico.';
+		}
+		
+		if (strlen($this->input->post('descripcion')) == 0) {
+			return 'Debe ingresar como se describir&iacute;a a si mismo.';
+		}
+		
+		if (strlen($this->input->post('formacion')) == 0) {
+			return 'Debe ingresar su nivel de formaci&oacute;n.';
+		}
+		
+		if (strlen($this->input->post('motivacion')) == 0) {
+			return 'Debe ingresar su motivaci&oacute;n para utilizar el cluster.';
+		}
+	
+		return '';
+	}
+	
+	function enviar() {
+	}
 }
 
 ?>

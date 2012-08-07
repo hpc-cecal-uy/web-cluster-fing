@@ -33,7 +33,7 @@
 								'id'		=> 'email_responsable',
 								'name'		=> 'email_responsable',
 								'value'		=> set_value('email_responsable'),
-								'size'		=> '30');
+								'size'		=> '25');
 							echo form_input($data_email_responsable,set_value('email_responsable')); ?>
 					</p>
 					<div class="error"><label for="email_responsable" generated="true" class="error"></label></div>
@@ -44,7 +44,7 @@
 								'id'		=> 'ejecutable_trabajo',
 								'name'		=> 'ejecutable_trabajo',
 								'value'		=> set_value('ejecutable_trabajo'),
-								'size'		=> '30');
+								'size'		=> '25');
 								
 							echo form_input($data_ejecutable_trabajo,set_value('ejecutable_trabajo')); ?>
 					</p>
@@ -56,7 +56,7 @@
 								'id'		=> 'directorio_trabajo',
 								'name'		=> 'directorio_trabajo',
 								'value'		=> set_value('directorio_trabajo'),
-								'size'		=> '30');
+								'size'		=> '25');
 
 							echo form_input($data_directorio_trabajo,	set_value('directorio_trabajo')); ?>
 					</p>
