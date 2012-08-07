@@ -24,7 +24,7 @@
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
 				<br/><br/><br/><br/>
-				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué hicimos en este primer millón de horas?</span>
+				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué hicimos en el primer millón de horas?</span>
 				<center><img src="<?php echo base_url();?>img/indicadores.png"></img></center>
 				<script type="text/javascript">
 				        jQuery(document).ready(function($) {
@@ -89,12 +89,9 @@
 			<div class="module-body">
 				<img src="<?php echo base_url();?>img/logo-niccad.png" width="180px" style="margin-bottom: 10px;"></img>
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
-					El próximo jueves 24 de noviembre de 2011 se llevará a cabo el II Seminario Multidisciplinario de 
-					Computación Científica de Alto Desempeño.<br/><br/>El mismo se desarrollará en el Salón B11 del Polifuncional 
-					José Luis Massera de la Facultad de Ingeniería, de 10 a 17 horas.<br/>
-				</div>
+					El jueves 24 de noviembre de 2011 se desarroll&oacute; el II Seminario Multidisciplinario de Computación Científica de Alto Desempe&ntilde;o en el Polifuncional José Luis Massera de la Facultad de Ingenierí&iacute;a. El evento reuni&oacute; a investigadores, estudiantes y empresarios interesados en las &aacute;reas de computaci&oacute;n cient&iacute;fica y computaci&oacute;n de alto desempe&ntilde;o.<br/>
+			</div>
 				<div>
-					<br/><br/><br/>
 					<center>
 						<table>
 							<tr>
@@ -142,13 +139,16 @@
 		<div class="module" style="background-image:url(img/1280934526_package_edutainment_64x64.png);">
 			<div class="module-title">Enseñanza</div>
 			<div class="module-body">
+				<a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase1.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 1]</a>
+				<a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase2.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 2]</a>
+				<a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase3.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 3]</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/cluster_arquitectura_y_aplicaciones.pdf" class="menu-option">Charla 1 (cluster)</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/cluster_memoria_compartida.pdf" class="menu-option">Charla 2 (memoria compartida)</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/cluster_memoria_distribuida.pdf" class="menu-option">Charla 3 (memoria distribuida)</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_1.pdf" class="menu-option">Nivelaci&oacute;n 1 (Unix-Linux)</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_2.pdf" class="menu-option">Nivelaci&oacute;n 2 (Unix-Linux)</a>
-				<a href="http://www.fing.edu.uy/cluster/grupo/Fortran.pdf" class="menu-option">FORTRAN</a>
 				<a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_3.pdf" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
+				<a href="http://www.fing.edu.uy/cluster/grupo/Fortran.pdf" class="menu-option">FORTRAN</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1280327953_edu_science_64x64.png);">
