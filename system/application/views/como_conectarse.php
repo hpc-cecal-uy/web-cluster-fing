@@ -64,7 +64,7 @@
 							'name'		=> 'formacion',
 							'value'		=> set_value('formacion'),
 							'size'		=> '25');
-						echo form_input(data_formacion,set_value('formacion')); ?>
+						echo form_input($data_formacion,set_value('formacion')); ?>
 				</p>
 				<div class="error"><label for="formacion" generated="true" class="error"></label></div>
 				<p>
