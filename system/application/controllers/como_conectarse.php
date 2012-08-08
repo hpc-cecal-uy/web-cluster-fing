@@ -75,8 +75,8 @@ class Como_Conectarse extends Controller {
 		$data_pubkey = fread($file_pubkey, filesize($pubkey));
 		fclose($file_pubkey);
 		
-		//$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
-		$to = "siturria@fing.edu.uy";
+		$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
+		//$to = "siturria@fing.edu.uy";
 		$subject = "[CLUSTER FING] Nuevo usuario";
 		
 		$body = "";
