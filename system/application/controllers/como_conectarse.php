@@ -7,6 +7,8 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function index() {
+		$this->load->library('upload');
+		
 		/*$to = "siturria@fing.edu.uy";
 		$subject = "Hi!";
 		$body = "Hi,\n\nHow are you?";
@@ -21,13 +23,15 @@ class Como_Conectarse extends Controller {
 		echo $this->input->post('pubkey');
 		
 		if ($this->input->post('submit') == 'Enviar') {
-			$config['upload_path'] = '/fing/web/cluster/';
-			$config['allowed_types'] = 'pub';
-			$config['max_size']	= '100';
+			$config['upload_path'] = '/fing/web/cluster/tmp/';
+			$config['file_name'] = 'pepe.pub';
+			//$config['allowed_types'] = 'pub';
+			//$config['allowed_types'] = '*';
+			//$config['max_size']	= '100';
 			
 			$this->load->library('upload', $config);
 			
-			if (!$this->upload->do_upload())
+			if (!$this->upload->do_upload("pubkey"))
 			{
 				$error = array('error' => $this->upload->display_errors());
 				foreach($error as $d) {
