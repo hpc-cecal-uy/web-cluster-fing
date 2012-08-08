@@ -14,24 +14,24 @@
 			</li>
 		</ul>
 	</div>
+	<h1>Soy un nuevo usuario</h1>
 	<div id="nuevo-usuario" style="font-size: 1.1em;">
-		<h3>Soy un nuevo usuario</h3>
 		<div <?php if (strlen($error) == 0) echo 'style="display:none;"'; ?>>
 			<?php echo $error; ?>
 		</div>
 		<?php echo form_open('como_conectarse',array('id'=>'nuevo_usuario','name'=>'nuevo_usuario')); ?>
-			<div class="note">Los campos marcados con <b>*</b> son requeridos.</div>
+			<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
 			<fieldset class="modulo_fieldset">
 				<p>
-					<label for="nombre" class="form">Nombre completo:</label>
-					<em>*</em><?php 
+					<label for="nombre" class="form">Nombre completo:</label><br/>
+					<?php 
 						$data_nombre = array(
 							'id'		=> 'nombre',
 							'name'		=> 'nombre',
 							'value'		=> set_value('nombre'),
 							'maxlength'	=> '25',
 							'size'		=> '25');
-						echo form_input($data_nombre, set_value('nombre')); ?>
+						echo form_input($data_nombre, set_value('nombre')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="nombre" generated="true" class="error"></label></div>
 				<p>
