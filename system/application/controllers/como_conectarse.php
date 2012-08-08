@@ -23,32 +23,15 @@ class Como_Conectarse extends Controller {
 		echo $this->input->post('pubkey');
 		
 		if ($this->input->post('submit') == 'Enviar') {
-			//$config['upload_path'] = '/fing/web/cluster/tmp/';
-			$config['upload_path'] = '/tmp/';
-			$config['file_name'] = 'pepe.pub';
-			//$config['allowed_types'] = 'pub';
-			//$config['allowed_types'] = '*';
-			//$config['max_size']	= '100';
+			$name_of_uploaded_file = basename($_FILES['pubkey']['name']);
+			$type_of_uploaded_file = substr($name_of_uploaded_file,
+					strrpos($name_of_uploaded_file, '.') + 1);
+			$size_of_uploaded_file = $_FILES["pubkey"]["size"]/1024;//size in KBs
 			
-			$this->load->library('upload', $config);
-			
-			if (!$this->upload->do_upload("pubkey"))
-			{
-				$error = array('error' => $this->upload->display_errors());
-				foreach($error as $d) {
-					echo $d;
-				};
-				//echo $error;
-				//$this->load->view('upload_form', $error);
-			}
-			else
-			{
-				$data = array('upload_data' => $this->upload->data());
-				foreach($data as $d) { echo $d; };
-				//echo $data;
-				//$this->load->view('upload_success', $data);
-			}
-						
+			echo $name_of_uploaded_file;
+			echo $type_of_uploaded_file;
+			echo $size_of_uploaded_file;
+									
 			$error = $this->validar_input();
 				
 			if (strlen($error) == 0) {
