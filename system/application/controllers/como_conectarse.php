@@ -26,7 +26,7 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function validar_input() {
-		/*if (strlen($this->input->post('nombre')) == 0) {
+		if (strlen($this->input->post('nombre')) == 0) {
 			return 'Debe ingresar su nombre completo.';
 		}
 			
@@ -54,7 +54,7 @@ class Como_Conectarse extends Controller {
 			return 'Debe ingresar su clave p&uacute;blica para acceder al cluster.';
 		}
 		
-		return '';*/
+		return '';
 	}
 	
 	function enviar() {
