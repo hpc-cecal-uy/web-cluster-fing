@@ -81,11 +81,11 @@ class Como_Conectarse extends Controller {
 		$body .= "\nPublic key ===========================================>\n";
 		$body .= $data_pubkey;
 		
-		/*if (mail($to, $subject, $body)) {
+		if (mail($to, $subject, $body)) {
 			redirect('/como_conectarse', 'ok');
-		} else {*/
+		} else {
 			return 'Ocurri&oacute; un error enviando sus datos. Por favor env&iacute;elos manualmente a <a href="mailto:gusera@fing.edu.uy">Gabriel Usera</a> y <a href="mailto:sergion@fing.edu.uy">Sergio Nesmachnow</a>&nbsp;<img src="'.base_url().'img/1280327156_email.png"></img>';
-		//}			
+		}			
 	}
 }
 
