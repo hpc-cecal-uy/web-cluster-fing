@@ -21,6 +21,25 @@ class Como_Conectarse extends Controller {
 		echo $this->input->post('pubkey');
 		
 		if ($this->input->post('submit') == 'Enviar') {
+			$config['upload_path'] = '/fing/web/cluster/';
+			$config['allowed_types'] = 'pub';
+			$config['max_size']	= '100';
+			
+			$this->load->library('upload', $config);
+			
+			if (!$this->upload->do_upload())
+			{
+				$error = array('error' => $this->upload->display_errors());
+				echo $error;
+				//$this->load->view('upload_form', $error);
+			}
+			else
+			{
+				$data = array('upload_data' => $this->upload->data());
+				echo $data;
+				//$this->load->view('upload_success', $data);
+			}
+						
 			$error = $this->validar_input();
 				
 			if (strlen($error) == 0) {
