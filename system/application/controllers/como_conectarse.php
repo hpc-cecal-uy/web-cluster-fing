@@ -58,7 +58,7 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function enviar() {
-		/*$pubkey = $_FILES["pubkey"]["tmp_name"];
+		$pubkey = $_FILES["pubkey"]["tmp_name"];
 		$file_pubkey = fopen($pubkey, 'r');
 		$data_pubkey = fread($file_pubkey, filesize($pubkey));
 		fclose($file_pubkey);
@@ -68,7 +68,7 @@ class Como_Conectarse extends Controller {
 		$to = "siturria@fing.edu.uy";
 		$subject = "[CLUSTER FING] Nuevo usuario";
 		
-		$body = "";*/
+		$body = "";
 		/*$body .= "Nombre: " . $this->input->post('nombre');
 		$body .= "\nEmail: " . $this->input->post('email');
 		$body .= "\nDescripción: " . $this->input->post('descripcion');
