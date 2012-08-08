@@ -18,6 +18,8 @@ class Como_Conectarse extends Controller {
 		
 		$error = "";
 		
+		echo $this->input->post('pubkey');
+		
 		if ($this->input->post('submit') == 'Enviar') {
 			$error = $this->validar_input();
 				

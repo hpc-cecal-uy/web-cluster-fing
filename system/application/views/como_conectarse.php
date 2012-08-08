@@ -19,7 +19,7 @@
 		<div <?php if (strlen($error) == 0) { echo 'style="display:none;"'; } else { echo 'style="color:red;font-weight:bold;"'; } ?>>
 			<?php echo $error; ?>
 		</div>
-		<?php echo form_open('como_conectarse',array('id'=>'nuevo_usuario','name'=>'nuevo_usuario')); ?>
+		<?php echo form_open_multipart('como_conectarse',array('id'=>'nuevo_usuario','name'=>'nuevo_usuario')); ?>
 			<fieldset style="border: 0 none;">
 				<p>
 					<label for="nombre">Nombre completo</label><br/>
@@ -78,7 +78,7 @@
 							'id'		=> 'pubkey',
 							'name'		=> 'pubkey',
 							'value'		=> set_value('pubkey'),
-							'size'		=> '90%');
+							'size'		=> '70%');
 						echo form_upload($data_pubkey,set_value('pubkey')); ?><em>*</em>
 				</p>
 				<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
