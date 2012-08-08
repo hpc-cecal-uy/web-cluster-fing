@@ -7,31 +7,9 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function index() {
-		$this->load->library('upload');
-		
-		/*$to = "siturria@fing.edu.uy";
-		$subject = "Hi!";
-		$body = "Hi,\n\nHow are you?";
-		if (mail($to, $subject, $body)) {
-			echo("<p>Message successfully sent!</p>");
-		} else {
-			echo("<p>Message delivery failed...</p>");
-		}*/
-		
 		$error = "";
-		
-		echo $this->input->post('pubkey');
-		
-		if ($this->input->post('submit') == 'Enviar') {
-			$name_of_uploaded_file = basename($_FILES['pubkey']['name']);
-			$type_of_uploaded_file = substr($name_of_uploaded_file,
-					strrpos($name_of_uploaded_file, '.') + 1);
-			$size_of_uploaded_file = $_FILES["pubkey"]["size"]/1024;//size in KBs
 			
-			echo $name_of_uploaded_file;
-			echo $type_of_uploaded_file;
-			echo $size_of_uploaded_file;
-									
+		if ($this->input->post('submit') == 'Enviar') {								
 			$error = $this->validar_input();
 				
 			if (strlen($error) == 0) {
@@ -68,10 +46,39 @@ class Como_Conectarse extends Controller {
 			return 'Debe ingresar su motivaci&oacute;n para utilizar el cluster.';
 		}
 	
+		if ($_FILES["pubkey"]["size"] == 0) {
+			return 'Debe ingresar su clave p&uacute;blica para acceder al cluster.';
+		}
+		
 		return '';
 	}
 	
 	function enviar() {
+		$pubkey = $_FILES["pubkey"]["tmp_name"];
+		$file_pubkey = fopen($pubkey, 'r');
+		$data_pubkey = fread($file_pubkey, filesize($pubkey));
+		fclose($file_pubkey);
+		echo $data_pubkey;
+		
+		//$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
+		$to = "siturria@fing.edu.uy";
+		$subject = "[CLUSTER FING] Nuevo usuario";
+		$body = "Hi,\n\nHow are you?\n" + $data_pubkey;
+		
+		if (mail($to, $subject, $body)) {
+			echo("<p>Message successfully sent!</p>");
+		} else {
+			echo("<p>Message delivery failed...</p>");
+		}
+		
+		/*
+		$name_of_uploaded_file = basename($_FILES['pubkey']['name']);
+		$size_of_uploaded_file = $_FILES["pubkey"]["size"];
+		$tmp_path = $_FILES["pubkey"]["tmp_name"];
+		echo $name_of_uploaded_file;
+		echo $type_of_uploaded_file;
+		echo $size_of_uploaded_file;
+		*/
 	}
 }
 
