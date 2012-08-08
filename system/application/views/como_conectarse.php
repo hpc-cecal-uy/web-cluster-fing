@@ -101,5 +101,7 @@
 		<?php  echo form_close(); ?>
 	</div>
 	<?php } else { ?>
+		<h1>Sus datos fueron enviados con &eacute;xito!</h1>
+		A la brevedad los administradores se contactar&aacute;n con usted.
 	<?php } ?>
 </div>
