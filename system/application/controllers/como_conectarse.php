@@ -7,6 +7,8 @@ class Como_Conectarse extends Controller {
 	}
 	
 	function index() {
+		$this->load->helper('url');
+				
 		$error = "";
 			
 		if ($this->input->post('submit') == 'Enviar') {								
@@ -71,7 +73,7 @@ class Como_Conectarse extends Controller {
 		$body = "";
 		$body .= "Nombre: ".$this->input->post('nombre');
 		$body .= "\nEmail: ".$this->input->post('email');
-		$body .= "\nDescripción: ".$this->input->post('descripcion');
+		$body .= "\nDescripci&oacute;n: ".$this->input->post('descripcion');
 		$body .= "\nFormación: ".$this->input->post('formacion');
 		$body .= "\nMotivación: ".$this->input->post('motivacion');	
 		$body .= "\n(start) Public key ====>\n";
@@ -86,7 +88,10 @@ class Como_Conectarse extends Controller {
 		
 		//$data['nombre'] = '';
 		//$this->input->post('descripcion') = ''; 
-		set_value('nombre','');
+		//set_value('nombre','');
+		//$this->input->post();
+		//redirect('/register/');
+		redirect('/como_conectarse');	
 	}
 }
 
