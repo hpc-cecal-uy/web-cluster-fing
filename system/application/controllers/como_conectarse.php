@@ -84,8 +84,8 @@ class Como_Conectarse extends Controller {
 			echo("<p>Message delivery failed...</p>");
 		}
 		
-		$data['nombre'] = '';
-		$this->input->post('descripcion') = ''; 
+		/*$data['nombre'] = '';
+		$this->input->post('descripcion') = '';*/ 
 	}
 }
 
