@@ -73,9 +73,9 @@ class Como_Conectarse extends Controller {
 		$body = "";
 		$body .= "Nombre: ".$this->input->post('nombre');
 		$body .= "\nEmail: ".$this->input->post('email');
-		$body .= "\nDescripci&oacute;n: ".$this->input->post('descripcion');
-		$body .= "\nFormación: ".$this->input->post('formacion');
-		$body .= "\nMotivación: ".$this->input->post('motivacion');	
+		$body .= "\nDescripcion: ".$this->input->post('descripcion');
+		$body .= "\nFormacion: ".$this->input->post('formacion');
+		$body .= "\nMotivacion: ".$this->input->post('motivacion');	
 		$body .= "\n(start) Public key ====>\n";
 		$body .= $data_pubkey;
 		$body .= "\n(end) Public key <====\n";
