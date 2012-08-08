@@ -64,7 +64,7 @@ class Como_Conectarse extends Controller {
 		$file_pubkey = fopen($pubkey, 'r');
 		$data_pubkey = fread($file_pubkey, filesize($pubkey));
 		fclose($file_pubkey);
-		echo $data_pubkey;
+		//echo $data_pubkey;
 		
 		//$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
 		$to = "siturria@fing.edu.uy";
@@ -81,9 +81,9 @@ class Como_Conectarse extends Controller {
 		$body .= "\n(end) Public key <====\n";
 		
 		if (mail($to, $subject, $body)) {
-			echo("<p>Message successfully sent!</p>");
+			//echo("<p>Message successfully sent!</p>");
 		} else {
-			echo("<p>Message delivery failed...</p>");
+			//echo("<p>Message delivery failed...</p>");
 		}
 		
 		//$data['nombre'] = '';
