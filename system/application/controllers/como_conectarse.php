@@ -30,13 +30,17 @@ class Como_Conectarse extends Controller {
 			if (!$this->upload->do_upload())
 			{
 				$error = array('error' => $this->upload->display_errors());
-				echo $error;
+				foreach($error as $d) {
+					echo $d;
+				};
+				//echo $error;
 				//$this->load->view('upload_form', $error);
 			}
 			else
 			{
 				$data = array('upload_data' => $this->upload->data());
-				echo $data;
+				foreach($data as $d) { echo $d; };
+				//echo $data;
 				//$this->load->view('upload_success', $data);
 			}
 						

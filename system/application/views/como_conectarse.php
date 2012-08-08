@@ -72,7 +72,7 @@
 						echo form_input($data_motivacion,set_value('motivacion')); ?><em>*</em>
 				</p>
 				<p>
-					<label for="pubkey">Ingrese su clave p&oacute;blica</label><br/>
+					<label for="pubkey">Ingrese su clave p&uacute;blica</label><br/>
 					<?php 
 						$data_pubkey = array(
 							'id'		=> 'pubkey',
@@ -81,8 +81,8 @@
 							'size'		=> '70%');
 						echo form_upload($data_pubkey,set_value('pubkey')); ?><em>*</em>
 				</p>
-				<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
-				<p style="text-align: right;">
+				<div style="font-size:smaller; font-weight:bold; text-align:right;">Los campos marcados con <b>*</b> son requeridos.</div>
+				<p>
 					<?php $custom_submit = ''; //class="submit_button"';	
 					echo form_submit('submit', 'Enviar',$custom_submit); ?>
 				</p>
