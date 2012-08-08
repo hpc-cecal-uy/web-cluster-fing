@@ -15,7 +15,7 @@ class Como_Conectarse extends Controller {
 			$error = $this->validar_input();
 				
 			if (strlen($error) == 0) {
-				$script = $this->enviar();
+				$error = $this->enviar();
 			}
 		}
 		
@@ -25,6 +25,9 @@ class Como_Conectarse extends Controller {
 		$data['js_include'] = '';
 		$data['css_include'] = $data['css_include'] = '<link rel="stylesheet" href="'.base_url().'css/como_conectarse.css" type="text/css" media="screen" />';
 		$this->load->view('includes/template', $data);
+	}
+	
+	function ok() {
 	}
 	
 	function validar_input() {
@@ -64,7 +67,6 @@ class Como_Conectarse extends Controller {
 		$file_pubkey = fopen($pubkey, 'r');
 		$data_pubkey = fread($file_pubkey, filesize($pubkey));
 		fclose($file_pubkey);
-		//echo $data_pubkey;
 		
 		//$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
 		$to = "siturria@fing.edu.uy";
@@ -76,22 +78,14 @@ class Como_Conectarse extends Controller {
 		$body .= "\nDescripcion: ".$this->input->post('descripcion');
 		$body .= "\nFormacion: ".$this->input->post('formacion');
 		$body .= "\nMotivacion: ".$this->input->post('motivacion');	
-		$body .= "\n(start) Public key ====>\n";
+		$body .= "\nPublic key ===========================================>\n";
 		$body .= $data_pubkey;
-		$body .= "\n(end) Public key <====\n";
 		
-		if (mail($to, $subject, $body)) {
-			//echo("<p>Message successfully sent!</p>");
-		} else {
-			//echo("<p>Message delivery failed...</p>");
-		}
-		
-		//$data['nombre'] = '';
-		//$this->input->post('descripcion') = ''; 
-		//set_value('nombre','');
-		//$this->input->post();
-		//redirect('/register/');
-		redirect('/como_conectarse');	
+		/*if (mail($to, $subject, $body)) {
+			redirect('/como_conectarse', 'ok');
+		} else {*/
+			return 'Ocurri&oacute; un error enviando sus datos. Por favor env&iacute;elos manualmente a <a href="mailto:gusera@fing.edu.uy">Gabriel Usera</a> y <a href="mailto:sergion@fing.edu.uy">Sergio Nesmachnow</a>&nbsp;<img src="<?php echo base_url(); ?>img/1280327156_email.png"></img>';
+		//}			
 	}
 }
 
