@@ -23,7 +23,8 @@ class Como_Conectarse extends Controller {
 		echo $this->input->post('pubkey');
 		
 		if ($this->input->post('submit') == 'Enviar') {
-			$config['upload_path'] = '/fing/web/cluster/tmp/';
+			//$config['upload_path'] = '/fing/web/cluster/tmp/';
+			$config['upload_path'] = '/tmp/';
 			$config['file_name'] = 'pepe.pub';
 			//$config['allowed_types'] = 'pub';
 			//$config['allowed_types'] = '*';

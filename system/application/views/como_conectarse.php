@@ -81,7 +81,7 @@
 							'size'		=> '70%');
 						echo form_upload($data_pubkey,set_value('pubkey')); ?><em>*</em>
 				</p>
-				<div style="font-size:smaller; font-weight:bold; text-align:right;">Los campos marcados con <b>*</b> son requeridos.</div>
+				<div style="font-size:smaller; font-weight:bold;">Los campos marcados con <b>*</b> son requeridos.</div>
 				<p>
 					<?php $custom_submit = ''; //class="submit_button"';	
 					echo form_submit('submit', 'Enviar',$custom_submit); ?>
