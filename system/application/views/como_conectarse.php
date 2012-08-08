@@ -12,7 +12,7 @@
 					<li>El procedimiento de generación de claves puede consultarse en el siguiente <a href="http://www.fing.edu.uy/inco/cursos/hpc/material/clases/AmbientePVM.pdf">enlace</a> y en sitios de Internet.</li>
 				</ul>
 			</li>
-			<li><b>Nuevos usuarios:</b> para solicitar acceso al cluster debe completar el formulario que sigue.</li>
+			<li><b>Nuevo usuario:</b> para solicitar acceso al cluster debe completar el formulario que sigue.</li>
 		</ul>
 	</div>
 	<?php if (! $enviado) { ?>
