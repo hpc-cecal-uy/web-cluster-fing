@@ -16,14 +16,13 @@
 	</div>
 	<h1>Soy un nuevo usuario</h1>
 	<div id="nuevo-usuario" style="font-size: 1.1em;">
-		<div <?php if (strlen($error) == 0) echo 'style="display:none;"'; ?>>
+		<div <?php if (strlen($error) == 0) { echo 'style="display:none;"'; } else { echo 'style="color:red;font-weight:bold;"'; } ?>>
 			<?php echo $error; ?>
 		</div>
 		<?php echo form_open('como_conectarse',array('id'=>'nuevo_usuario','name'=>'nuevo_usuario')); ?>
-			<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
 			<fieldset style="border: 0 none;">
 				<p>
-					<label for="nombre" class="form">Nombre completo:</label><br/>
+					<label for="nombre">Nombre completo</label><br/>
 					<?php 
 						$data_nombre = array(
 							'id'		=> 'nombre',
@@ -32,9 +31,8 @@
 							'size'		=> '90%');
 						echo form_input($data_nombre, set_value('nombre')); ?><em>*</em>
 				</p>
-				<div class="error"><label for="nombre" generated="true" class="error"></label></div>
 				<p>
-					<label for="email" class="form">Correo electr&oacute;nico:</label><br/>
+					<label for="email">Correo electr&oacute;nico</label><br/>
 					<?php 
 						$data_email = array(
 							'id'		=> 'email',
@@ -43,9 +41,8 @@
 							'size'		=> '90%');
 						echo form_input($data_email,set_value('email')); ?><em>*</em>
 				</p>
-				<div class="error"><label for="email" generated="true" class="error"></label></div>
 				<p>
-					<label for="descripcion" class="form">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.):</label><br/>
+					<label for="descripcion">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.)</label><br/>
 					<?php 
 						$data_descripcion = array(
 							'id'		=> 'descripcion',
@@ -54,9 +51,8 @@
 							'size'		=> '90%');
 						echo form_input($data_descripcion,set_value('descripcion')); ?><em>*</em>
 				</p>
-				<div class="error"><label for="descripcion" generated="true" class="error"></label></div>
 				<p>
-					<label for="formacion" class="form">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.):</label><br/>
+					<label for="formacion">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.)</label><br/>
 					<?php 
 						$data_formacion = array(
 							'id'		=> 'formacion',
@@ -65,19 +61,28 @@
 							'size'		=> '90%');
 						echo form_input($data_formacion,set_value('formacion')); ?><em>*</em>
 				</p>
-				<div class="error"><label for="formacion" generated="true" class="error"></label></div>
 				<p>
-					<label for="motivacion" class="form">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (curso específico/tesis de maestr&iacute;a o doctorado/proyecto/curiosidad/etc.):</label><br/>
+					<label for="motivacion">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (curso específico/tesis de maestr&iacute;a o doctorado/proyecto/curiosidad/etc.)</label><br/>
 					<?php 
 						$data_motivacion = array(
-							'id'		=> 'proyecto',
-							'name'		=> 'proyecto',
+							'id'		=> 'motivacion',
+							'name'		=> 'motivacion',
 							'value'		=> set_value('motivacion'),
 							'size'		=> '90%');
 						echo form_input($data_motivacion,set_value('motivacion')); ?><em>*</em>
 				</p>
-				<div class="error"><label for="motivacion" generated="true" class="error"></label></div>
 				<p>
+					<label for="pubkey">Ingrese su clave p&oacute;blica</label><br/>
+					<?php 
+						$data_pubkey = array(
+							'id'		=> 'pubkey',
+							'name'		=> 'pubkey',
+							'value'		=> set_value('pubkey'),
+							'size'		=> '90%');
+						echo form_upload($data_pubkey,set_value('pubkey')); ?><em>*</em>
+				</p>
+				<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
+				<p style="text-align: right;">
 					<?php $custom_submit = ''; //class="submit_button"';	
 					echo form_submit('submit', 'Enviar',$custom_submit); ?>
 				</p>
