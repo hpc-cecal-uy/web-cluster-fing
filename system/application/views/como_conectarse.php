@@ -29,53 +29,52 @@
 							'id'		=> 'nombre',
 							'name'		=> 'nombre',
 							'value'		=> set_value('nombre'),
-							'maxlength'	=> '25',
-							'size'		=> '25');
+							'size'		=> '100%');
 						echo form_input($data_nombre, set_value('nombre')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="nombre" generated="true" class="error"></label></div>
 				<p>
-					<label for="email" class="form">Correo electr&oacute;nico:</label>
-					<em>*</em><?php 
+					<label for="email" class="form">Correo electr&oacute;nico:</label><br/>
+					<?php 
 						$data_email = array(
 							'id'		=> 'email',
 							'name'		=> 'email',
 							'value'		=> set_value('email'),
 							'size'		=> '25');
-						echo form_input($data_email,set_value('email')); ?>
+						echo form_input($data_email,set_value('email')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="email" generated="true" class="error"></label></div>
 				<p>
-					<label for="descripcion" class="form">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.):</label>
-					<em>*</em><?php 
+					<label for="descripcion" class="form">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.):</label><br/>
+					<?php 
 						$data_descripcion = array(
 							'id'		=> 'descripcion',
 							'name'		=> 'descripcion',
 							'value'		=> set_value('descripcion'),
 							'size'		=> '25');
-						echo form_input($data_descripcion,set_value('descripcion')); ?>
+						echo form_input($data_descripcion,set_value('descripcion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="descripcion" generated="true" class="error"></label></div>
 				<p>
-					<label for="formacion" class="form">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.):</label>
-					<em>*</em><?php 
+					<label for="formacion" class="form">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.):</label><br/>
+					<?php 
 						$data_formacion = array(
 							'id'		=> 'formacion',
 							'name'		=> 'formacion',
 							'value'		=> set_value('formacion'),
 							'size'		=> '25');
-						echo form_input($data_formacion,set_value('formacion')); ?>
+						echo form_input($data_formacion,set_value('formacion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="formacion" generated="true" class="error"></label></div>
 				<p>
-					<label for="motivacion" class="form">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (materia o curso perticular/tesis (de maestr&iacute;a o doctorado)/proyecto/curiosidad/etc.):</label>
-					<em>*</em><?php 
+					<label for="motivacion" class="form">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (materia o curso perticular/tesis (de maestr&iacute;a o doctorado)/proyecto/curiosidad/etc.):</label><br/>
+					<?php 
 						$data_motivacion = array(
 							'id'		=> 'proyecto',
 							'name'		=> 'proyecto',
 							'value'		=> set_value('motivacion'),
 							'size'		=> '25');
-						echo form_input($data_motivacion,set_value('motivacion')); ?>
+						echo form_input($data_motivacion,set_value('motivacion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="motivacion" generated="true" class="error"></label></div>
 				<p>
