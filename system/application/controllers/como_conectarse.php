@@ -33,7 +33,11 @@ class Como_Conectarse extends Controller {
 		if (strlen($this->input->post('email')) == 0) {
 			return 'Debe ingresar su correo eletr&oacute;nico.';
 		}
-		
+
+		if ($this->input->post('email') == $this->input->post('email2')) {
+			return 'Los correos electr&oacute;nicos no coinciden.';
+		}
+				
 		if (strlen($this->input->post('descripcion')) == 0) {
 			return 'Debe ingresar como se describir&iacute;a a si mismo.';
 		}
@@ -63,7 +67,9 @@ class Como_Conectarse extends Controller {
 		//$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
 		$to = "siturria@fing.edu.uy";
 		$subject = "[CLUSTER FING] Nuevo usuario";
-		$body = "Hi,\n\nHow are you?\n" + $data_pubkey;
+		
+		//$body = "Hi,\n\nHow are you?\n" + $data_pubkey;
+		$body = $data_pubkey;
 		
 		if (mail($to, $subject, $body)) {
 			echo("<p>Message successfully sent!</p>");

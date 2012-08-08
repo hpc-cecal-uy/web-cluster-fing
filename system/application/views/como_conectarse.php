@@ -42,6 +42,16 @@
 						echo form_input($data_email,set_value('email')); ?><em>*</em>
 				</p>
 				<p>
+					<label for="email2">Verifique su correo electr&oacute;nico</label><br/>
+					<?php 
+						$data_email = array(
+							'id'		=> 'email2',
+							'name'		=> 'email2',
+							'value'		=> set_value('email2'),
+							'size'		=> '90%');
+						echo form_input($data_email,set_value('email2')); ?><em>*</em>
+				</p>
+				<p>
 					<label for="descripcion">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.)</label><br/>
 					<?php 
 						$data_descripcion = array(
