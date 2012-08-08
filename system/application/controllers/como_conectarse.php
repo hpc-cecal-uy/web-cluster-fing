@@ -86,6 +86,7 @@ class Como_Conectarse extends Controller {
 		
 		//$data['nombre'] = '';
 		//$this->input->post('descripcion') = ''; 
+		set_value('nombre','');
 	}
 }
 
