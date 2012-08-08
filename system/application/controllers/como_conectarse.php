@@ -74,7 +74,7 @@ class Como_Conectarse extends Controller {
 		$body .= "\nDescripción: " . $this->input->post('descripcion');
 		$body .= "\nFormación: " . $this->input->post('formacion');
 		$body .= "\nMotivación: " . $this->input->post('motivacion');*/	
-		/*$body .= "\n(start) Public key ====>\n";
+		$body .= "\n(start) Public key ====>\n";
 		$body .= $data_pubkey;
 		$body .= "\n(end) Public key <====\n";
 		
@@ -82,7 +82,7 @@ class Como_Conectarse extends Controller {
 			echo("<p>Message successfully sent!</p>");
 		} else {
 			echo("<p>Message delivery failed...</p>");
-		}*/
+		}
 		
 		/*$data['nombre'] = '';
 		$this->input->post('descripcion') = '';*/ 
