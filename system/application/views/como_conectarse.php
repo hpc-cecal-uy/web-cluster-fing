@@ -14,6 +14,7 @@
 			</li>
 		</ul>
 	</div>
+	<?php if (! $enviado) { ?>
 	<h1>Soy un nuevo usuario</h1>
 	<div id="nuevo-usuario" style="font-size: 1.1em;">
 		<div <?php if (strlen($error) == 0) { echo 'style="display:none;"'; } else { echo 'style="color:red;font-weight:bold;"'; } ?>>
@@ -99,4 +100,6 @@
 			</fieldset>
 		<?php  echo form_close(); ?>
 	</div>
+	<?php } else { ?>
+	<?php } ?>
 </div>
