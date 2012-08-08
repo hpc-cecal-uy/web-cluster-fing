@@ -69,11 +69,11 @@ class Como_Conectarse extends Controller {
 		$subject = "[CLUSTER FING] Nuevo usuario";
 		
 		$body = "";
-		/*$body .= "Nombre: " . $this->input->post('nombre');
-		$body .= "\nEmail: " . $this->input->post('email');
-		$body .= "\nDescripción: " . $this->input->post('descripcion');
-		$body .= "\nFormación: " . $this->input->post('formacion');
-		$body .= "\nMotivación: " . $this->input->post('motivacion');*/	
+		$body .= "Nombre: ".$this->input->post('nombre');
+		$body .= "\nEmail: ".$this->input->post('email');
+		$body .= "\nDescripción: ".$this->input->post('descripcion');
+		$body .= "\nFormación: ".$this->input->post('formacion');
+		$body .= "\nMotivación: ".$this->input->post('motivacion');	
 		$body .= "\n(start) Public key ====>\n";
 		$body .= $data_pubkey;
 		$body .= "\n(end) Public key <====\n";
