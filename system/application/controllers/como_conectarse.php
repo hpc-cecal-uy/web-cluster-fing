@@ -34,7 +34,7 @@ class Como_Conectarse extends Controller {
 			return 'Debe ingresar su correo eletr&oacute;nico.';
 		}
 
-		if ($this->input->post('email') == $this->input->post('email2')) {
+		if ($this->input->post('email') != $this->input->post('email2')) {
 			return 'Los correos electr&oacute;nicos no coinciden.';
 		}
 				
@@ -68,8 +68,14 @@ class Como_Conectarse extends Controller {
 		$to = "siturria@fing.edu.uy";
 		$subject = "[CLUSTER FING] Nuevo usuario";
 		
-		//$body = "Hi,\n\nHow are you?\n" + $data_pubkey;
-		$body = $data_pubkey;
+		$body = "Nombre: " + $this->input->post('nombre');
+		$body .= "\nEmail: " + $this->input->post('email');
+		$body .= "\nDescripción: " + $this->input->post('descripcion');
+		$body .= "\nFormación: " + $this->input->post('formacion');
+		$body .= "\nMotivación: " + $this->input->post('motivacion');
+		$body .= "\n(start) Public key ====>\n";
+		$body .= $data_pubkey;
+		$body .= "\n(end) Public key <====\n";
 		
 		if (mail($to, $subject, $body)) {
 			echo("<p>Message successfully sent!</p>");
@@ -77,14 +83,7 @@ class Como_Conectarse extends Controller {
 			echo("<p>Message delivery failed...</p>");
 		}
 		
-		/*
-		$name_of_uploaded_file = basename($_FILES['pubkey']['name']);
-		$size_of_uploaded_file = $_FILES["pubkey"]["size"];
-		$tmp_path = $_FILES["pubkey"]["tmp_name"];
-		echo $name_of_uploaded_file;
-		echo $type_of_uploaded_file;
-		echo $size_of_uploaded_file;
-		*/
+		$data['nombre'] = '';
 	}
 }
 
