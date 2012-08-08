@@ -67,7 +67,7 @@
 				</p>
 				<div class="error"><label for="formacion" generated="true" class="error"></label></div>
 				<p>
-					<label for="motivacion" class="form">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (materia o curso perticular/tesis (de maestr&iacute;a o doctorado)/proyecto/curiosidad/etc.):</label><br/>
+					<label for="motivacion" class="form">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (curso específico/tesis de maestr&iacute;a o doctorado/proyecto/curiosidad/etc.):</label><br/>
 					<?php 
 						$data_motivacion = array(
 							'id'		=> 'proyecto',
