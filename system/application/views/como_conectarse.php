@@ -21,7 +21,7 @@
 		</div>
 		<?php echo form_open('como_conectarse',array('id'=>'nuevo_usuario','name'=>'nuevo_usuario')); ?>
 			<div style="font-size: smaller; font-weight: bold;">Los campos marcados con <b>*</b> son requeridos.</div>
-			<fieldset class="modulo_fieldset">
+			<fieldset style="border: 0 none;">
 				<p>
 					<label for="nombre" class="form">Nombre completo:</label><br/>
 					<?php 
@@ -29,7 +29,7 @@
 							'id'		=> 'nombre',
 							'name'		=> 'nombre',
 							'value'		=> set_value('nombre'),
-							'size'		=> '100%');
+							'size'		=> '90%');
 						echo form_input($data_nombre, set_value('nombre')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="nombre" generated="true" class="error"></label></div>
@@ -40,7 +40,7 @@
 							'id'		=> 'email',
 							'name'		=> 'email',
 							'value'		=> set_value('email'),
-							'size'		=> '25');
+							'size'		=> '90%');
 						echo form_input($data_email,set_value('email')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="email" generated="true" class="error"></label></div>
@@ -51,7 +51,7 @@
 							'id'		=> 'descripcion',
 							'name'		=> 'descripcion',
 							'value'		=> set_value('descripcion'),
-							'size'		=> '25');
+							'size'		=> '90%');
 						echo form_input($data_descripcion,set_value('descripcion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="descripcion" generated="true" class="error"></label></div>
@@ -62,7 +62,7 @@
 							'id'		=> 'formacion',
 							'name'		=> 'formacion',
 							'value'		=> set_value('formacion'),
-							'size'		=> '25');
+							'size'		=> '90%');
 						echo form_input($data_formacion,set_value('formacion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="formacion" generated="true" class="error"></label></div>
@@ -73,7 +73,7 @@
 							'id'		=> 'proyecto',
 							'name'		=> 'proyecto',
 							'value'		=> set_value('motivacion'),
-							'size'		=> '25');
+							'size'		=> '90%');
 						echo form_input($data_motivacion,set_value('motivacion')); ?><em>*</em>
 				</p>
 				<div class="error"><label for="motivacion" generated="true" class="error"></label></div>
