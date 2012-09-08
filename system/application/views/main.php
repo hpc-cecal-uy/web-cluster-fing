@@ -10,20 +10,20 @@
 <div id="two-columns">
 	<div id="left-column">
 		<div class="module">
-			<div class="module-title">¡Cumplimos 1.000.000 de horas de cómputo!</div>
-			<!--<div class="module-title">¡Falta poco para cumplir el 1.000.000 de horas!</div>-->
+			<div class="module-title">Hacia las 2.000.000 de horas de c&oacute;mputo</div>
 			<div class="module-body">
-				<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>
+				<!--<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>-->
+                                <img src="<?php echo base_url();?>img/dart-2.jpg" width="180px" style="margin-bottom: 10px;"></img>
 				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
-					¡Albricias, el proyecto cluster FING cumplió 1.000.000 de horas de cómputo el viernes 16 de setiembre del 2011 a las 20:46!<br/><br/>
-					Nuestros agradecimientos a todos los que colaboraron para que este hito pudiera ser alcanzado.<br/>
-					<br/>Total de horas de cómputo hasta el momento:<br/>
+					El proyecto cluster FING cumpli&oacute; 1.000.000 de horas de cómputo el  16 de setiembre del  2011. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/><br/>
+                                        El pr&oacute;ximo objetivo es alcanzar las 2.000.000 de horas de c&oacute;mputo.<br/>
+					<br/>Total de horas de cómputo <!-- hasta el momento-->:<br/>
 					<div style="text-align:center;margin-top:5px;">
 						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
-				<br/><br/><br/><br/>
+				<br/><br/><br/>
 				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué hicimos en el primer millón de horas?</span>
 				<center><img src="<?php echo base_url();?>img/indicadores.png"></img></center>
 				<script type="text/javascript">
@@ -84,6 +84,10 @@
 		</div>
 	</div>
 	<div id="right-column">
+		<div class="module">
+                        <div class="module-title">Evento Interdiciplinario PEDECIBA</div>
+			<a href="http://www.fing.edu.uy/grupos/niccad/ccad-2012/"><img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/banner.jpg"></img></a>
+		</div>
 		<div class="module">
 			<div class="module-title">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</div>
 			<div class="module-body">
