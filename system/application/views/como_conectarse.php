@@ -3,6 +3,7 @@
 	<div id="content-body" style="font-size: 1.1em;">
 		<ul>
 			<li><b>Punto de acceso:</b> cluster.fing.edu.uy</li>
+                        <li><b>Punto de acceso externo:</b> cluster-external.fing.edu.uy (solo bajo pedido)</li>
 			<!-- <li><b>Habilitación de usuarios:</b> solicitud mediante correo electrónico a <a href="mailto:gusera@fing.edu.uy">Gabriel Usera</a> y <a href="mailto:sergion@fing.edu.uy">Sergio Nesmachnow</a>&nbsp;<img src="<?php echo base_url(); ?>img/1280327156_email.png"></img></li> -->
 			<li><b>Autenticación:</b> mediante par de claves pública/privada.
 				<ul>
