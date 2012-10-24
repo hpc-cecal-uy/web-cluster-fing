@@ -1,4 +1,4 @@
-<img src="<?php echo base_url();?>img/1m-horas-ribbon.gif" style="position: absolute; top: 0px; right: 0px;" />
+<!--<img src="<?php echo base_url();?>img/1m-horas-ribbon.gif" style="position: absolute; top: 0px; right: 0px;" />-->
 <div id="foto-slider">
 	<img src="<?php echo base_url();?>img/fotos/1.jpg" alt="" title="Cluster FING" />
 	<img src="<?php echo base_url();?>img/fotos/2.jpg" alt="" title="Cluster FING" style="display:none;" />
