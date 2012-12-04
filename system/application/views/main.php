@@ -22,7 +22,7 @@
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
-				<br/><br/><br/>
+				<br/><br/>
 				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué se ha logrado en estas dos millones de horas?</span>
 				<center><img src="<?php echo base_url();?>img/indicadores-2012.png" width="400px"></img></center>
 				<script type="text/javascript">
@@ -156,7 +156,7 @@
                                     <br/>
 				    <img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px"></img>
 				</div>
-                                <div style="float:right; width:280px; padding-right:5px;font-size:14px;text-align:justify;">
+                                <div style="width:300px;font-size:14px;text-align:justify;padding-left:130px;">
                                         El miércoles 17 de noviembre de 2012 se desarroll&oacute; el evento interdisciplinario de 
                                         Computación Científica de Alto Desempe&ntilde;o en Facultad de Ingeniería.<br/> 
                                         La Conferencia tuvo como cometido la difusión de las actividades de investigación en al 
@@ -165,7 +165,7 @@
                                         de diversas disciplinas para resolver problemas con impacto en la salud, el manejo de recursos 
                                         energéticos, la producción, etc.
                                 </div>
-                                <div style="padding-top:270px">
+                                <div>
                                    <center>
                                      <table>
                                        <tr>
@@ -192,11 +192,13 @@
 		<div class="module">
 			<div class="module-title">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</div>
 			<div class="module-body" style="text-align:center;">
-				<img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px" style="margin-bottom: 50px;"></img>
-				<div style="float:right; width:280px; padding-right:5px;font-size:14px;text-align:justify;">
-					El jueves 24 de noviembre de 2011 se desarroll&oacute; el II Seminario Multidisciplinario de Computación Científica de Alto Desempe&ntilde;o en el Polifuncional José Luis Massera de la Facultad de Ingenierí&iacute;a. El evento reuni&oacute; a investigadores, estudiantes y empresarios interesados en las &aacute;reas de computaci&oacute;n cient&iacute;fica y computaci&oacute;n de alto desempe&ntilde;o.<br/>
+				<div style="float:left;width:130px; text-align: center;">
+					<img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px" style="margin-bottom: 50px;"></img>
+				</div>
+				<div style="width:300px; padding-left:130px;font-size:14px;text-align:justify;">
+					El jueves 24 de noviembre de 2011 se desarroll&oacute; el II Seminario Multidisciplinario de Computación Científica de Alto Desempe&ntilde;o en el Polifuncional José Luis Massera de la Facultad de Ingenierí&iacute;a. El evento reuni&oacute; a investigadores, estudiantes y empresarios interesados en las &aacute;reas de computaci&oacute;n cient&iacute;fica y computaci&oacute;n de alto desempe&ntilde;o.
                                 </div>
-				<div style="padding-top: 20px">
+				<div style="margin-top:1px;padding-left:0px;">
 				   <center>
 				     <table>
 				       <tr>
