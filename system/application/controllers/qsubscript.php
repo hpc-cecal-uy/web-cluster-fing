@@ -19,15 +19,17 @@ class QSubScript extends Controller {
 		}
 		
 		$implementacion_mpi_trabajo_options = array(
-		  'mpich' => 'MPICH 1.2.7',
+		  'mpich' => 'MPICH 1.2.7');
+		/*,
 		  'lam' => 'LAM/MPI 7.1.4',
 		  'openmpi' => 'OpenMPI 1.2.5'
-		);
+		);*/
 
 		$cola_trabajo_options = array(
 		  'small_jobs' => 'small_jobs',
 		  'medium_jobs' => 'medium_jobs',
-		  'big_jobs' => 'big_jobs'
+		  'big_jobs' => 'big_jobs',
+		  'quick_jobs' => 'quick_jobs'
 		);
 	
 		$data['body'] = 'qsubscript';
@@ -214,7 +216,7 @@ class QSubScript extends Controller {
 				//Paralelo
 				if (strlen($this->input->post('tiene_omp_trabajo')) > 0) {
 					//Con OpenMP
-					$script .= 'export OMP_SCHEDULE="DYNAMIC,1"'."\n";
+					$script .= 'export OMP_SCHEDULE="STATIC"'."\n";
 					$script .= 'export OMP_NUM_THREADS=$NPROCS'."\n";
 				}
 				
@@ -225,7 +227,7 @@ class QSubScript extends Controller {
 			case 'distribuido':
 				if (strlen($this->input->post('tiene_omp_trabajo')) > 0) {
 					//Con OpenMP
-					$script .= 'export OMP_SCHEDULE="DYNAMIC,1"'."\n";
+					$script .= 'export OMP_SCHEDULE="STATIC"'."\n";
 					$script .= 'export OMP_NUM_THREADS=$NPROCS'."\n";
 				}		
 			
@@ -239,9 +241,9 @@ class QSubScript extends Controller {
 					switch ($this->input->post('implementacion_mpi_trabajo')) {
 						case 'mpich':
 							//MPICH
-							$script .= 'time /opt/mpich-ch_p4-gcc-1.2.7/bin/mpirun -np $NPROCS -machinefile $PBS_NODEFILE '.$this->input->post('ejecutable_trabajo')."\n";
+							$script .= 'time /usr/local/bin/mpiexec -mpich-p4-no-shmem '.$this->input->post('ejecutable_trabajo')."\n";
 							break;
-						case 'lam':
+						/*case 'lam':
 							//LAM
 							$script .= '/opt/lam-7.1.4/bin/lamboot'."\n";
 							$script .= 'time /opt/lam-7.1.4/bin/mpiexec '.$this->input->post('ejecutable_trabajo')."\n";
@@ -250,7 +252,7 @@ class QSubScript extends Controller {
 						case 'openmpi':
 							//OpenMPI
 							$script .= 'time mpiexec -np $NPROCS -machinefile $PBS_NODEFILE '.$this->input->post('ejecutable_trabajo')."\n";
-							break;
+							break;*/
 					}
 				}
 				break;
