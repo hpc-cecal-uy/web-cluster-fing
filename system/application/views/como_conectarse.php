@@ -31,7 +31,7 @@
 							'id'		=> 'nombre',
 							'name'		=> 'nombre',
 							'value'		=> set_value('nombre'),
-							'size'		=> '90%');
+							'size'		=> '60');
 						echo form_input($data_nombre, set_value('nombre')); ?><em>*</em>
 				</p>
 				<p>
@@ -41,7 +41,7 @@
 							'id'		=> 'email',
 							'name'		=> 'email',
 							'value'		=> set_value('email'),
-							'size'		=> '90%');
+							'size'		=> '60');
 						echo form_input($data_email,set_value('email')); ?><em>*</em>
 				</p>
 				<p>
@@ -51,7 +51,7 @@
 							'id'		=> 'email2',
 							'name'		=> 'email2',
 							'value'		=> set_value('email2'),
-							'size'		=> '90%');
+							'size'		=> '60');
 						echo form_input($data_email,set_value('email2')); ?><em>*</em>
 				</p>
 				<p>
@@ -61,8 +61,9 @@
 							'id'		=> 'descripcion',
 							'name'		=> 'descripcion',
 							'value'		=> set_value('descripcion'),
-							'size'		=> '90%');
-						echo form_input($data_descripcion,set_value('descripcion')); ?><em>*</em>
+							'rows'		=> '3',
+							'cols'		=> '60');
+						echo form_textarea($data_descripcion,set_value('descripcion')); ?><em>*</em>
 				</p>
 				<p>
 					<label for="formacion">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.)</label><br/>
@@ -71,8 +72,9 @@
 							'id'		=> 'formacion',
 							'name'		=> 'formacion',
 							'value'		=> set_value('formacion'),
-							'size'		=> '90%');
-						echo form_input($data_formacion,set_value('formacion')); ?><em>*</em>
+							'rows'		=> '3',
+							'cols'		=> '60');
+						echo form_textarea($data_formacion,set_value('formacion')); ?><em>*</em>
 				</p>
 				<p>
 					<label for="motivacion">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (curso específico/tesis de maestr&iacute;a o doctorado/proyecto/curiosidad/etc.)</label><br/>
@@ -81,8 +83,20 @@
 							'id'		=> 'motivacion',
 							'name'		=> 'motivacion',
 							'value'		=> set_value('motivacion'),
-							'size'		=> '90%');
-						echo form_input($data_motivacion,set_value('motivacion')); ?><em>*</em>
+							'rows'		=> '3',
+							'cols'		=> '60');
+						echo form_textarea($data_motivacion,set_value('motivacion')); ?><em>*</em>
+				</p>
+				<p>
+					<label for="area">Cu&aacute;l es su &aacute;rea de trabajo?</label><br/>
+					<?php 
+						$data_area = array(
+							'id'		=> 'area',
+							'name'		=> 'area',
+							'value'		=> set_value('area'),
+							'rows'		=> '3',
+							'cols'		=> '60');
+						echo form_textarea($data_area,set_value('area')); ?><em>*</em>
 				</p>
 				<p>
 					<label for="pubkey">Ingrese su clave p&uacute;blica</label><br/>

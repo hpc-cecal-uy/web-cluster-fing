@@ -10,21 +10,35 @@
 <div id="two-columns">
 	<div id="left-column">
 		<div class="module">
-			<div class="module-title">Cumplimos las 2.000.000 de horas de c&oacute;mputo</div>
+			<div class="module-title">Cumplimos los 4.000.000 de horas de c&oacute;mputo</div>
 			<div class="module-body">
 				<!--<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>-->
-                                <img src="<?php echo base_url();?>img/dart-2.jpg" width="180px" style="margin-bottom: 10px;"></img>
-				<div style="float:right; width:230px; padding-right:15px;font-size:14px;text-align:justify;">
-					El proyecto cluster FING cumpli&oacute; 2.000.000 de horas de cómputo el 19 de octubre del 2012. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/><br/>
-					<br/>Total de horas de cómputo <!-- hasta el momento-->:<br/>
+                                <img src="<?php echo base_url();?>img/4M.jpg" width="120px" style="margin-bottom: 120px;"></img>
+				<div style="float:right; width:260px; padding-right:15px;font-size:14px;text-align:justify;">
+					El proyecto cluster FING cumpli&oacute; 4.000.000 de horas de cómputo en enero de 2014. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/><br/>
+					<br/>Total de horas de cómputo al día de hoy:<br/>
 					<div style="text-align:center;margin-top:5px;">
 						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
 					</div>
 					<!-- <br/><a href="about:none" style="font-size:12px;float:right;">[leer más...]</a> -->
 				</div>
-				<br/><br/>
-				<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué se ha logrado en estas dos millones de horas?</span>
-				<center><img src="<?php echo base_url();?>img/indicadores-2012.png" width="400px"></img></center>
+				<br/>
+				<!--<span style="font-weight:bold; margin-left:20px; margin-bottom:3px;">¿Qué se ha logrado en estas tres millones de horas?</span>-->
+				<!--<center>-->
+					<!--<img src="<?php echo base_url();?>img/indicadores-2012.png" width="400px"></img>-->
+					<!--<table>
+						<tr><td span=2><b>INDICADORES DEL CLUSTER FING</b></td></tr>
+						<tr><td><b>Indicador</b></td><td><b>Valor (Mayo, 2013)</b></td></tr>
+						<tr><td>Número de usuarios</td><td>&gt; 150, de 6 países</td></tr>
+						<tr><td>Horas efectivas de cómputo</td><td>&gt; 2.900.000 horas (~332 años)</td></tr>
+						<tr><td>Proyectos académicos</td><td>&gt; 35</td></tr>
+						<tr><td>Tesis de posgrado</td><td>&gt; 30 Maestría y &gt; 15 Doctorado</td></tr>
+						<tr><td>Grupos de investigación</td><td>25</td></tr>
+						<tr><td>Proyectos y trabajos de grado</td><td>&gt; 100</td></tr>
+						<tr><td>Convenios</td><td>9</td></tr>
+						<tr><td>Atrículos publicados</td><td>&gt; 150</td></tr>
+					</table>
+				</center>-->
 				<script type="text/javascript">
 				        jQuery(document).ready(function($) {
 				                //$("#counter").flipCounter({imagePath:"http://localhost/web-cluster-fing/img/flipCounter-medium.png"});
@@ -40,6 +54,24 @@
 				                );    
 				        });
 				</script>
+			</div>
+		</div>                                       
+                <div class="module">
+                        <div class="module-title">Indicadores del cluster FING</div>
+                        <div class="module-body">
+				<div style="text-align:right;font-weight:bold;">¿Qué se ha logrado en estas tres millones de horas?</div><br/>
+		                <table width="100%" style="font-size:1.1em;font-weight:normal;" cellspacing=0>
+                                        <tr style="background-color:#081073;color:white;font-weight:bold;">
+						<td align="center">Indicador</td><td align="center">Valor (Julio, 2013)</td></tr>
+                                        <tr><td>Número de usuarios</td><td align="right">&gt; ~200, de 8 países</td></tr>
+                                        <tr><td>Horas efectivas de cómputo</td><td align="right">&gt; 4.500.000 horas (~515 años)</td></tr>
+                                        <tr><td>Proyectos académicos</td><td align="right">&gt; 50</td></tr>
+                                        <tr><td>Tesis de posgrado</td><td align="right">&gt; 40 Maestría y &gt; 20 Doctorado</td></tr>
+                                        <tr><td>Grupos de investigación</td><td align="right">30</td></tr>
+                                        <tr><td>Proyectos y trabajos de grado</td><td align="right">&gt; 130</td></tr>
+        	                        <tr><td>Convenios</td><td align="right">12</td></tr>
+                                        <tr><td>Atrículos publicados</td><td align="right">&gt; 250</td></tr>
+	                        </table>	
 			</div>
 		</div>
 		<div class="module">
@@ -139,6 +171,38 @@
 	</div>
 	<div id="right-column">
 		<div class="module">
+                        <div class="module-title">Evolución de horas de uso del cluster FING</div>
+			<div style="padding:5px;margin:0px;text-align:center;">
+				<a href="http://www.fing.edu.uy/cluster/img/horas_cluster_4M.png"><img src="http://www.fing.edu.uy/cluster/img/horas_cluster_4M.png" width="430px"></img></a>
+			</div>
+		</div>
+
+		<div class="module">
+                        <div class="module-title">Cluster FING: 8th in LARTOP 50 - 2013<!--50 fastest Supercomputers in Latin America--></div>
+			<div style="padding:0px;margin:0px;text-align:center">
+				<div style="text-align:right;font-weight:bold;margin-bottom:5px;">50 fastest Supercomputers in Latin America</div>
+				<a href="http://www2.lartop50.org/src/#listing"><img src="http://www.fing.edu.uy/cluster/img/lartop50.jpg" width="430px"></img></a>
+			</div>
+		</div>
+
+		<div class="module">
+                        <div class="module-title">HPCLatAm - High-Performance Computing Latin America Community</div>
+			<div style="padding:0px;margin:0px;text-align:center">
+				<a href="http://hpclatam.org/">
+					<img width="160px" style="margin-bottom: 10px;" src="http://hpclatam.org/img/logo_hpclatam.png"></img></a>
+				<div style="float:right;width:260px;text-align:left;width:250px;margin-top:5px;">
+HPCLatAm gathers a young but growing community of scientist and practitioners of the HPC in Latin America. The past events proved that the HPC community in the region is steadely growing. HPCLatAm aims to bring together researchers, developers, and users of HPC to discuss new ideas, experiences, and problems. <br/>The main goal of HPCLatAm is to provide a regional forum fostering the growth of the HPC community in Latin America through the exchange and dissemination of new ideas, techniques, and research in HPC.
+				</div>
+				<br/><br/><br/><br/>
+				<div style="text-align:right;">
+					<a href="http://hpclatam.org/">P&aacute;gina web</a>&nbsp;<img src="http://www.fing.edu.uy/cluster/img/1376705828_home.png"/><br/>
+					<a href="http://www.linkedin.com/groups/HPC-Latam-5139928"/>Grupo de discusi&oacute;n</a>&nbsp;<img src="http://www.fing.edu.uy/cluster/img/1376705841_linked_in.png"/>
+				</div>
+				<br/>
+			</div>
+		</div>
+
+		<div class="module">
                         <div class="module-title">STIC-AmSud Scientific Meeting</div>
 			<div style="padding:0px;margin:0px;text-align:center;">
 				<a href="http://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/"><img src="http://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/logo_2.png" width="300px"></img></a>
@@ -192,7 +256,7 @@
 		<div class="module">
 			<div class="module-title">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</div>
 			<div class="module-body" style="text-align:center;">
-				<div style="float:left;width:130px; text-align: center;">
+				<div style="float:left;width:130px; text-align: center;height:110px;">
 					<img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px" style="margin-bottom: 50px;"></img>
 				</div>
 				<div style="width:300px; padding-left:130px;font-size:14px;text-align:justify;">

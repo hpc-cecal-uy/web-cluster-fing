@@ -23,7 +23,8 @@ class Main extends Controller {
 		
 		// Horas de cómputo ------------------
 		//$file = "/home/santiago/eclipse/php-workspace/web-cluster-fing/Cluster.All.Hours.txt";
-		$file = "/fing/web/cluster/Cluster.All.Hours.txt";
+		//$file = "/fing/web/cluster/Cluster.All.Hours.txt";
+		$file = "/fing/web/cluster/Cluster.Pbsacct.Hours.txt";
 		$f = fopen($file, "r");
 		if ($line = fgets($f, 1000) ) {
 			//if (strlen(trim($line)) <= 6) {

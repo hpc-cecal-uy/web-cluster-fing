@@ -77,15 +77,17 @@ class Como_Conectarse extends Controller {
 		
 		$to = "sergion@fing.edu.uy,gusera@fing.edu.uy,siturria@fing.edu.uy";
 		//$to = "siturria@fing.edu.uy";
+
 		$subject = "[CLUSTER FING] Nuevo usuario";
 		
 		$body = "";
-		$body .= "Nombre: ".$this->input->post('nombre');
-		$body .= "\nEmail: ".$this->input->post('email');
-		$body .= "\nDescripcion: ".$this->input->post('descripcion');
-		$body .= "\nFormacion: ".$this->input->post('formacion');
-		$body .= "\nMotivacion: ".$this->input->post('motivacion');	
-		$body .= "\nPublic key ===========================================>\n";
+		$body .= "[Nombre]\n".$this->input->post('nombre');
+		$body .= "\n[Email]\n".$this->input->post('email');
+		$body .= "\n[Descripcion]\n".$this->input->post('descripcion');
+		$body .= "\n[Formacion]\n".$this->input->post('formacion');
+		$body .= "\n[Motivacion]\n".$this->input->post('motivacion');	
+		$body .= "\n[Area]\n".$this->input->post('area');
+		$body .= "\n[Public key]\n";
 		$body .= $data_pubkey;
 		
 		if (mail($to, $subject, $body)) {

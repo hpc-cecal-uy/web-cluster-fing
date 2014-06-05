@@ -1,0 +1,229 @@
+@CHARSET "UTF-8";
+
+#foto-slider {
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	margin-bottom: 1em;
+}
+
+#two-columns {
+	/*float: left;*/
+	width: 900px;
+}
+
+#left-column {
+	/*float: left;
+	width: 450px;
+	overflow: hide;*/
+}
+
+#right-column {
+	/*float: left;
+	width: 450px;
+	overflow: hide;*/
+}
+
+.module {
+	/*width: 430px;*/
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	
+	background-repeat: no-repeat;
+	background-position: right 30px;
+}
+
+.module-title {
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #5EA3CE;
+}
+
+.module-title:before {
+	content: '';
+	font-size: 0.6em;
+}
+
+.module-body {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: justify;
+}
+
+a.menu-option {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	
+	display: block;
+	text-decoration: none;
+	font-size: 1.2em;
+	width: 290px;
+	color: navy;
+}
+
+a.menu-option:hover:before {
+	content: '';
+}
+
+a.menu-option:hover {
+	background-color: #5EA3CE;
+	color: white;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+}
+
+.noticias {
+	padding-left: 1.5em;
+}
+
+.noticias .noticia {
+	margin-bottom: 1em;
+}
+
+.noticias .noticia_titulo {
+	font-size: 1.2em;
+}
+
+.noticias .noticia_fecha {
+	font-size: 0.8em;
+	/*float: right;*/
+}
+
+.noticias .noticia_contenido {
+	margin-top: 5px;
+}
+
+.slide a img {
+	border-style: none;
+}
+
+.contacto {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 1em;
+}
+
+.logos {
+	float: left;
+	width: 100%;
+	text-align: center;
+	/*padding-top: 4em;*/
+}
+
+.logos a {
+	margin-right: 25px;
+	margin-left: 25px;
+}
+
+.logos img {
+	border-style: none;
+}
+
+/** 
+ * Slideshow style rules.
+ */
+#slideshow {
+	/*float: left;*/
+	margin:0 auto;
+	width:429px;
+	height:200px;
+	position:relative;
+}
+#slideshow #slidesContainer {
+  margin:0 auto;
+  width:397px;
+  height:200px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+}
+#slideshow #slidesContainer .slide {
+  margin:0 auto;
+  width:377px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+  height:200px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control {
+  display:block;
+  width:16px;
+  height:200px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl {
+  top:0;
+  left:0;
+  background:transparent url(../img/arrow2_left_16x200_2.png) no-repeat 0 0;
+}
+#rightControl {
+  top:0;
+  right:0;
+  background:transparent url(../img/arrow2_right_16x200_2.png) no-repeat 0 0;
+}
+
+.kwicks {
+	/* recommended styles for kwicks ul container */
+	list-style: none;
+	position: relative;
+	margin-left: 30px;
+	padding: 0;
+}
+.kwicks li{
+	/* these are required, but the values are up to you (must be pixel) */
+	width: 160px;
+	height: 100px;
+
+	/*do not change these */
+	display: block;
+	overflow: hidden;
+	padding: 0;  /* if you need padding, do so with an inner div (or implement your own box-model hack) */
+}
+.kwicks.horizontal li {
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-right: 5px; /*Set to same as spacing option. */	
+	float: left;
+}
+.kwicks.vertical  li{
+	/* This is optional and will be disregarded by the script.  However, it should be provided for non-JS enabled browsers. */
+	margin-bottom: 5px; /*Set to same as spacing option. */	
+}
+
+#kwick_1 { 
+	background-color: #53b388;
+}
+#kwick_2 {
+	background-color: #5a69a9;
+}
+#kwick_3 {
+	background-color: #c26468;
+}
+#kwick_4 { 
+	background-color: #bf7cc7;
+}
+#kwick_5 { 
+	background-color: #aaaaaa;
+}
+.kwicks.horizontal #kwick_5 {
+	margin-right: none; /* cancel margin on last kiwck (if you set a margin above) */
+}
+.kwicks.vertical #kwick_5 {
+	margin-bottom: none; /* cancel margin on last kiwck (if you set a margin above) */
+}
