@@ -13,7 +13,7 @@
 			<div class="module-title">Cumplimos los 4.000.000 de horas de c&oacute;mputo</div>
 			<div class="module-body">
 				<!--<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>-->
-                                <img src="<?php echo base_url();?>img/4M.jpg" width="120px" style="margin-bottom: 120px;"></img>
+                                <img src="<?php echo base_url();?>img/4M.jpg" width="140px" style="margin-bottom: 80px;"></img>
 				<div style="float:right; width:260px; padding-right:15px;font-size:14px;text-align:justify;">
 					El proyecto cluster FING cumpli&oacute; 4.000.000 de horas de cómputo en enero de 2014. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/><br/>
 					<br/>Total de horas de cómputo al día de hoy:<br/>
@@ -117,7 +117,12 @@
 
 
                <div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
-                        <div class="module-title">Nuevos usuarios</div>
+                        <div class="module-title">Ranking de estimaciones de usuarios</div>
+			<div class="module-body">
+				<?php echo $rankingEstimaciones;?>
+				<div align="right">ranking de los últimos 60 días</div>
+			</div>
+			<div class="module-title">Nuevos usuarios</div>
                         <div class="module-body">
                                 <a href="<?php echo base_url();?>index.php/como_conectarse" class="menu-option">C&oacute;mo conectarse</a>
                                 <a href="<?php echo base_url();?>index.php/como_ejecutar_trabajo" class="menu-option">C&oacute;mo ejecutar un trabajo</a>

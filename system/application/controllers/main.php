@@ -35,6 +35,14 @@ class Main extends Controller {
 		}
 		// Horas de cómputo ------------------
 		
+		//ranking estimaciones
+		$file2 = "/fing/web/cluster/estadisticas/rankingEstimaciones.html";
+		$f2 = fopen($file2, "r");
+		$data['rankingEstimaciones'] = '';
+		while ($line2 = fgets($f2, 1000)){
+			$data['rankingEstimaciones'] = $data['rankingEstimaciones'] . $line2; 
+		}
+		
 		$this->load->view('includes/template', $data);
 	}
 	

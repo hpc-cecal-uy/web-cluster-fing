@@ -55,6 +55,94 @@
 						echo form_input($data_email,set_value('email2')); ?><em>*</em>
 				</p>
 				<p>
+					<h3>Filiaci&oacute;n</h3>
+				</p>
+				<p>
+					<label for="instituto">Instituto</label><br/>
+					<?php
+						$data_instituto = array(
+							'id'		=> 'instituto',
+							'name'		=> 'instituto',
+							'value'		=> set_value('instituto'),
+							'rows'		=> '1',
+							'cols'		=> '60');
+						echo form_input($data_instituto,set_value('instituto'));
+					?>
+					<em>*</em>
+				</p>
+				<p>
+					<label for="facultad">Facultad</label><br/>
+					<?php
+						$data_facultad = array(
+							'id'		=> 'facultad',
+							'name'		=> 'facultad',
+							'value'		=> set_value('facultad'),
+							'rows'		=> '1',
+							'cols'		=> '60');
+						echo form_input($data_facultad,set_value('facultad'));
+					?>
+					<em>*</em>
+				</p>
+				<p>
+					<label for="universidad">Universidad</label><br/>
+					<?php
+						$data_universidad = array(
+							'id'		=> 'universidad',
+							'name'		=> 'universidad',
+							'value'		=> set_value('universidad'),
+							'rows'		=> '1',
+							'cols'		=> '60');
+						echo form_input($data_universidad,set_value('universidad'));
+					?>
+					<em>*</em>
+				</p>
+				<br/><br/>
+				<p>
+					<label for="nivelAcademico">Nivel Acad&eacute;mico</label><br/>
+					<?php
+						$data_nivelAcademico = array(
+							'Estudiante de Grado'			=> 'Estudiante de Grado',
+							'Estudiante de Maestria'		=> 'Estudiante de Maestria',
+							'Estudiante de Doctorado'		=> 'Estudiante de Doctorado',
+							'Investigador'				=> 'Investigador',
+							'Industria'				=> 'Industria');
+						echo form_dropdown('nivelAcademico', $data_nivelAcademico, 'estudianteGrado');
+					?>
+					<em>*</em>
+				</p>
+				<p>
+					<label for="tipoTrabajo">Tipo de Trabajo</label><br/>
+					<?php
+						$data_tipoTrabajo = array(
+							'Curso de Grado'			=> 'Curso de Grado',
+							'Curso de Posgrado'			=> 'Curso de Posgrado',
+							'Tesis de Maestria'			=> 'Tesis de Maestria',
+							'Tesis de Doctorado'			=> 'Tesis de Doctorado',
+							'Proyecto de Investigacion'		=> 'Proyecto de Investigacion',
+							'Convenio'				=> 'Convenio');
+						echo form_dropdown('tipoTrabajo', $data_tipoTrabajo, 'cursoGrado');
+					?>
+					<em>*</em>
+				</p>
+				
+				<p>
+					<label for="articulosPublicados">Art&iacute;culos publicados que han utilizado la infraestructura</label><br/>
+					<label for="articulosPublicados" ><font size=1>Para nuevos usuarios, acepta el valor 0.</font></label><br />
+					<!-- type puede no andar porque no esta documentado que sea asi -->
+					<?php
+						$data_articulosPublicados = array(
+							'id'		=> 'articulosPublicados',
+							'name'		=> 'articulosPublicados',
+							'value'		=> set_value('articulosPublicados'),
+							'rows'		=> '1',
+							'cols'		=> '60');
+					echo form_input($data_articulosPublicados,set_value('articulosPublicados'));
+					?>
+					<em>*</em>
+				</p>
+				
+				
+				<!--<p>
 					<label for="descripcion">C&oacute;mo se describir&iacute;a? (estudiante/investigador/etc.)</label><br/>
 					<?php 
 						$data_descripcion = array(
@@ -64,8 +152,8 @@
 							'rows'		=> '3',
 							'cols'		=> '60');
 						echo form_textarea($data_descripcion,set_value('descripcion')); ?><em>*</em>
-				</p>
-				<p>
+				</p>-->
+				<!--<p>
 					<label for="formacion">Qu&eacute; formaci&oacute;n tiene? (estudiante/grado/maestr&iacute;a/doctorado/etc.)</label><br/>
 					<?php 
 						$data_formacion = array(
@@ -75,8 +163,8 @@
 							'rows'		=> '3',
 							'cols'		=> '60');
 						echo form_textarea($data_formacion,set_value('formacion')); ?><em>*</em>
-				</p>
-				<p>
+				</p>-->
+				<!--<p>
 					<label for="motivacion">Cu&aacute;l es su motivaci&oacute;n para utilizar el cluster? (curso específico/tesis de maestr&iacute;a o doctorado/proyecto/curiosidad/etc.)</label><br/>
 					<?php 
 						$data_motivacion = array(
@@ -86,8 +174,8 @@
 							'rows'		=> '3',
 							'cols'		=> '60');
 						echo form_textarea($data_motivacion,set_value('motivacion')); ?><em>*</em>
-				</p>
-				<p>
+				</p>-->
+				<!--<p>
 					<label for="area">Cu&aacute;l es su &aacute;rea de trabajo?</label><br/>
 					<?php 
 						$data_area = array(
@@ -97,7 +185,7 @@
 							'rows'		=> '3',
 							'cols'		=> '60');
 						echo form_textarea($data_area,set_value('area')); ?><em>*</em>
-				</p>
+				</p>-->
 				<p>
 					<label for="pubkey">Ingrese su clave p&uacute;blica</label><br/>
 					<?php 
