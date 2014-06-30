@@ -114,14 +114,15 @@
 			</div>
 		</div>-->
 
-
+		<div class="module">
+                        <div class="module-title">Ranking de estimaciones de usuarios</div>
+                        <div class="module-body">
+                                <?php echo $rankingEstimaciones;?>
+                                <div align="right">ranking de los últimos 60 días</div>
+                        </div>
+		</div>
 
                <div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
-                        <div class="module-title">Ranking de estimaciones de usuarios</div>
-			<div class="module-body">
-				<?php echo $rankingEstimaciones;?>
-				<div align="right">ranking de los últimos 60 días</div>
-			</div>
 			<div class="module-title">Nuevos usuarios</div>
                         <div class="module-body">
                                 <a href="<?php echo base_url();?>index.php/como_conectarse" class="menu-option">C&oacute;mo conectarse</a>
