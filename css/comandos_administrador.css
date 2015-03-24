@@ -6,11 +6,24 @@ table{
 }
 th,td {
 	padding: 0.5em;
-	border-bottom: 1px solid #999;
 }
 th {
 	background-color: #ADC5D7;
 }
+
+tr.bordeArriba{
+	border-top: 1px solid #999;
+}
+
+tr.bordeAbajo{
+        border-bottom: 1px solid #999;
+}
+
+tr.arribaYAbajo{
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
 .columnaGrande {
 	width: 20%;
 }

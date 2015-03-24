@@ -10,12 +10,13 @@
 <div id="two-columns">
 	<div id="left-column">
 		<div class="module">
-			<div class="module-title">Cumplimos los 4.000.000 de horas de c&oacute;mputo</div>
+			<div class="module-title">Cumplimos los 5.000.000 de horas de c&oacute;mputo</div>
 			<div class="module-body">
 				<!--<img src="<?php echo base_url();?>img/party_helium_balloons_clip_art_25507.jpg" width="180px" style="margin-bottom: 10px;"></img>-->
-                                <img src="<?php echo base_url();?>img/4M.jpg" width="140px" style="margin-bottom: 80px;"></img>
-				<div style="float:right; width:260px; padding-right:15px;font-size:14px;text-align:justify;">
-					El proyecto cluster FING cumpli&oacute; 4.000.000 de horas de cómputo en enero de 2014. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/><br/>
+                                <!--<img src="<?php echo base_url();?>img/4M.jpg" width="140px" style="margin-bottom: 80px;"></img>-->
+				<!--<div style="float:right; width:260px; padding-right:15px;font-size:14px;text-align:justify;">-->
+				<div style="font-size:14px;text-align:justify;">
+					El proyecto cluster FING cumpli&oacute; 5.000.000 de horas de cómputo en setiembre de 2014. Nuestros agradecimientos a todos los que colaboraron para alcanzar este hito.<br/>
 					<br/>Total de horas de cómputo al día de hoy:<br/>
 					<div style="text-align:center;margin-top:5px;">
 						<div id="counter"><input type="hidden" name="counter-value" value="0" /></div>
@@ -138,7 +139,7 @@
                                 <a href="http://www.fing.edu.uy/cluster/estadisticas.html" class="menu-option" target="_new">Estad&iacute;sticas de uso mensual</a>
                                 <a href="http://www.fing.edu.uy/cluster/ganglia/" class="menu-option" target="_new">Estad&iacute;sticas de tiempo real (completas)</a>
                                 <a href="http://www.fing.edu.uy/cluster/gstat.txt" class="menu-option" target="_new">Uso de CPU</a>
-                                <a href="http://www.fing.edu.uy/cluster/uso.disco.home.cluster.txt" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
+                                <a href="http://www.fing.edu.uy/cluster/index.php/uso_disco_home" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
                         </div>
                 </div>
                 <div class="module" style="background-image:url(img/1280934526_package_edutainment_64x64.png);">
@@ -164,6 +165,12 @@
                                 <a href="http://www.fing.edu.uy/cluster/seminario/2011/" class="menu-option">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</a>-->
                         </div>
                 </div>
+		<div class="module" style="background-image:url(img/server.png);">
+                        <div class="module-title">Infraestructura</div>
+                        <div class="module-body">
+                                <a href="<?php echo base_url();?>index.php/infraestructura" class="menu-option">Descripci&oacute;n del hardware</a><br/><br/>
+                        </div>
+                </div>
                 <div class="module" style="background-image:url(img/1278458764_folder_green_64x64.png);">
                         <div class="module-title">Documentos</div>
                         <div class="module-body">
@@ -179,7 +186,7 @@
 		<div class="module">
                         <div class="module-title">Evolución de horas de uso del cluster FING</div>
 			<div style="padding:5px;margin:0px;text-align:center;">
-				<a href="http://www.fing.edu.uy/cluster/img/horas_cluster_4M.png"><img src="http://www.fing.edu.uy/cluster/img/horas_cluster_4M.png" width="430px"></img></a>
+				<a href="http://www.fing.edu.uy/cluster/img/horas_cluster_5M.png"><img src="http://www.fing.edu.uy/cluster/img/horas_cluster_5M.png" width="430px"></img></a>
 			</div>
 		</div>
 
@@ -304,7 +311,7 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
 				<a href="http://www.fing.edu.uy/cluster/estadisticas.html" class="menu-option" target="_new">Estad&iacute;sticas de uso mensual</a>
 				<a href="http://www.fing.edu.uy/cluster/ganglia/" class="menu-option" target="_new">Estad&iacute;sticas de tiempo real (completas)</a>
 				<a href="http://www.fing.edu.uy/cluster/gstat.txt" class="menu-option" target="_new">Uso de CPU</a>
-				<a href="http://www.fing.edu.uy/cluster/uso.disco.home.cluster.txt" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
+				<a href="http://http://www.fing.edu.uy/cluster/index.php/uso_disco_home" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
 			</div>
 		</div>
 		<div class="module" style="background-image:url(img/1280934526_package_edutainment_64x64.png);">

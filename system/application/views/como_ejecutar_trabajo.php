@@ -8,10 +8,9 @@
 	<ul>
 		<li><a href='#Serial'>Trabajo serial</a></li>
 		<li><a href='#Paralelo'>Trabajo paralelo</a></li>
-		<li><a href='#Distribuido'>Trabajo paralelo/distribuido</a>
+		<li><a href='#Distribuido'>Trabajo distribuido</a>
 		<ul>
 			<li><a href='#DistribuidoMPICH'>MPICH</a></li>
-			<li><a href='#DistribuidoLAM'>LAM/MPI</a></li>
 		</ul>
 	</ul>
 	</li>
@@ -46,40 +45,47 @@ encuentra compuesto por los siguientes nodos.
 		<td nowrap="nowrap"></td>
 	</tr>
 	<tr>
-		<td>node02 al node09</td>
+		<td>node02-09</td>
 		<td>8</td>
 		<td>class0</td>
 		<td>8 núcleos y 8 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>node20 al node23</td>
-		<td>4</td>
+		<td>node20-21</td>
+		<td>2</td>
 		<td>class1</td>
 		<td>8 núcleos y 24 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>node30 al node32</td>
+		<td>node30-32</td>
 		<td>3</td>
 		<td>class2</td>
 		<td>24 núcleos y 24 GB de RAM</td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>node33 al node38</td>
-		<td>6</td>
+		<td>node33-34</td>
+		<td>2</td>
 		<td>class3</td>
 		<td>24 núcleos y 72 GB de RAM</td>
 		<td></td>
 	</tr>
-	<tr style="color: red;">
+	<tr>
+        <td>node50-53</td>
+        <td>4</td>
+        <td>class5</td>
+        <td>16 núcleos y 64 GB de RAM</td>
+        <td></td>
+    </tr>
+	<!--<tr style="color: red;">
 		<td>tesla</td>
 		<td>1</td>
 		<td>gpu</td>
 		<td>8 núcleos, 48 GB de RAM, 4 tarjetas nVidia C1060</td>
 		<td nowrap="nowrap">* no accesible</td>
-	</tr>
+	</tr>-->
 </table>
 <br />
 <br />
@@ -139,9 +145,14 @@ colas de ejecución, pero cada cola de ejecución establece ciertas restriccione
 		<td>Cant. máx. de walltime</td>
 	</tr>
 	<tr>
+                <td>serial</td>
+                <td>hasta 1 proc.</td>
+                <td>hasta 240 horas (7 días)</td>
+        </tr>
+	<tr>
 		<td>small_jobs</td>
 		<td>hasta 16 proc.</td>
-		<td>hasta 168 horas (7 días)</td>
+		<td>hasta 240 horas (7 días)</td>
 	</tr>
 	<tr>
 		<td>medium_jobs</td>
@@ -155,8 +166,8 @@ colas de ejecución, pero cada cola de ejecución establece ciertas restriccione
 	</tr>
 	<tr>
 		<td>quick_jobs</td>
-		<td>hasta 24 proc.</td>
-		<td>hasta 2 horas</td>
+		<td>hasta 64 proc.</td>
+		<td>hasta 4 horas</td>
 	</tr>
 </table>
 </p>
@@ -180,7 +191,7 @@ de trabajos.
 #PBS -q small_jobs
 
 # Directorio de trabajo
-#PBS -d /home/siturria/&lt;directorio_trabajo&gt;
+#PBS -d &lt;ruta_absoluta_al_directorio_trabajo&gt;
 
 # Correo electronico
 #PBS -M &lt;mi_email&gt;@fing.edu.uy
@@ -193,12 +204,13 @@ de trabajos.
 # e: mail is sent when the job terminates.
 
 # Directorio donde se guardará la salida estándar y de error de nuestro trabajo
-#PBS -e /home/siturria/&lt;directorio_trabajo&gt;/
-#PBS -o /home/siturria/&lt;directorio_trabajo&gt;/
+#PBS -e &lt;ruta_absoluta_al_directorio_trabajo&gt;/
+#PBS -o &lt;ruta_absoluta_al_directorio_trabajo&gt;/
 
+<!-- SE QUITA ESTA LINEA PORQUE GENERA ERRORES EN ROCKS CLUSTER
 # Will make  all variables defined in the environment from which the job is submitted available to the job.
 #PBS -V
-
+-->
 echo Job Name: $PBS_JOBNAME
 echo Working directory: $PBS_O_WORKDIR
 echo Queue: $PBS_QUEUE
@@ -224,12 +236,12 @@ echo NODES
 cat $PBS_NODEFILE
 
 # Ejecuto la tarea
-time ./&lt;Ejecutable de nuestro trabajo&gt;</pre>
+time /&lt;ruta absoluta al ejecutable de nuestro trabajo&gt;</pre>
 
 <h2>Trabajo paralelo<a name='Paralelo' id='Paralelo'></a></h2>
 <p>Debemos solicitar que todos los procesadores que sean asignados a
 nuestro trabajo se encuentren en el mismo nodo físico del cluster. Un
-posible esqueleto de script para un trabajo que utiliza OpenMP para
+posible esqueleto de script para un trabajo que utiliza multithread para
 paralelizar su ejecución es el que sigue:</p>
 <pre class='escaped'>#!/bin/bash
 
@@ -244,7 +256,7 @@ paralelizar su ejecución es el que sigue:</p>
 #PBS -q small_jobs
 
 # Directorio de trabajo
-#PBS -d /home/siturria/&lt;directorio_trabajo&gt;
+#PBS -d &lt;ruta_absoluta_al_directorio_trabajo&gt;
 
 # Correo electronico
 #PBS -M &lt;mi_email&gt;@fing.edu.uy
@@ -257,12 +269,13 @@ paralelizar su ejecución es el que sigue:</p>
 # e: mail is sent when the job terminates.
 
 # Directorio donde se guardará la salida estándar y de error de nuestro trabajo
-#PBS -e /home/siturria/&lt;directorio_trabajo&gt;/
-#PBS -o /home/siturria/&lt;directorio_trabajo&gt;/
+#PBS -e &lt;ruta_absoluta_al_directorio_trabajo&gt;/
+#PBS -o &lt;ruta_absoluta_al_directorio_trabajo&gt;/
 
+<!-- SE QUITA ESTA LINEA PORQUE GENERA ERRORES EN ROCKS CLUSTER
 # Will make  all variables defined in the environment from which the job is submitted available to the job.
 #PBS -V
-
+-->
 echo Job Name: $PBS_JOBNAME
 echo Working directory: $PBS_O_WORKDIR
 echo Queue: $PBS_QUEUE
@@ -290,13 +303,13 @@ echo Cantidad de nodos:
 NPROCS=$(wc -l &lt; $PBS_NODEFILE)
 echo $NPROCS
 echo
-export OMP_SCHEDULE="DYNAMIC,1"
-export OMP_NUM_THREADS=$NPROCS
-time ./&lt;Ejecutable de nuestro trabajo&gt;</pre>
+<!--export OMP_SCHEDULE="DYNAMIC,1"
+export OMP_NUM_THREADS=$NPROCS-->
+time /&lt;Ruta absoluta al ejecutable de nuestro trabajo&gt;</pre>
 
-<h2>Trabajo paralelo/distribuido<a name='Distribuido' id='Distribuido'></a></h2>
+<h2>Trabajo distribuido<a name='Distribuido' id='Distribuido'></a></h2>
 
-<p>Antes de compilar y ejecutar un programa que utilice una
+<!--<p>Antes de compilar y ejecutar un programa que utilice una
 implementación de MPI es necesario configurar el entorno de nuestro
 usuario del cluster y especificar qué implementación de MPI se desea
 utilizar. Para obtener una lista de las implementaciónes de MPI
@@ -316,9 +329,14 @@ desde cualquier nodo.</p>
 <p>Es necesario cerrar la conexión de la sesión actual e iniciar una
 nueva conexión con el cluster para que la nueva configuración tenga
 efecto.</p>
-<div></div>
-<h3>MPICH<a name='DistribuidoMPICH' id='DistribuidoMPICH'></a></h3>
+<div></div>-->
+<h3>MPI 2 <a name='DistribuidoMPICH' id='DistribuidoMPICH'></a></h3>
+<p>Las dos implementaciones disponibles de MPI son:
+<br /><br />
+- Open MPI 1.6.2 en /opt/openmpi/ [es el que esté configurado por defecto]<br />
+- MPICH2 1.4.1p1 en /opt/mpich2/gnu/<br /><br />
 
+</p>
 <pre class='escaped'>#!/bin/bash
 
 # Nombre del trabajo
@@ -332,7 +350,7 @@ efecto.</p>
 #PBS -q small_jobs
 
 # Directorio de trabajo
-#PBS -d /home/siturria/&lt;directorio_trabajo&gt;
+#PBS -d &lt;ruta_absoluta_al_directorio_trabajo&gt;
 
 # Correo electronico
 #PBS -M &lt;mi_email&gt;@fing.edu.uy
@@ -345,12 +363,13 @@ efecto.</p>
 # e: mail is sent when the job terminates.
 
 # Directorio donde se guardará la salida estándar y de error de nuestro trabajo
-#PBS -e /home/siturria/&lt;directorio_trabajo&gt;/
-#PBS -o /home/siturria/&lt;directorio_trabajo&gt;/
+#PBS -e &lt;ruta_absoluta_al_directorio_trabajo&gt;/
+#PBS -o &lt;ruta_absoluta_al_directorio_trabajo&gt;/
 
+<!-- SE QUITA ESTA LINEA PORQUE GENERA ERRORES EN ROCKS CLUSTER
 # Will make  all variables defined in the environment from which the job is submitted available to the job.
 #PBS -V
-
+-->
 echo Job Name: $PBS_JOBNAME
 echo Working directory: $PBS_O_WORKDIR
 echo Queue: $PBS_QUEUE
@@ -378,8 +397,8 @@ echo Cantidad de nodos:
 NPROCS=$(wc -l &lt; $PBS_NODEFILE)
 echo $NPROCS
 echo
-time mpiexec -mpich-p4-no-shmem ./&lt;Ejecutable de nuestro trabajo&gt; </pre>
-
+time /opt/mpiexec/bin/mpiexec /&lt;Ruta absoluta al ejecutable de nuestro trabajo&gt; </pre>
+<!--
 <h3>LAM/MPI<a name='DistribuidoLAM' id='DistribuidoLAM'></a></h3>
 <pre class='escaped'>#!/bin/bash
 
@@ -447,7 +466,7 @@ export PATH=/opt/lam-7.1.4/bin:$PATH
 /opt/lam-7.1.4/bin/lamboot
 /opt/lam-7.1.4/bin/mpiexec ./&lt;Ejecutable de nuestro trabajo&gt;
 /opt/lam-7.1.4/bin/lamhalt</pre>
-
+-->
 </div>
 </div>
 <h2>Iniciar un trabajo<a name='Iniciar' id='Iniciar'></a></h2>
@@ -455,7 +474,7 @@ Una vez finalizado el script que describe a nuestro trabajo debemos indicarle al
 Para solicitar la ejecución de un trabajo en el cluster debemos invocar el comando <i>qsub</i> utilizando como argumento el script que acabamos 
 de crear y que describe nuestro trabajo:
 <pre class='escaped'>
-[siturria@cluster ~]$ qsub script_gestor.sh
+$ qsub script_gestor.sh
 </pre>
 Es probable que un trabajo no inicie inmediatamente su ejecución en el cluster. El gestor debe buscar los recursos necesarios para iniciar la ejecución
 del nuevo trabajo y es probable que estos recursos actualmente esten siendo utilizados por otro trabajo. Para obtener más información sobre el estado 
@@ -463,10 +482,10 @@ de un trabajo en el cluster ver <a href="<?php echo base_url();?>index.php/coman
 <h2>Iniciar un trabajo que depende de otro trabajo<a name='IniciarConDependencia' id='IniciarConDependencia'></a></h2>
 Para iniciar un trabajo que depende de otro trabajo debemos utilizar la opción <b><i>qsub -W depend</i></b> seguido por el tipo de dependencia.<br/>Por ejemplo, supongamos que el trabajo <b><i>paso_1.sh</i></b> esta siendo ejecutado en el cluster con tiene ID <b><i>3251714.cluster</i></b>, y queremos que el trabajo <b><i>paso_2.sh</i></b> sea ejecutado una vez que finaliza el trabajo <b><i>paso_1.sh</i></b>. Entonces debemos iniciar el trabajo <b><i>paso_2.sh</i></b> de la siguiente manera:  
 <pre class='escaped'>
-[siturria@cluster ~]$ qsub -W depend=after:3251714.cluster paso_2.qsub
+$ qsub -W depend=after:3251714.cluster paso_2.qsub
 </pre>
 En este caso el trabajo <b><i>paso_2.sh</i></b> se ejecutará después del trabajo <b><i>paso_1.sh</i></b> sin importar si este finaliza correctamente o erroneamente. Si queremos que se ejecute <b>solamente</b> si el trabajo finaliza correctamente, debemos ejecutar:
 <pre class='escaped'>
-[siturria@cluster ~]$ qsub -W depend=afterok:3251714.cluster paso_2.qsub
+$ qsub -W depend=afterok:3251714.cluster paso_2.qsub
 </pre> 
 Aqui se puede consultar una lista de todos las posibles dependencias con las que puede iniciarse un trabajo <a href="http://cf.ccmr.cornell.edu/cgi-bin/w3mman2html.cgi?qsub%281B%29">enlace</a>.

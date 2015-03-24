@@ -35,6 +35,21 @@
 	background-position: right 30px;
 }
 
+.pagina-title {
+	text-align: left;
+	font-size: 1.9em;
+	font-weight: bold;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #5EA3CE;
+}
+
+.pagina-title:before {
+	content: '';
+	font-size: 0.6em;
+} 
+
+
 .module-title {
 	font-size: 1.4em;
 	font-weight: bold;

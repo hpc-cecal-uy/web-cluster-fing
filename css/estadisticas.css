@@ -3,6 +3,8 @@ table{
 	border: 1px solid #999;
 	border-collapse: collapse;
 	margin: 0 0 1em 0;
+	color: #000080;
+	font-size: small;
 }
 th,td {
 	padding: 0.5em;
@@ -11,13 +13,13 @@ th,td {
 th {
 	background-color: #ADC5D7;
 }
-.columnaGrande {
+tr.columnaGrande {
 	width: 20%;
 }
-.alineadoDer{
+td.alineadoDer,th.alineadoDer{
 	text-align: right;
 }
-.totales{
+td.totales,th.totales{
 	border-top: 2px solid #999;
 	font-weight: bold;
 }
