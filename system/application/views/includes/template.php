@@ -7,7 +7,7 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>css/style.css" type="text/css" media="screen" />
 		<?php echo $css_include; ?>
 				
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<?php echo base_url();?>js/jquery.validate.js" type="text/javascript" charset="utf-8"></script>
 		<?php echo $js_include; ?>
 	</head>

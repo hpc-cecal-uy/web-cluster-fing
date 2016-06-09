@@ -26,12 +26,18 @@ class Main extends Controller {
 		//$file = "/fing/web/cluster/Cluster.All.Hours.txt";
 		$file = "/fing/web/cluster/Cluster.Pbsacct.Hours.txt";
 		$f = fopen($file, "r");
-		if ($line = fgets($f, 1000) ) {
-			//if (strlen(trim($line)) <= 6) {
-				$data['horas'] = trim($line);
-			//} else {
-			//	$data['horas'] = "1000000";
-			//}	
+		
+		$file2 = "/fing/web/cluster/Contador.Horas.Actual.txt";
+		$f2 = fopen($file2, "r");
+		
+		if ($line = fgets($f, 1000)) {
+			$data['horas'] = trim($line);
+			if ($line2 = fgets($f2, 1000)) {
+				$data['horas'] += trim($line2);
+			}
+			else {
+				$data['horas'] = "1000000";
+			}
 		}
 		// Horas de cómputo ------------------
 		

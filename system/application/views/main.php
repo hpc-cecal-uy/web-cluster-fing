@@ -43,7 +43,7 @@
 				<script type="text/javascript">
 				        jQuery(document).ready(function($) {
 				                //$("#counter").flipCounter({imagePath:"http://localhost/web-cluster-fing/img/flipCounter-medium.png"});
-				                $("#counter").flipCounter({imagePath:"http://www.fing.edu.uy/cluster/img/flipCounter-medium.png",number:0});
+				                $("#counter").flipCounter({imagePath:"<?php echo base_url();?>img/flipCounter-medium.png",number:0});
 				                //$("#counter").flipCounter({imagePath:"http://localhost/web-cluster-fing/img/flipCounter-custom.png",number:0,digitHeight:67,digitWidth:50});              
 				                $("#counter").flipCounter(
 				                        "startAnimation", // scroll counter from the current number to the specified number
@@ -79,27 +79,31 @@
 			<div class="module-title">Estad&iacute;sticas en tiempo real</div>
 			<div class="module-body">
 				<div id="slideshow">
-				    <div id="slidesContainer">
-				      <div class="slide">
-				        <h3></h3>
-				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=load_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
-		              </div>
+				  <div id="slidesContainer">
+				    <div class="slide">
+				      <h3></h3>
+				      <p><a href="<?php echo base_url();?>ganglia/" target="_new"><img height="246" width="382" src="<?php echo base_url();?>ganglia/stacked.php?m=load_one&c=FING-Rocks-Cluster&r=hour&st=1463506391&host_regex=" /></a></p>
+		        </div>
+				   	<div class="slide">
+				    	<h3></h3>
+				      <p><a href="<?php echo base_url();?>ganglia/" target="_new"><img src="<?php echo base_url();?>ganglia/graph.php?g=load_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+		        </div>
 					  <div class="slide">
-				        <h3></h3>
-				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=cpu_report&z=medium&c=FING Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
-				      </div>
+				    	<h3></h3>
+				      <p><a href="<?php echo base_url();?>ganglia/" target="_new"><img src="<?php echo base_url();?>ganglia/graph.php?g=cpu_report&z=medium&c=FING Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				    </div>
 					  <div class="slide">
-				        <h3></h3>
-				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=mem_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
-				      </div>
-		      		  <div class="slide">
-				        <h3></h3>
-				        <p><a href="http://www.fing.edu.uy/cluster/ganglia/" target="_new"><img src="http://www.fing.edu.uy/cluster/ganglia/graph.php?g=network_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
-				      </div>	      
-		            </div>
-			    </div>
+				    	<h3></h3>
+				      <p><a href="<?php echo base_url();?>ganglia/" target="_new"><img src="<?php echo base_url();?>ganglia/graph.php?g=mem_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				    </div>
+		      	<div class="slide">
+				      <h3></h3>
+				    	<p><a href="<?php echo base_url();?>ganglia/" target="_new"><img src="<?php echo base_url();?>ganglia/graph.php?g=network_report&z=medium&c=FING%20Cluster&m=&r=hour&s=descending&hc=4" /></a></p>
+				    </div>	      
+		      </div>
 			</div>
-	        </div>
+			</div>
+	  </div>
 		<!--<div class="module">
 			<div class="module-title">Noticias</div>
 			<div class="module-body">
@@ -126,7 +130,8 @@
                <div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">
 			<div class="module-title">Nuevos usuarios</div>
                         <div class="module-body">
-                                <a href="<?php echo base_url();?>index.php/como_conectarse" class="menu-option">C&oacute;mo conectarse</a>
+				<a href="<?php echo base_url();?>index.php/crear_usuario" class="menu-option">Como conectarse</a>
+                                <a href="<?php echo base_url();?>index.php/como_conectarse" class="menu-option">Registro de usuarios</a>
                                 <a href="<?php echo base_url();?>index.php/como_ejecutar_trabajo" class="menu-option">C&oacute;mo ejecutar un trabajo</a>
                                 <a href="<?php echo base_url();?>index.php/comandos_uso_cotidiano" class="menu-option">Comandos de uso cotidiano</a>
                                 <a href="<?php echo base_url();?>index.php/preguntas_frecuentes" class="menu-option">Preguntas frecuentes</a>
@@ -136,31 +141,31 @@
                 <div class="module" style="background-image:url(img/1278458679_kcmpartitions_64x64.png);">
                         <div class="module-title">Reportes</div>
                         <div class="module-body">
-                                <a href="http://www.fing.edu.uy/cluster/estadisticas.html" class="menu-option" target="_new">Estad&iacute;sticas de uso mensual</a>
-                                <a href="http://www.fing.edu.uy/cluster/ganglia/" class="menu-option" target="_new">Estad&iacute;sticas de tiempo real (completas)</a>
-                                <a href="http://www.fing.edu.uy/cluster/gstat.txt" class="menu-option" target="_new">Uso de CPU</a>
-                                <a href="http://www.fing.edu.uy/cluster/index.php/uso_disco_home" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
+                                <a href="<?php echo base_url();?>estadisticas.html" class="menu-option" target="_new">Estad&iacute;sticas de uso mensual</a>
+                                <a href="<?php echo base_url();?>ganglia/" class="menu-option" target="_new">Estad&iacute;sticas de tiempo real (completas)</a>
+                                <a href="<?php echo base_url();?>gstat.txt" class="menu-option" target="_new">Uso de CPU</a>
+                                <a href="<?php echo base_url();?>index.php/uso_disco_home" class="menu-option" target="_new">Uso de espacio de almacenamiento</a>
                         </div>
                 </div>
                 <div class="module" style="background-image:url(img/1280934526_package_edutainment_64x64.png);">
                         <div class="module-title">Enseñanza</div>
                         <div class="module-body">
-                                <a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase1.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 1]</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase2.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 2]</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/Multithreading-Clase3.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 3]</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/cluster_arquitectura_y_aplicaciones.pdf" class="menu-option">Charla 1 (cluster)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/cluster_memoria_compartida.pdf" class="menu-option">Charla 2 (memoria compartida)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/cluster_memoria_distribuida.pdf" class="menu-option">Charla 3 (memoria distribuida)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_1.pdf" class="menu-option">Nivelaci&oacute;n 1 (Unix-Linux)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_2.pdf" class="menu-option">Nivelaci&oacute;n 2 (Unix-Linux)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/nivelacion_3.pdf" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
-                                <a href="http://www.fing.edu.uy/cluster/grupo/Fortran.pdf" class="menu-option">FORTRAN</a>
+                                <a href="<?php echo base_url();?>grupo/Multithreading-Clase1.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 1]</a>
+                                <a href="<?php echo base_url();?>grupo/Multithreading-Clase2.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 2]</a>
+                                <a href="<?php echo base_url();?>grupo/Multithreading-Clase3.pdf" class="menu-option">Curso de Programación Multithreading (ECAR 2012) [Clase 3]</a>
+                                <a href="<?php echo base_url();?>grupo/cluster_arquitectura_y_aplicaciones.pdf" class="menu-option">Charla 1 (cluster)</a>
+                                <a href="<?php echo base_url();?>grupo/cluster_memoria_compartida.pdf" class="menu-option">Charla 2 (memoria compartida)</a>
+                                <a href="<?php echo base_url();?>grupo/cluster_memoria_distribuida.pdf" class="menu-option">Charla 3 (memoria distribuida)</a>
+                                <a href="<?php echo base_url();?>grupo/nivelacion_1.pdf" class="menu-option">Nivelaci&oacute;n 1 (Unix-Linux)</a>
+                                <a href="<?php echo base_url();?>grupo/nivelacion_2.pdf" class="menu-option">Nivelaci&oacute;n 2 (Unix-Linux)</a>
+                                <a href="<?php echo base_url();?>grupo/nivelacion_3.pdf" class="menu-option">Nivelaci&oacute;n 3 (Unix-Linux)</a>
+                                <a href="<?php echo base_url();?>grupo/Fortran.pdf" class="menu-option">FORTRAN</a>
                         </div>
                 </div>
                 <div class="module" style="background-image:url(img/1280327953_edu_science_64x64.png);">
                         <div class="module-title">Investigación</div>
                         <div class="module-body">
-                                <a href="http://www.fing.edu.uy/grupos/niccad/index.php" class="menu-option">N&uacute;cleo Interdisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o (NICCAD)</a><br/>
+                                <a href="https://www.fing.edu.uy/grupos/niccad/index.php" class="menu-option">N&uacute;cleo Interdisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o (NICCAD)</a><br/>
                                 <!--<a href="http://www.fing.edu.uy/cluster/seminario/" class="menu-option">Seminario Multidisciplinario de Computaci&oacute;n Cient&iacute;fica de Alto Desempe&ntilde;o</a>
                                 <a href="http://www.fing.edu.uy/cluster/seminario/2011/" class="menu-option">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</a>-->
                         </div>
@@ -175,8 +180,8 @@
                         <div class="module-title">Documentos</div>
                         <div class="module-body">
                                 <a href="<?php echo base_url();?>files/clusterFING_estructura.pdf" class="menu-option">Descripci&oacute;n t&eacute;cnica</a>
-                                <a href="http://www.fing.edu.uy/cluster/pdfs/politicas.pdf" class="menu-option">Pol&iacute;ticas de uso</a>
-                                <a href="http://www.fing.edu.uy/cluster/pdfs/Reglamento.pdf" class="menu-option">Reglamento de uso</a>
+                                <a href="<?php echo base_url();?>pdfs/politicas.pdf" class="menu-option">Pol&iacute;ticas de uso</a>
+                                <a href="<?php echo base_url();?>pdfs/Reglamento.pdf" class="menu-option">Reglamento de uso</a>
                         </div>
                 </div>
 
@@ -186,7 +191,7 @@
 		<div class="module">
                         <div class="module-title">Evolución de horas de uso del cluster FING</div>
 			<div style="padding:5px;margin:0px;text-align:center;">
-				<a href="http://www.fing.edu.uy/cluster/img/horas_cluster_5M.png"><img src="http://www.fing.edu.uy/cluster/img/horas_cluster_5M.png" width="430px"></img></a>
+				<a href="<?php echo base_url();?>img/horas_cluster_5M.png"><img src="<?php echo base_url();?>img/horas_cluster_5M.png" width="430px"></img></a>
 			</div>
 		</div>
 
@@ -194,7 +199,7 @@
                         <div class="module-title">Cluster FING: 8th in LARTOP 50 - 2013<!--50 fastest Supercomputers in Latin America--></div>
 			<div style="padding:0px;margin:0px;text-align:center">
 				<div style="text-align:right;font-weight:bold;margin-bottom:5px;">50 fastest Supercomputers in Latin America</div>
-				<a href="http://www2.lartop50.org/src/#listing"><img src="http://www.fing.edu.uy/cluster/img/lartop50.jpg" width="430px"></img></a>
+				<a href="http://www2.lartop50.org/src/#listing"><img src="<?php echo base_url();?>img/lartop50.jpg" width="430px"></img></a>
 			</div>
 		</div>
 
@@ -208,8 +213,8 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
 				</div>
 				<br/><br/><br/><br/>
 				<div style="text-align:right;">
-					<a href="http://hpclatam.org/">P&aacute;gina web</a>&nbsp;<img src="http://www.fing.edu.uy/cluster/img/1376705828_home.png"/><br/>
-					<a href="http://www.linkedin.com/groups/HPC-Latam-5139928"/>Grupo de discusi&oacute;n</a>&nbsp;<img src="http://www.fing.edu.uy/cluster/img/1376705841_linked_in.png"/>
+					<a href="http://hpclatam.org/">P&aacute;gina web</a>&nbsp;<img src="<?php echo base_url();?>img/1376705828_home.png"/><br/>
+					<a href="http://www.linkedin.com/groups/HPC-Latam-5139928"/>Grupo de discusi&oacute;n</a>&nbsp;<img src="<?php echo base_url();?>img/1376705841_linked_in.png"/>
 				</div>
 				<br/>
 			</div>
@@ -218,7 +223,7 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
 		<div class="module">
                         <div class="module-title">STIC-AmSud Scientific Meeting</div>
 			<div style="padding:0px;margin:0px;text-align:center;">
-				<a href="http://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/"><img src="http://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/logo_2.png" width="300px"></img></a>
+				<a href="https://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/"><img src="https://www.fing.edu.uy/grupos/niccad/stic-amsud-2012/logo_2.png" width="300px"></img></a>
 			</div>
 		</div>
 
@@ -229,9 +234,9 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
                         <div class="module-title">Evento interdisciplinario PEDECIBA: "Computación Científica de Alto Desempeño"</div>
                         <div class="module-body">
 				<div style="float:left; width:130px; text-align: center;">
-                                    <img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_pedeciba.png" width="100px"></img>
+                                    <img src="https://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_pedeciba.png" width="100px"></img>
                                     <br/>
-				    <img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px"></img>
+				    <img src="https://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px"></img>
 				</div>
                                 <div style="width:300px;font-size:14px;text-align:justify;padding-left:130px;">
                                         El miércoles 17 de noviembre de 2012 se desarroll&oacute; el evento interdisciplinario de 
@@ -259,7 +264,7 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
                                       </table>
                                    </center>
                                 </div>
-                                <a href="http://www.fing.edu.uy/grupos/niccad/ccad-2012/" style="font-size:12px;float:right;">[leer más...]</a>
+                                <a href="https://www.fing.edu.uy/grupos/niccad/ccad-2012/" style="font-size:12px;float:right;">[leer más...]</a>
                         </div>
                 </div>
 
@@ -270,7 +275,7 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
 			<div class="module-title">II Seminario Multidisciplinario de Computación Científica de Alto Desempeño</div>
 			<div class="module-body" style="text-align:center;">
 				<div style="float:left;width:130px; text-align: center;height:110px;">
-					<img src="http://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px" style="margin-bottom: 50px;"></img>
+					<img src="https://www.fing.edu.uy/grupos/niccad/ccad-2012/logo_niccad-2.png" width="120px" style="margin-bottom: 50px;"></img>
 				</div>
 				<div style="width:300px; padding-left:130px;font-size:14px;text-align:justify;">
 					El jueves 24 de noviembre de 2011 se desarroll&oacute; el II Seminario Multidisciplinario de Computación Científica de Alto Desempe&ntilde;o en el Polifuncional José Luis Massera de la Facultad de Ingenierí&iacute;a. El evento reuni&oacute; a investigadores, estudiantes y empresarios interesados en las &aacute;reas de computaci&oacute;n cient&iacute;fica y computaci&oacute;n de alto desempe&ntilde;o.
@@ -292,7 +297,7 @@ HPCLatAm gathers a young but growing community of scientist and practitioners of
 				      </table>
 				   </center>
 				</div>
-				<a href="http://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
+				<a href="https://www.fing.edu.uy/cluster/seminario/2011/" style="font-size:12px;float:right;">[leer más...]</a>
 			</div>
 		</div>
 		<!--<div class="module" style="background-image:url(img/1278458880_kdmconfig_64x64.png);">

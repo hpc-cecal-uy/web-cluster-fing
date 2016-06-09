@@ -1,23 +1,7 @@
 <div id="content">
-	<h1>Cómo conectarse</h1>
-	<div id="content-body" style="font-size: 1.1em;">
-		<ul>
-			<li><b>Punto de acceso:</b> cluster.fing.edu.uy</li>
-                        <li><b>Punto de acceso externo:</b> cluster-external.fing.edu.uy (solo bajo pedido)</li>
-			<!-- <li><b>Habilitación de usuarios:</b> solicitud mediante correo electrónico a <a href="mailto:gusera@fing.edu.uy">Gabriel Usera</a> y <a href="mailto:sergion@fing.edu.uy">Sergio Nesmachnow</a>&nbsp;<img src="<?php echo base_url(); ?>img/1280327156_email.png"></img></li> -->
-			<li><b>Autenticación:</b> mediante par de claves pública/privada.
-				<ul>
-					<li>Se genera con comandos de ssh (ssh-keygen) y utilitarios (putty-keygen).</li>
-					<li>Clave RSA de 1024 bits.</li>
-					<li>La clave pública se debe enviar por correo electrónico, y la clave privada se almacena en un archivo accesible al(a los) equipo(s) desde los cuales se establecerá la conexión.</li>
-					<li>El procedimiento de generación de claves puede consultarse en el siguiente <a href="http://www.fing.edu.uy/inco/cursos/hpc/material/clases/AmbientePVM.pdf">enlace</a> y en sitios de Internet.</li>
-				</ul>
-			</li>
-			<li><b>Nuevo usuario:</b> para solicitar acceso al cluster debe completar el formulario que sigue.</li>
-		</ul>
-	</div>
 	<?php if (! $enviado) { ?>
 	<h1>Registro de usuarios</h1>
+	<p>Si no tiene experiencia en la creación de claves público-privadas, le recomendamos lea este pequeño <a href="http://www.fing.edu.uy/cluster/index.php/crear_usuario">tutorial</a>. También encotrará ayuda sobre como ingresar al cluster luego de tener su usuario.</p>
 	<div id="nuevo-usuario" style="font-size: 1.1em;" onload=seleccionaOtro(); >
 		<div <?php if (strlen($error) == 0) { echo 'style="display:none;"'; } else { echo 'style="color:red;font-weight:bold;"'; } ?>>
 			<?php echo $error; ?>
