@@ -128,7 +128,7 @@ class QSubScript extends Controller {
         if (strlen($this->input->post('walltime_trabajo_minutos')) == 1) {
             $script .= '0';
         }
-        $script .= $this->input->post('walltime_trabajo_minutos')."\n";
+        $script .= $this->input->post('walltime_trabajo_minutos').":00\n";
 
         $script .= "\n".'# Cola de ejecuci&oacute;n'."\n";
         $script .= '#PBS -q '.$this->input->post('cola_trabajo')."\n";
